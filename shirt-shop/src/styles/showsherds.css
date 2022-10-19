@@ -1,10 +1,10 @@
 .sherd-container-all{
   display:flex;
   flex-wrap:wrap;
-  gap:25px;
 }
 
 .sherds-all{
+  margin:25px;
   width: 200px;
   display:flex;
   flex-direction: column;

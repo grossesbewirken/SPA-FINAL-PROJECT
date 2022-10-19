@@ -12,7 +12,6 @@ const textStyle = {
   marginRight: "43%",
   marginBottom: "25%",
   textAlign:"center"
-
 }
 
   return (

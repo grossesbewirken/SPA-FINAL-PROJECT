@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
 const ShowDetails = ({sherds}) => {
   const {id} = useParams()
   const navigate = useNavigate()
 
-  const [backgroundColor, setBackgroundColor] = useState("red")
-  const [fontColor, setFontColor] = useState("black")
+  const [backgroundColor, setBackgroundColor] = useState("black")
+  const [fontColor, setFontColor] = useState("white")
 
   const currSherd = sherds.find(sherd => sherd.id === +id)
   console.log(currSherd);
@@ -18,11 +18,11 @@ const ShowDetails = ({sherds}) => {
     left:0,
     right:0,
     bottom:0,
-    marginTop: "12%",
-    marginLeft: "20%",
-    marginRight: "43%",
+    marginTop: "20%",
+    marginLeft: "30%",
+    marginRight: "35%",
     marginBottom: "25%",
-    textAlign:"center"  
+    textAlign:"center", 
   }
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
@@ -46,30 +46,14 @@ const ShowDetails = ({sherds}) => {
           <div>
             <h2>background-color: </h2>
             <div className="color-container">
-              <div className="beige circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="black circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="blue circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="grey circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="lime circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="oliv circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="orange circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="red circle" onClick={(event)=>colorHandler(event)}></div>
-              <div className="white circle" onClick={(event)=>colorHandler(event)}></div>
+              {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
             <h2>color: </h2>
             <div className="color-container">
-              <div className="beige circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="black circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="blue circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="grey circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="lime circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="oliv circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="orange circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="red circle" onClick={(event)=>fontHandler(event)}></div>
-              <div className="white circle" onClick={(event)=>fontHandler(event)}></div>
-            </div>
+            {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+            </div>            
           </div>
           <div></div>
           <div></div>
