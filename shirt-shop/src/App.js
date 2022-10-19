@@ -13,15 +13,11 @@ import data from "./data/products.json"
 
 function App() {
   const [color, setColor] = useContext(ColorContext)
-  setColor("rgb(125,250,0)")
-  
-  const style ={
-    color:color
-  }
+
   console.log(data);
 
   return (
-    <div style={style} className="App">
+    <div className="App">
         <p>hallo</p>
     </div>
   );
