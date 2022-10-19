@@ -6,10 +6,8 @@ import { BrowserRouter } from 'react-router-dom'; // Hashrouter?
 // Styles Import
 import './index.css';
 
-
 // Files Import
 import App from './App';
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,4 +18,3 @@ root.render(
     </React.StrictMode>
   </BrowserRouter>
 );
-
