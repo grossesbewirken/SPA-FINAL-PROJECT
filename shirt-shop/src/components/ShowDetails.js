@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+
 const ShowDetails = ({sherds}) => {
   const {id} = useParams()
   const navigate = useNavigate()
@@ -9,8 +11,6 @@ const ShowDetails = ({sherds}) => {
   const [backgroundColor, setBackgroundColor] = useState("black")
   const [fontColor, setFontColor] = useState("white")
 
-  const currSherd = sherds.find(sherd => sherd.id === +id)
-  console.log(currSherd);
   const textStyle = {
     color:fontColor,
     position: "absolute",
@@ -24,6 +24,9 @@ const ShowDetails = ({sherds}) => {
     marginBottom: "25%",
     textAlign:"center", 
   }
+  
+  const currSherd = sherds.find(sherd => sherd.id === +id)
+  
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
     setBackgroundColor(color)
@@ -52,7 +55,7 @@ const ShowDetails = ({sherds}) => {
           <div>
             <h2>color: </h2>
             <div className="color-container">
-            {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
             </div>            
           </div>
           <div></div>

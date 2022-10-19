@@ -25,7 +25,7 @@ const textStyle = {
         </div>
         <div className="details-all">
           <span className="red-text">{"{ "}text: </span>
-          <span className="text-details-all">{ sherd.text.length > 15 ? sherd.text.slice(0, 15) : sherd.text}...,</span><br />
+          <span className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
           <span className="text-details-all red-text">price: </span>
           <span>{sherd.price.toFixed(2)} €uro</span>
           <span className="red-text">{" }"}</span>
