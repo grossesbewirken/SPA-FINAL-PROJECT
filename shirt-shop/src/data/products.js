@@ -7,7 +7,7 @@
  import orangeSherd from "../images/orange-sherd.png"
  import redSherd from "../images/red-sherd.png"
  import whiteSherd from "../images/white-sherd.png"
- 
+
  const products = [
   {
     "id":1,
@@ -264,7 +264,7 @@
   {
     "id": 13,
     "author": "anonym",
-    "text": "We all live in a rgb(255,255,0) submarine",
+    "text": "We all live in a rgb(255, 255, 0) submarine",
     "date": "",
     "shirtColor": {
       "beige": beigeSherd,

@@ -1,25 +1,27 @@
 // Packages Import
 // import { FontAwesomeIcon } from "fortawesome/react-fontawesome";
 // import { library } from 'fortawesome/fontawesome-svg-core';
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
-import ColorContext from './context/colorContext';
-import { useContext } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 // Styles Import
 import './styles/App.scss';
 
 // Files Import
 import sherds from "./data/products"
+import ShowSherds from './components/ShowSherds';
+import ShowDetails from './components/ShowDetails';
+console.log(sherds);
 
 function App() {
-  const [color, setColor] = useContext(ColorContext)
-
   return (
     <div className="App">
-        <p>hallo</p>
-        <img src={sherds[0].shirtColor.black} alt="" width="150"/>
-      
-
+      <div className="sherd-container-all">
+        <Routes>
+          <Route path="*" element={<Navigate to="/"/>}/>
+          <Route path="/" element={sherds.map(sherd => <ShowSherds key ={sherd.id} sherd={sherd}/>)} />
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds}/>} />
+        </Routes>
+      </div>
     </div>
   );
 }
