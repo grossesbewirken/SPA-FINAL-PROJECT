@@ -1,0 +1,79 @@
+.sherd-container-all{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.sherds-all{
+  margin:25px;
+  width: 200px;
+  display:flex;
+  flex-direction: column;
+  border:1px solid black;
+}
+
+.red-text{
+  color:red;
+}
+
+.link  {
+  color:black;
+  text-decoration: none;
+}
+
+.img-container-all{
+  position:relative;
+}
+
+.details-top-container{
+  display:flex;
+}
+.details-bottom-container{
+  display:flex;
+}
+.color-container{
+  display: flex;
+}
+.circle{
+  border:1px solid black;
+  width:25px;
+  height:25px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor:pointer;
+}
+
+.black{
+  background-color:black
+}
+
+.beige{
+  background-color: beige;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.grey{
+  background-color: grey;
+}
+
+.lime{
+  background-color: lime;
+}
+
+.oliv{
+  background-color: olive;
+}
+
+.orange{
+  background-color: orange;
+}
+
+.red{
+  background-color: red;
+}
+
+.white{
+  background-color: white;
+}
