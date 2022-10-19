@@ -4,7 +4,9 @@
     "author": "Martin",
     "text": "Slack mich am Arsch",
     "date": "",
-    "shirt-color": "grey",
+    "shirt-color": {
+      "black" :"./"
+    },
     "font-color": "black",
     "size": "M",
     "category": "Developer Philosophie",
