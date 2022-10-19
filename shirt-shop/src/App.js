@@ -9,16 +9,17 @@ import { useContext } from 'react';
 import './styles/App.scss';
 
 // Files Import
-import data from "./data/products.json"
+import sherds from "./data/products"
 
 function App() {
   const [color, setColor] = useContext(ColorContext)
 
-  console.log(data);
-
   return (
     <div className="App">
         <p>hallo</p>
+        <img src={sherds[0].shirtColor.black} alt="" width="150"/>
+      
+
     </div>
   );
 }
