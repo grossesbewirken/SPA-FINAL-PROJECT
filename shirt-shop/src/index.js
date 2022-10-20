@@ -17,9 +17,9 @@ root.render(
   <FavoriteContextProvider>
   <ColorContextProvider>
     <BrowserRouter>
-      <React.StrictMode>
+      {/* <React.StrictMode> */}
         <App />
-      </React.StrictMode>
+      {/* </React.StrictMode> */}
     </BrowserRouter>  
   </ColorContextProvider>
   </FavoriteContextProvider>

@@ -7,7 +7,8 @@ import { useState } from "react";
 // import { useContext } from 'react';
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-
+import { useContext, useEffect } from "react";
+import FavoriteContext from "./context/FavoriteContext";
 
 // Styles Import
 import './styles/App.scss';
@@ -21,7 +22,6 @@ import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
 
-console.log(sherds);
 library.add(faMagnifyingGlass);
 
 
@@ -30,10 +30,24 @@ library.add(faMagnifyingGlass);
 function App() {
   // const [color, setColor] = useContext(ColorContext)
   const [toggle, setToggle] = useState(true);
-
   const showSidebar = () => {
     setToggle(curr => !curr);
   }
+
+  const [favorite, setFavorite] = useContext(FavoriteContext)
+  
+  useEffect(()=>{
+    const getFav = JSON.parse(localStorage.getItem("favorite"))
+    if(getFav !== null && getFav.length !== 0){
+      console.log("hallo");
+      setFavorite(getFav)
+    }
+    console.log("nichtHallo");
+  },[])
+
+  useEffect(()=>{
+    localStorage.setItem("favorite", JSON.stringify(favorite))
+  },[favorite])
 
   const [currColor, setCurrColor] = useState("")
 

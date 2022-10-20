@@ -60,7 +60,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   const favoriteHandler= ()=>{
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
-    console.log("hallo");
   }
 
   return (
