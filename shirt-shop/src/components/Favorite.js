@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import FavoriteContext from "../context/FavoriteContext";
 import "../styles/text.css"
+import "../styles/favoriten.css"
 
 const Favorite = () => {
   const [favoriteContext] = useContext(FavoriteContext)
-  
-  console.log(favoriteContext);
+
   return (
     <div>
       <h1>Favoriten</h1>
@@ -20,8 +20,14 @@ const Favorite = () => {
                 </div>            
               </div>   
             </div>
-            <div>
-              <p>Hier kommen die Daten des Sherds hin</p>
+            <div className="favoriten-details">
+              <p style={{color:sherd.backgroundColor}}>sherdObject{"{"}</p>
+              <p>text: {sherd.text},</p>
+              <p>author: {sherd.author},</p>
+              <p>backgroundColor: {sherd.backgroundColor},</p>
+              <p>fontColor: {sherd.fontColor},</p>
+              <p>value: {sherd.price.toFixed(2)}€uro </p>
+              <p style={{color:sherd.backgroundColor}}> {" } "}</p>
             </div>            
         </div>
         )
