@@ -1,11 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useContext } from "react";
+import ColorContext from "../context/colorContext";
 
 const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds}) => {
+  const [colorContext] = useContext(ColorContext)
   const {id} = useParams()
   const navigate = useNavigate()
 
@@ -45,7 +48,7 @@ const ShowDetails = ({sherds}) => {
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
-    setFontColor(color)
+    setFontColor(colorContext[color])
     setCustomColor("")
   }
   const customHandler = (event)=>{
@@ -54,9 +57,6 @@ const ShowDetails = ({sherds}) => {
   }
   const sizeHandler = (event)=>{
     const size = event.target.innerText
-    const colorObject = {
-      
-    }
     setSize(size)
   }
 
