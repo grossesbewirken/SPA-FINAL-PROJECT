@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 
 // Styles Import
@@ -50,9 +51,9 @@ const Header = () => {
         <Form className="d-flex justify-content-end">
           <div className="input-group">
             <span className="input-group-text search" id="basic-addon1">
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                />
+                
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              
             </span>
             <input type="text" className="me-2 form-control search" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
           </div>
@@ -66,9 +67,10 @@ const Header = () => {
             <Button
               variant="outline-dark"
               className="me-2 text-white border border-light rounded-circle"
-            >
-              <FontAwesomeIcon
-                icon={faHeart} />
+            ><Link className="link" to="/favoriten">
+              <FontAwesomeIcon className="heart"
+                icon={faHeart} />  
+             </Link> 
             </Button>
         </Form>
       </Navbar.Collapse>
