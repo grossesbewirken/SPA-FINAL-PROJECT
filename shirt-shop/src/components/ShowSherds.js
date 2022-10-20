@@ -14,7 +14,6 @@ const textStyle = {
   marginRight: "32%",
   marginBottom: "25%",
   textAlign:"center",
-  LetterSpacing:"2px"
 }
 
 const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
