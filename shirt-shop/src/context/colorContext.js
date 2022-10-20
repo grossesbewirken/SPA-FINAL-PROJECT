@@ -14,7 +14,7 @@ const ColorContextProvider = (props)=>{
     darkgrey:"rgb(75, 75, 75)",
     white:"rgb(250, 250, 250)",
     darkwhite:"rgb(200, 200, 200)",
-    black:"rgb(25, 25, 25)",
+    black:"rgb(45, 45, 45)",
     darkblack:"rgb(0, 0, 0)",
     oliv:"rgb(100, 100, 0)",
     darkoliv:"rgb(60, 60, 60)",
