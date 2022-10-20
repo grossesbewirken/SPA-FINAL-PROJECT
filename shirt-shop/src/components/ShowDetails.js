@@ -58,7 +58,6 @@ const ShowDetails = ({sherds}) => {
   const favoriteHandler= ()=>{
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
-    console.log("hallo");
   }
 
   return (
