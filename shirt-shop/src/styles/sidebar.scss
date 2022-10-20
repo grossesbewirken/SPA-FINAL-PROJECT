@@ -1,0 +1,17 @@
+// BootStrap Class Override for Sidebar Components
+
+// .offcanvas {
+//   visibility: visible;
+// }
+
+.offcanvas-start {
+  top: 93px !important;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
+}
+
+// .btn-close {
+//   visibility: hidden;
+// }
