@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds}) => {
   const {id} = useParams()
@@ -10,9 +11,21 @@ const ShowDetails = ({sherds}) => {
 
   const [backgroundColor, setBackgroundColor] = useState("black")
   const [fontColor, setFontColor] = useState("white")
+  const [customColor, setCustomColor] = useState("")
+  const [size, setSize] = useState("")
+  
+  const currSherd = sherds.find(sherd => sherd.id === +id)
+  
+  const favorite = {
+    text:currSherd.text,
+    backgroundColor: backgroundColor,
+    fontColor: customColor ? customColor : fontColor,
+    size:size
+  }
 
+  console.log(favorite);
   const textStyle = {
-    color:fontColor,
+    color: customColor ? customColor : fontColor,
     position: "absolute",
     top:0,
     left:0,
@@ -25,15 +38,26 @@ const ShowDetails = ({sherds}) => {
     textAlign:"center" 
   }
   
-  const currSherd = sherds.find(sherd => sherd.id === +id)
   
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
     setBackgroundColor(color)
   }
-  const fontHandler = (event)=>{
+  const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
     setFontColor(color)
+    setCustomColor("")
+  }
+  const customHandler = (event)=>{
+    const color = event.target.value
+    setCustomColor(color)
+  }
+  const sizeHandler = (event)=>{
+    const size = event.target.innerText
+    const colorObject = {
+      
+    }
+    setSize(size)
   }
 
   return (
@@ -47,19 +71,27 @@ const ShowDetails = ({sherds}) => {
         </div>        
         <div className="select-single">
           <div>
-            <h2>background-color: </h2>
+            <h3>background-color: </h3>
             <div className="color-container">
               {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
-            <h2>color: </h2>
+            <h3>color: </h3>
             <div className="color-container">
               {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              <label className="customColor circle" htmlFor="customColor">?</label>
+              <input onChange={(event)=> customHandler(event)} className="hidden" type="color" id="customColor" />
             </div>            
           </div>
-          <div></div>
-          <div></div>
+          <div>
+            <h3>width: </h3>
+            {sizes.map(size => <div className="circle" onClick={(event)=>sizeHandler(event)}>{size}</div>)}
+          </div>
+          <div>
+            <h3>value: </h3>
+            <div>{currSherd.price.toFixed(2)} €uro</div>
+          </div>
         </div>
       </div>
 
