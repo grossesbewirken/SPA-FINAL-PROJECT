@@ -14,7 +14,7 @@
     "author": "Martin",
     "text": "Slack mich am Arsch",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -35,7 +35,7 @@
     "author": "anonym",
     "text": "Spiel mir das Lied vom Code!",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -56,7 +56,7 @@
     "author": "anonym",
     "text": "Commit, ik will dir was zeigen :smirk:",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -77,7 +77,7 @@
     "author": "Jeff",
     "text": "Natural Born Developer",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -98,7 +98,7 @@
     "author": "anonym",
     "text": "Na, heute schon gep(f)usht? Coder-Sprache kann Leben retten!",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -119,7 +119,7 @@
     "author": "Jeff",
     "text": "Hypure Hypure",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -140,7 +140,7 @@
     "author": "anonym",
     "text": "2B || !2B",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -161,7 +161,7 @@
     "author": "anonym",
     "text": "Loop Skywalker",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -182,7 +182,7 @@
     "author": "anonym",
     "text": "Loop, die Macht ist mit dir!",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -203,7 +203,7 @@
     "author": "anonym",
     "text": "Warum nicht gleich? || ?!=",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -224,7 +224,7 @@
     "author": "anonym",
     "text": "This is the &&",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -245,7 +245,7 @@
     "author": "anonym",
     "text": "Leg&&ary",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -266,7 +266,7 @@
     "author": "anonym",
     "text": "We all live in a rgb(255, 255, 0) submarine",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -287,7 +287,7 @@
     "author": "anonym",
     "text": "!verst&&en",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -308,7 +308,7 @@
     "author": "anonym",
     "text": "mk <3 !war",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -329,7 +329,7 @@
     "author": "anonym",
     "text": "||wurm",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -350,7 +350,7 @@
     "author": "anonym",
     "text": "Pulmentum Clava, taste the chaos...",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -371,7 +371,7 @@
     "author": "anonym",
     "text": "!Kein Problem",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -392,7 +392,7 @@
     "author": "anonym",
     "text": "So ein Slice...",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -413,7 +413,7 @@
     "author": "anonym",
     "text": "Pulp Function",
     "date": "",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -434,7 +434,7 @@
     "author": "Florian",
     "text": "Stranger Strings",
     "date": "2022-07-14",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -455,7 +455,7 @@
     "author": "Martin",
     "text": "coffee.filter() returned immer einen 'Brewlean'",
     "date": "2022-07-13",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -476,7 +476,7 @@
     "author": "anonym",
     "text": "Echt !einfach",
     "date": "2022.07.15",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -497,7 +497,7 @@
     "author": "Martin",
     "text": "My git pull is faster than yours! ",
     "date": "2022-07-22",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -518,7 +518,7 @@
     "author": "Uwe",
     "text": "error functions !arrow functions",
     "date": "2022-07-15",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -539,7 +539,7 @@
     "author": "Martin",
     "text": "Captain Jack Sp=>",
     "date": "2022-07-16",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -560,7 +560,7 @@
     "author": "Martin",
     "text": "Roses are red, violets are blue, unexpected error in line 42",
     "date": "2022-07-20",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -581,7 +581,7 @@
     "author": "Martin",
     "text": "null > 0",
     "date": "2022-07-21",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -602,7 +602,7 @@
     "author": "Carola",
     "text": "Warum pushen wenn man poppen kann?",
     "date": "2022-07-21",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -623,7 +623,7 @@
     "author": "Martin",
     "text": "Pull Metal Jacket",
     "date": "2022-07-21",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -644,7 +644,7 @@
     "author": "Martin",
     "text": ":): => Schrödingers Smiley",
     "date": "2022-07-21",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -665,7 +665,7 @@
     "author": "Robert",
     "text": ">||der",
     "date": "2022-07-21",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -686,7 +686,7 @@
     "author": "Uwe",
     "text": "Badge'l'||'ette'",
     "date": "2022-08-22",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -707,7 +707,7 @@
     "author": "Martin",
     "text": "Sieht ganz ||dentlich aus!",
     "date": "2022-08-30",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -728,7 +728,7 @@
     "author": "Ella",
     "text": "Fetch me if you can!",
     "date": "2022-09-12",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -749,7 +749,7 @@
     "author": "Martin",
     "text": "Link One 80 to='' ",
     "date": "2022-09-28",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -770,7 +770,7 @@
     "author": "Martin",
     "text": "<Modal/> Combat",
     "date": "2022-10-11",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -791,7 +791,7 @@
     "author": "Jeff",
     "text": "Coden? Nicht ohne Mucke im ||!",
     "date": "2022-10-11",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -812,7 +812,7 @@
     "author": "Martin",
     "text": "up-g-mount-@!",
     "date": "2022-10-11",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
@@ -833,7 +833,7 @@
     "author": "Jeff",
     "text": "Back&& Mounten",
     "date": "2022-10-11",
-    "shirtColor": {
+    "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
       "blue": blueSherd,
