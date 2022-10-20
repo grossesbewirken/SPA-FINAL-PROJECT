@@ -1,6 +1,7 @@
 .sherd-container-all{
   display:flex;
   flex-wrap:wrap;
+  flex: 3;
 }
 
 .sherds-all{

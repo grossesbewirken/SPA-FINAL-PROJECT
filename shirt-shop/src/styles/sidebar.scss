@@ -1,17 +1,22 @@
-// BootStrap Class Override for Sidebar Components
-
-// .offcanvas {
-//   visibility: visible;
-// }
-
-.offcanvas-start {
-  top: 93px !important;
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  color: white;
+  background-color: grey;
+  width: 100%;
 }
 
-.offcanvas-backdrop.show {
-  opacity: 0 !important;
+.ul-sidebar {
+  margin: 2rem;
+  .li-sidebar {
+    list-style-type: none;
+    margin: 0.5rem;
+  }
 }
 
-// .btn-close {
-//   visibility: hidden;
-// }
+
+
+
+
+

@@ -18,7 +18,7 @@ import fjm from '../images/fjm-logo.png';
 
 const Header = () => {
   return (
-<Navbar bg="dark" expand="lg" className="shadow-lg">
+<Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
       <Container fluid className="d-flex justify-content-between">
 
       <Navbar bg="dark">
@@ -54,7 +54,7 @@ const Header = () => {
                   icon={faMagnifyingGlass}
                 />
             </span>
-            <input type="text" className="me-2 form-control search" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
+            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1"/>
           </div>
             <Button
               variant="outline-dark"

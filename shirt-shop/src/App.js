@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 // import ColorContext from './context/colorContext';
 // import { useContext } from 'react';
 
@@ -23,13 +24,33 @@ library.add(faMagnifyingGlass);
 
 function App() {
   // const [color, setColor] = useContext(ColorContext)
+  const [toggle, setToggle] = useState(true);
+
+  const showSidebar = () => {
+    setToggle(curr => !curr);
+  }
 
   return (
-    <div className="App">
+  <div className="App">
       <Header
       FontAwesomeIcon={FontAwesomeIcon}
       />
-      <Sidebar />
+      <button className=
+      // "sidebar-outer-toggle-button "
+      {`sidebar-outer-toggle-button 
+      ${toggle ?
+        "hide-outer-sidebar-button" :
+        "hide-outer-sidebar-button-onClick"}`}
+        onClick={showSidebar}
+      >
+        getSidebar
+      </button>
+    <div className="sidebar-content-flex">
+        <div className=
+          {`sidebar-container-all  
+          ${toggle ? "hide-sidebar" : ""}`}>
+        <Sidebar toggle={toggle} showSidebar={showSidebar} />
+      </div>
       <div className="sherd-container-all">
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
@@ -38,6 +59,7 @@ function App() {
         </Routes>
       </div>
     </div>
+  </div>
   );
 }
 
