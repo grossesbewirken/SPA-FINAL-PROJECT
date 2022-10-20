@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import ColorContext from "../context/colorContext";
 
-const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+const colorPalette = ["beige-grad-135", "black-grad-135", "blue-grad-135", "grey-grad-135", "lime-grad-135", "oliv-grad-135", "orange-grad-135", "red-grad-135", "white-grad-135"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds}) => {
