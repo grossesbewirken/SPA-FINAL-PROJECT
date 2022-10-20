@@ -9,6 +9,7 @@ import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-so
 import { Link } from 'react-router-dom';
 
 
+
 // Styles Import
 import '../styles/header.scss';
 
@@ -17,11 +18,11 @@ import '../styles/header.scss';
 import fjm from '../images/fjm-logo.png';
 
 
+
 const Header = () => {
   return (
 <Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
-      <Container fluid className="d-flex justify-content-between">
-
+    <Container fluid className="d-flex justify-content-between">
       <Navbar bg="dark">
         <Container>
           <Navbar.Brand href="#home">
@@ -37,7 +38,7 @@ const Header = () => {
       </Navbar>
 
         <Navbar.Brand className="text-white">
-          {`<Nerd Sherd>`}
+          <span className="red-text">{"n"}</span>erd<span className="red-text">{"s"}</span>herd
         </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="navbarScroll" className="border border-light"/>
@@ -59,14 +60,13 @@ const Header = () => {
           </div>
             <Button
               variant="outline-dark"
-              className="me-2 text-white border border-light rounded-circle"
-            >
+              className="me-2 text-white border border-light circle">
               <FontAwesomeIcon
                 icon={faCartShopping} />
             </Button>
             <Button
               variant="outline-dark"
-              className="me-2 text-white border border-light rounded-circle"
+              className="me-2 text-white border border-light circle"
             ><Link className="link" to="/favoriten">
               <FontAwesomeIcon className="heart"
                 icon={faHeart} />  

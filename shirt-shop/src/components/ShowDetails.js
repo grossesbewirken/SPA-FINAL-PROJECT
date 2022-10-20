@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import { useContext } from "react";
 import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
@@ -13,7 +13,7 @@ import "../styles/showdetails.css"
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
 
@@ -21,8 +21,10 @@ const ShowDetails = ({sherds}) => {
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
 
-  console.log(currSherd);
-  console.log(favorite);
+  useEffect(()=>{
+    setCurrColor(currSherd.backgroundColor)
+  }, [currSherd])
+  console.log(currColor);
   
   const textStyle = {
     color: `${currSherd.fontColor}`,
@@ -77,11 +79,11 @@ const ShowDetails = ({sherds}) => {
             <div className="details-single">
 
               <div className="details-single-description">
-                <span className="red-text">{"{ "}text: </span>
+                <span style={{color: currColor}}>{"{ "}text: </span>
                 <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
-                <span className="text-details-all red-text">price: </span>
+                <span style={{color: currColor}}>price: </span>
                 <span>{currSherd.price.toFixed(2)} €uro</span>
-                <span className="red-text">{" }"}</span>
+                <span style={{color: currColor}}>{" }"}</span>
               </div>
 
               <div className="details-single-buttons">
