@@ -61,20 +61,30 @@ const ShowDetails = ({sherds}) => {
       <div className="details-top-container">
         
         {/* C A R D */}
-        <div className="img-container-single img-container-all">
-          <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="200" />
+        <div className="img-container-single img-container-all cardd">
+          <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="650" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>
+
+          {/* C A R D */}
           <div className="details-bottom-container">
+
             <div className="details-single">
-            <span className="red-text">{"{ "}text: </span>
-              <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
-              <span className="text-details-all red-text">price: </span>
-              <span>{currSherd.price.toFixed(2)} €uro</span>
-              <span className="red-text">{" }"}</span>
-              <button>warenkorb</button>
-              <button onclick={favoriteHandler}>herz</button>
+
+              <div class="details-single-description">
+                <span className="red-text">{"{ "}text: </span>
+                <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
+                <span className="text-details-all red-text">price: </span>
+                <span>{currSherd.price.toFixed(2)} €uro</span>
+                <span className="red-text">{" }"}</span>
+              </div>
+
+              <div class="details-single-buttons">
+                <button>warenkorb</button>
+                <button onclick={favoriteHandler}>herz</button>
+              </div>
+
             </div>
           </div>
         </div>   
