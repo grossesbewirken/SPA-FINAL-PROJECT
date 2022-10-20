@@ -31,11 +31,11 @@ function App() {
       />
       <Sidebar />
       <div className="sherd-container-all">
-        {/* <Routes>
+        <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds}/>} />
-        </Routes> */}
+        </Routes>
       </div>
     </div>
   );
