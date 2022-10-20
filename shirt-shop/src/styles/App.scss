@@ -1,0 +1,72 @@
+.sidebar-content-flex {
+  display: flex;
+}
+
+.sidebar-container-all {
+  display: flex;
+  min-width: 400px;
+  max-width: 400px;
+  flex: 1;
+}
+
+.sidebar-outer-toggle-button {
+  margin:25px;
+  margin-bottom: 0;
+  border: 2 solid white;
+  border-radius: 5px;
+  background-color: #212529;
+  color: white;
+}
+
+.sidebar-inner-toggle-button {
+  margin:25px;
+  margin-bottom: 0;
+  border: 2 solid white;
+  border-radius: 5px;
+  background-color: #212529;
+  color: white;
+}
+
+
+.hide-sidebar {
+  display: flex;
+}
+
+.hide-outer-sidebar-button {
+  display: none;
+}
+
+.hide-outer-sidebar-button-onClick {
+  display: none;
+}
+
+.hide-inner-sidebar-button {
+  display: none;
+}
+
+.hide-inner-sidebar-button-onClick {
+  display: none;
+}
+
+// 992px 
+
+// MEDIA QUERY
+
+@media (max-width: 992px)
+{
+  .hide-sidebar 
+  {
+    display: none;
+  }
+
+  .hide-outer-sidebar-button 
+  {
+    display: flex;
+  }
+
+  .hide-inner-sidebar-button 
+  {
+    display: flex;
+  }
+
+}

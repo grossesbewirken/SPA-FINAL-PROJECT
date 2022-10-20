@@ -5,8 +5,12 @@ import { useContext } from "react";
 import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 
-const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
+// Styles Import
+import "../styles/showdetails.css"
 
+
+
+const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds}) => {
@@ -55,21 +59,36 @@ const ShowDetails = ({sherds}) => {
   return (
     <div>
       <div className="details-top-container">
+        
+        {/* C A R D */}
         <div className="img-container-single img-container-all">
           <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="200" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
-          </div>       
-        </div>        
-        <div className="select-single">
+          </div>
+          <div className="details-bottom-container">
+            <div className="details-single">
+            <span className="red-text">{"{ "}text: </span>
+              <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
+              <span className="text-details-all red-text">price: </span>
+              <span>{currSherd.price.toFixed(2)} €uro</span>
+              <span className="red-text">{" }"}</span>
+              <button>warenkorb</button>
+              <button onclick={favoriteHandler}>herz</button>
+            </div>
+          </div>
+        </div>   
+
+        {/* C U S T O M I Z E R */}
+        <div className="select-single customize">
           <div>
-            <h3>background-color: </h3>
+            <h5>background-color: </h5>
             <div className="color-container">
               {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
-            <h3>color: </h3>
+            <h5>color:</h5>
             <div className="color-container">
               {colorPalette.map(color => <div className={`${color} circle`}  onClick={(event)=>fontHandler(event)}></div>)}
               <label className="customColor circle" htmlFor="customColor">?</label>
@@ -77,30 +96,22 @@ const ShowDetails = ({sherds}) => {
             </div>            
           </div>
           <div>
-            <h3>width: </h3>
+            <h5>width: </h5>
+            <div className="color-container">
             {sizes.map(size => <div className="circle" onClick={(event)=>sizeHandler(event)}>{size}</div>)}
+            </div>
           </div>
           <div>
-            <h3>value: </h3>
+            <h5>value:</h5>
             <div>{currSherd.price.toFixed(2)} €uro</div>
           </div>
+          <div className="button-container-single">        
+          <button onClick={()=>navigate("/")}>return Shop;</button>        
+        </div>
         </div>
       </div>
 
-      <div className="details-bottom-container">
-        <div className="details-single">
-        <span className="red-text">{"{ "}text: </span>
-          <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
-          <span className="text-details-all red-text">price: </span>
-          <span>{currSherd.price.toFixed(2)} €uro</span>
-          <span className="red-text">{" }"}</span>
-          <button>warenkorb</button>
-          <button type="button" onClick={favoriteHandler}>herz</button>
-        </div>
-        <div className="button-container-single">        
-          <button onClick={()=>navigate("/")}>return Shop;</button>        
-        </div>
-      </div>
+
     </div>
   );
 };

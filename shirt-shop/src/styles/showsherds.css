@@ -4,6 +4,7 @@
 .sherd-container-all{
   display:flex;
   flex-wrap:wrap;
+  flex: 3;
 }
 
 .sherds-all{
@@ -43,12 +44,13 @@
   display: flex;
 }
 .circle{
-  border:1px solid black;
+  border:1px solid white;
   width:40px;
   height:40px;
   border-radius: 50%;
   margin: 5px;
   cursor:pointer;
+  display: flex;
 }
 
 .column{
@@ -62,7 +64,9 @@
   gap: 2rem
 }
 
-
+.circle *{
+  justify-content: center;
+}
 
 
 .red{
