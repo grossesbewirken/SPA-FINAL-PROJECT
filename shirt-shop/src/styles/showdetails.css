@@ -26,9 +26,8 @@
 .details-single-buttons{
     align-items:flex-end;
     flex: 1,
-
-
 }
+
 .details-single-description{
     flex: 2
 }

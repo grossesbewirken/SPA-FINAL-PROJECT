@@ -20,8 +20,7 @@ import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
-
-console.log(sherds);
+import Carousel from "./components/Carousel";
 library.add(faMagnifyingGlass);
 
 function App() {
@@ -52,15 +51,16 @@ function App() {
           {`sidebar-container-all  
           ${toggle ? "hide-sidebar" : ""}`}>
         <Sidebar toggle={toggle} showSidebar={showSidebar} />
-      </div>
-      <div className="sherd-container-all">
+        </div>
+      <Carousel />
+      {/* <div className="sherd-container-all">
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds}/>} />
           <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
         </Routes>
-      </div>
+      </div> */}
     </div>
   </div>
   );
