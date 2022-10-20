@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState} from "react";
 import { useContext } from "react";
 import ColorContext from "../context/colorContext";
+import FavoriteContext from "../context/FavoriteContext";
 
+const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
 
 // Styles Import
 import "../styles/showdetails.css"
@@ -14,27 +16,15 @@ const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey",
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds}) => {
-  const [colorContext] = useContext(ColorContext)
   const {id} = useParams()
   const navigate = useNavigate()
 
-  const [backgroundColor, setBackgroundColor] = useState("black")
-  const [fontColor, setFontColor] = useState("white")
-  const [customColor, setCustomColor] = useState("")
-  const [size, setSize] = useState("")
-  
-  const currSherd = sherds.find(sherd => sherd.id === +id)
-  
-  const favorite = {
-    text:currSherd.text,
-    backgroundColor: backgroundColor,
-    fontColor: customColor ? customColor : fontColor,
-    size:size
-  }
+  const [colorContext] = useContext(ColorContext)
+  const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
 
-  console.log(favorite);
   const textStyle = {
-    color: customColor ? customColor : fontColor,
+    color: `${currSherd.fontColor}`,
     position: "absolute",
     top:0,
     left:0,
@@ -50,29 +40,29 @@ const ShowDetails = ({sherds}) => {
   
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
-    setBackgroundColor(color)
+    setCurrSherd({...currSherd, backgroundColor: color })
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
-    setFontColor(colorContext[color])
-    setCustomColor("")
+    setCurrSherd({...currSherd, fontColor:colorContext[color]})
   }
   const customHandler = (event)=>{
     const color = event.target.value
-    setCustomColor(color)
+    setCurrSherd({...currSherd, fontColor:color})
   }
   const sizeHandler = (event)=>{
     const size = event.target.innerText
-    setSize(size)
+    setCurrSherd({...currSherd, size:size})
   }
+  const favoriteHandler= ()=>[
+    setFavorite([...favorite, currSherd])
+  ]
 
   return (
     <div>
       <div className="details-top-container">
-
-        {/* C A R D D*/}
-        <div className="img-container-single img-container-all cardd" >
-          <img src={currSherd.sherdColor[backgroundColor]} alt="" width="650" />
+        <div className="img-container-single img-container-all">
+          <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="200" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>
@@ -95,13 +85,13 @@ const ShowDetails = ({sherds}) => {
           <div>
             <h5>background-color: </h5>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`} style={{color:color}} onClick={(event)=>colorHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
             <h5>color:</h5>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`} style={{backgroundColor:color}} onClick={(event)=>fontHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} circle`}  onClick={(event)=>fontHandler(event)}></div>)}
               <label className="customColor circle" htmlFor="customColor">?</label>
               <input onChange={(event)=> customHandler(event)} className="hidden" type="color" id="customColor" />
             </div>            
