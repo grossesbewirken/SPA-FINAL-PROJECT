@@ -26,7 +26,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -48,7 +48,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -70,7 +70,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -92,7 +92,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -114,7 +114,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -136,7 +136,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -158,7 +158,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -180,7 +180,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -202,7 +202,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -224,7 +224,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -246,7 +246,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Music",
     "price": 19.90
@@ -268,7 +268,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -290,7 +290,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Music",
     "price": 19.90
@@ -312,7 +312,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -334,7 +334,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -356,7 +356,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -378,7 +378,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -400,7 +400,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -422,7 +422,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -444,7 +444,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -466,7 +466,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -488,7 +488,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -510,7 +510,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -532,7 +532,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -554,7 +554,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -576,7 +576,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -598,7 +598,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -620,7 +620,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -642,7 +642,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -664,7 +664,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -686,7 +686,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -708,7 +708,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -730,7 +730,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -752,7 +752,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -774,7 +774,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -796,7 +796,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Music",
     "price": 19.90
@@ -818,7 +818,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -840,7 +840,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -862,7 +862,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -884,7 +884,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "fontColor": "black",
+    "fontColor": "white",
     "size": "M",
     "category": "Movie",
     "price": 19.90
