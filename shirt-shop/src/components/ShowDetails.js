@@ -5,8 +5,6 @@ import { useContext } from "react";
 import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 
-const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
-
 // Styles Import
 import "../styles/showdetails.css"
 
@@ -61,12 +59,13 @@ const ShowDetails = ({sherds}) => {
   return (
     <div>
       <div className="details-top-container">
+        
+        {/* C A R D */}
         <div className="img-container-single img-container-all">
           <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="200" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>
-
           <div className="details-bottom-container">
             <div className="details-single">
             <span className="red-text">{"{ "}text: </span>
@@ -75,7 +74,7 @@ const ShowDetails = ({sherds}) => {
               <span>{currSherd.price.toFixed(2)} €uro</span>
               <span className="red-text">{" }"}</span>
               <button>warenkorb</button>
-              <button>herz</button>
+              <button onclick={favoriteHandler}>herz</button>
             </div>
           </div>
         </div>   
