@@ -1,3 +1,6 @@
+.hidden{
+  visibility:hidden;
+}
 .sherd-container-all{
   display:flex;
   flex-wrap:wrap;
@@ -7,10 +10,12 @@
   margin:25px;
   width: 200px;
   display:flex;
-  flex-direction: column;
+  flex-direction:column;
   border:1px solid black;
 }
-
+.sherd-text-all{
+  line-height: -50px,
+}
 .red-text{
   color:red;
 }

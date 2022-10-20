@@ -18,6 +18,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
+
 console.log(sherds);
 library.add(faMagnifyingGlass);
 
@@ -26,9 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-      FontAwesomeIcon={FontAwesomeIcon}
-      />
+      <Header FontAwesomeIcon={FontAwesomeIcon} />
       <Sidebar />
       <div className="sherd-container-all">
         <Routes>

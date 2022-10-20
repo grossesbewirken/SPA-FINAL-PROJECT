@@ -26,7 +26,7 @@ const colorPalette = ["beigeGrad135", "blue", "grey", "lime", "oliv", "orange", 
             <p className="sherd-text-all">{sherd.text}</p> 
           </div>            
         </div>
-    </Link>
+      </Link>
         <div className="details-all">
           <span className="red-text">{"{ "}text: </span>
           <span className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
