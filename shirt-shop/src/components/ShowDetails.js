@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import ColorContext from "../context/colorContext";
 
-const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+const colorPalette = ["beigeGrad135", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds}) => {
@@ -73,13 +73,13 @@ const ShowDetails = ({sherds}) => {
           <div>
             <h3>background-color: </h3>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} circle`} style={{color:color}} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
             <h3>color: </h3>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} circle`} style={{backgroundColor:color}} onClick={(event)=>fontHandler(event)}></div>)}
               <label className="customColor circle" htmlFor="customColor">?</label>
               <input onChange={(event)=> customHandler(event)} className="hidden" type="color" id="customColor" />
             </div>            
