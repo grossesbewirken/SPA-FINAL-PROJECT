@@ -4,7 +4,14 @@ import "../styles/text.css"
 import "../styles/favoriten.css"
 
 const Favorite = () => {
-  const [favoriteContext] = useContext(FavoriteContext)
+  const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
+  const deleteFav = (event, sherd)=>{
+    const newFav = favoriteContext.filter(favSherd => favSherd !== sherd)
+    setFavoriteContext(newFav)
+  }
+  const buyHandler = ()=>{
+
+  }
 
   return (
     <div>
@@ -28,6 +35,8 @@ const Favorite = () => {
               <p>fontColor: {sherd.fontColor},</p>
               <p>value: {sherd.price.toFixed(2)}€uro </p>
               <p style={{color:sherd.backgroundColor}}> {" } "}</p>
+              <button type="button" className="delete-button" onClick={(event)=>deleteFav(event, sherd)}>delete</button>
+              <button type="button" className="delete-button" onClick={buyHandler}>buy</button>
             </div>            
         </div>
         )
