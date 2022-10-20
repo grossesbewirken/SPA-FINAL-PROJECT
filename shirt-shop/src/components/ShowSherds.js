@@ -15,7 +15,7 @@ const textStyle = {
   LetterSpacing:"2px"
 }
 
-const colorPalette = ["beigeGrad135", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
 
   return (
     <div className="sherds-all">
