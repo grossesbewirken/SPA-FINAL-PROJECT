@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 const colorPalette = ["beige", "black", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+
 const ShowDetails = ({sherds}) => {
   const {id} = useParams()
   const navigate = useNavigate()
@@ -9,8 +11,6 @@ const ShowDetails = ({sherds}) => {
   const [backgroundColor, setBackgroundColor] = useState("black")
   const [fontColor, setFontColor] = useState("white")
 
-  const currSherd = sherds.find(sherd => sherd.id === +id)
-  console.log(currSherd);
   const textStyle = {
     color:fontColor,
     position: "absolute",
@@ -18,12 +18,15 @@ const ShowDetails = ({sherds}) => {
     left:0,
     right:0,
     bottom:0,
-    marginTop: "20%",
-    marginLeft: "30%",
-    marginRight: "35%",
+    marginTop: "10%",
+    marginLeft: "32%",
+    marginRight: "32%",
     marginBottom: "25%",
     textAlign:"center", 
   }
+  
+  const currSherd = sherds.find(sherd => sherd.id === +id)
+  
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
     setBackgroundColor(color)
@@ -37,7 +40,7 @@ const ShowDetails = ({sherds}) => {
     <div>
       <div className="details-top-container">
         <div className="img-container-single img-container-all">
-          <img src={currSherd.shirtColor[backgroundColor]} alt="" width="200" />
+          <img src={currSherd.sherdColor[backgroundColor]} alt="" width="200" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>       
@@ -52,7 +55,7 @@ const ShowDetails = ({sherds}) => {
           <div>
             <h2>color: </h2>
             <div className="color-container">
-            {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
             </div>            
           </div>
           <div></div>

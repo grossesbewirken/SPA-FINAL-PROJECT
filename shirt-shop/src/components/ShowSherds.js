@@ -7,31 +7,34 @@ const textStyle = {
   left:0,
   right:0,
   bottom:0,
-  marginTop: "12%",
-  marginLeft: "20%",
-  marginRight: "43%",
+  marginTop: "10%",
+  marginLeft: "32%",
+  marginRight: "32%",
   marginBottom: "25%",
-  textAlign:"center"
+  textAlign:"center",
+  LetterSpacing:"2px"
 }
 
+const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+
   return (
-    <Link className="link" to={`/products/${sherd.id}`}>
-      <div className="sherds-all">
+    <div className="sherds-all">
+      <Link className="link" to={`/products/${sherd.id}`}>
         <div className="img-container-all">
-          <img src={sherd.shirtColor.red} alt="shirt" width="150" /> 
+          <img src={sherd.sherdColor[colorPalette[Math.floor(Math.random() * colorPalette.length)]]} alt="shirt" width="200" /> 
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{sherd.text}</p> 
           </div>            
         </div>
+    </Link>
         <div className="details-all">
           <span className="red-text">{"{ "}text: </span>
-          <span className="text-details-all">{ sherd.text.length > 15 ? sherd.text.slice(0, 15) : sherd.text}...,</span><br />
+          <span className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
           <span className="text-details-all red-text">price: </span>
           <span>{sherd.price.toFixed(2)} €uro</span>
           <span className="red-text">{" }"}</span>
         </div>      
       </div>    
-    </Link>
   );
 };
 
