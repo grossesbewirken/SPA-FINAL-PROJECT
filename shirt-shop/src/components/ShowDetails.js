@@ -40,7 +40,7 @@ const ShowDetails = ({sherds}) => {
     <div>
       <div className="details-top-container">
         <div className="img-container-single img-container-all">
-          <img src={currSherd.shirtColor[backgroundColor]} alt="" width="200" />
+          <img src={currSherd.sherdColor[backgroundColor]} alt="" width="200" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>       
