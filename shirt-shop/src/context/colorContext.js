@@ -27,7 +27,7 @@ const ColorContextProvider = (props)=>{
     olivGrad135:"background: linear-gradient(135deg, rgb(100, 100, 0)30%, rgb(60, 60, 0)80%)",
     beige:"rgb(250, 200, 125)",
     darkbeige:"rgb(200, 150, 75)",
-    beigeGrad:"background: linear-gradient(135deg, rgb(250, 200, 125)30%, rgb(200, 150, 75)80%)",
+    beigeGrad135:"background: linear-gradient(135deg, rgb(250, 200, 125)30%, rgb(200, 150, 75)80%)",
     blue:"rgb(0, 100, 200)",
     darkblue:"rgb(0, 50, 150)",
     blueGrad135:"background: linear-gradient(135deg, rgb(0, 100, 200)30%, rgb(0, 50, 150)80%)",
