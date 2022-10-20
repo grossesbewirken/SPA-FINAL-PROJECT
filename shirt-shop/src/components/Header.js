@@ -9,6 +9,7 @@ import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-so
 
 
 // Styles Import
+import '../styles/header.scss';
 
 
 // Files Import
@@ -17,7 +18,7 @@ import fjm from '../images/fjm-logo.png';
 
 const Header = () => {
   return (
-<Navbar bg="dark" expand="lg">
+<Navbar bg="dark" expand="lg" className="shadow-lg">
       <Container fluid className="d-flex justify-content-between">
 
       <Navbar bg="dark">

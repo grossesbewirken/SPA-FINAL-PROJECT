@@ -26,16 +26,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className="sherd-container-all">
       <Header
       FontAwesomeIcon={FontAwesomeIcon}
       />
       <Sidebar />
-        <Routes>
+      <div className="sherd-container-all">
+        {/* <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={sherds.map(sherd => <ShowSherds key ={sherd.id} sherd={sherd}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds}/>} />
-        </Routes>
+        </Routes> */}
       </div>
     </div>
   );
