@@ -22,7 +22,7 @@ const ShowDetails = ({sherds}) => {
     marginLeft: "32%",
     marginRight: "32%",
     marginBottom: "25%",
-    textAlign:"center", 
+    textAlign:"center" 
   }
   
   const currSherd = sherds.find(sherd => sherd.id === +id)
@@ -49,13 +49,13 @@ const ShowDetails = ({sherds}) => {
           <div>
             <h2>background-color: </h2>
             <div className="color-container">
-              {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
             <h2>color: </h2>
             <div className="color-container">
-              {colorPalette.map(color=> <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
             </div>            
           </div>
           <div></div>
