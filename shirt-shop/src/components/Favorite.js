@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import FavoriteContext from "../context/FavoriteContext";
 
-const Favorite = ({sherds}) => {
+const Favorite = () => {
   const [favoriteContext] = useContext(FavoriteContext)
   console.log(favoriteContext);
   return (
