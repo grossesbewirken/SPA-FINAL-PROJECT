@@ -18,9 +18,9 @@ const ShowDetails = ({sherds}) => {
     left:0,
     right:0,
     bottom:0,
-    marginTop: "20%",
-    marginLeft: "30%",
-    marginRight: "35%",
+    marginTop: "10%",
+    marginLeft: "32%",
+    marginRight: "32%",
     marginBottom: "25%",
     textAlign:"center", 
   }

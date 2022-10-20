@@ -7,18 +7,21 @@ const textStyle = {
   left:0,
   right:0,
   bottom:0,
-  marginTop: "12%",
-  marginLeft: "20%",
-  marginRight: "43%",
+  marginTop: "10%",
+  marginLeft: "32%",
+  marginRight: "32%",
   marginBottom: "25%",
-  textAlign:"center"
+  textAlign:"center",
+  LetterSpacing:"2px"
 }
+
+const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
 
   return (
     <Link className="link" to={`/products/${sherd.id}`}>
       <div className="sherds-all">
         <div className="img-container-all">
-          <img src={sherd.shirtColor.red} alt="shirt" width="150" /> 
+          <img src={sherd.shirtColor[colorPalette[Math.floor(Math.random() * colorPalette.length)]]} alt="shirt" width="200" /> 
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{sherd.text}</p> 
           </div>            

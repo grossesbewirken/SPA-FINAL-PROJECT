@@ -10,7 +10,6 @@ import './styles/App.scss';
 import sherds from "./data/products"
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
-console.log(sherds);
 
 function App() {
   return (
