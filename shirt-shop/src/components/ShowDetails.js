@@ -57,7 +57,7 @@ const ShowDetails = ({sherds}) => {
   }
   const favoriteHandler= ()=>{
     const newSherd = currSherd
-    setFavorite([newSherd])
+    setFavorite([...currSherd, newSherd])
     console.log("hallo");
   }
 
@@ -77,7 +77,7 @@ const ShowDetails = ({sherds}) => {
 
             <div className="details-single">
 
-              <div class="details-single-description">
+              <div className="details-single-description">
                 <span className="red-text">{"{ "}text: </span>
                 <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
                 <span className="text-details-all red-text">price: </span>
@@ -85,9 +85,9 @@ const ShowDetails = ({sherds}) => {
                 <span className="red-text">{" }"}</span>
               </div>
 
-              <div class="details-single-buttons">
+              <div className="details-single-buttons">
                 <button>warenkorb</button>
-                <button onclick={favoriteHandler}>herz</button>
+                <button onClick={favoriteHandler}>herz</button>
               </div>
 
             </div>
