@@ -21,18 +21,21 @@ const ShowDetails = ({sherds}) => {
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
 
+  console.log(currSherd);
+  console.log(favorite);
+  
   const textStyle = {
     color: `${currSherd.fontColor}`,
     position: "absolute",
     top:0,
     left:0,
     right:0,
-    bottom:0,
+    bottom:300,
     marginTop: "10%",
     marginLeft: "32%",
     marginRight: "32%",
     marginBottom: "25%",
-    textAlign:"center" 
+    textAlign:"center",
   }
   
   
@@ -52,9 +55,11 @@ const ShowDetails = ({sherds}) => {
     const size = event.target.innerText
     setCurrSherd({...currSherd, size:size})
   }
-  const favoriteHandler= ()=>[
-    setFavorite([...favorite, currSherd])
-  ]
+  const favoriteHandler= ()=>{
+    const newSherd = currSherd
+    setFavorite([newSherd])
+    console.log("hallo");
+  }
 
   return (
     <div>
@@ -74,7 +79,7 @@ const ShowDetails = ({sherds}) => {
               <span>{currSherd.price.toFixed(2)} €uro</span>
               <span className="red-text">{" }"}</span>
               <button>warenkorb</button>
-              <button onclick={favoriteHandler}>herz</button>
+              <button type="button" onclick={favoriteHandler}>herz</button>
             </div>
           </div>
         </div>   
