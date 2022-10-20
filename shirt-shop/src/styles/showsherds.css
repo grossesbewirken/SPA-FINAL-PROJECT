@@ -1,3 +1,6 @@
+.hidden{
+  visibility:hidden;
+}
 .sherd-container-all{
   display:flex;
   flex-wrap:wrap;
@@ -8,10 +11,12 @@
   margin:25px;
   width: 200px;
   display:flex;
-  flex-direction: column;
+  flex-direction:column;
   border:1px solid black;
 }
-
+.sherd-text-all{
+  line-height: -50px,
+}
 .red-text{
   color:red;
 }
@@ -39,45 +44,141 @@
   display: flex;
 }
 .circle{
-  border:1px solid black;
-  width:25px;
-  height:25px;
+  border:1px solid white;
+  width:40px;
+  height:40px;
   border-radius: 50%;
   margin: 5px;
   cursor:pointer;
-}
-.black{
-  background-color:black
+  display: flex;
 }
 
-.beige{
-  background-color: beige;
+.column{
+  display: flex;
+  flex-direction: column;
 }
 
-.blue{
-  background-color: blue;
+.row{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem
 }
 
-.grey{
-  background-color: grey;
+.circle *{
+  justify-content: center;
 }
 
-.lime{
-  background-color: lime;
-}
-
-.oliv{
-  background-color: olive;
-}
-
-.orange{
-  background-color: orange;
-}
 
 .red{
-  background-color: red;
+  background-color:rgb(200, 0, 50);
+}
+.darkred{
+  background-color: rgb(125, 0, 50);
+}
+.red-grad-135{
+  background: linear-gradient(135deg, rgb(200, 0, 50)30%, rgb(125,0,50)80%);
 }
 
+
+
+
 .white{
-  background-color: white;
+  background-color: rgb(250, 250, 250);
+}
+.darkwhite{
+  background-color: rgb(200, 200, 200);
+}
+.white-grad-135{
+  background: linear-gradient(135deg, rgb(250, 250, 250)30%, rgb(200, 200, 200)80%);
+}
+
+
+
+
+.orange{
+  background-color: rgb(250, 125, 0);
+}
+.darkorange{
+  background-color: rgb(175, 75, 0);
+}
+.orange-grad-135{
+  background: linear-gradient(135deg, rgb(250, 125, 0)30%, rgb(175, 75, 0)80%);
+}
+
+
+
+
+.lime{
+  background-color: rgb(125, 250, 0);
+}
+.darklime{
+  background-color: rgb(50, 125, 0);
+}
+.lime-grad-135{
+  background: linear-gradient(135deg, rgb(125, 250, 0)30%, rgb(50, 125, 0)80%);
+}
+
+
+
+
+.black{
+  background-color: rgb(25, 25, 25);
+}
+.darkblack{
+  background-color: rgb(0, 0, 0);
+}
+.black-grad-135{
+  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(0, 0, 0)80%);
+}
+
+
+
+
+.grey{
+  background-color: rgb(125, 125, 125);
+}
+.darkgrey{
+  background-color: rgb(75, 75, 75);
+}
+.grey-grad-135{
+  background: linear-gradient(135deg, rgb(125, 125, 125)30%, rgb(75, 75, 75)80%);
+}
+
+
+
+
+.oliv{
+  background-color: rgb(100, 100, 0);
+}
+.darkoliv{
+  background-color: rgb(60, 60, 0);
+}
+.oliv-grad-135{
+  background: linear-gradient(135deg, rgb(100, 100, 0)30%, rgb(60, 60, 0)80%);
+}
+
+
+
+
+.beige{
+  background-color: rgb(250, 200, 125);
+}
+.darkbeige{
+  background-color: rgb(200, 150, 75);
+}
+.beige-grad-135{
+  background: linear-gradient(135deg, rgb(250, 200, 125)30%, rgb(200, 150, 75)80%);
+}
+
+
+
+
+.blue{
+  background-color: rgb(0, 100, 200);
+}
+.darkblue{
+  background-color: rgb(0, 50, 150);
+}
+.blue-grad-135{
+  background: linear-gradient(135deg, rgb(0, 100, 200)30%, rgb(0, 50, 150)80%);
 }

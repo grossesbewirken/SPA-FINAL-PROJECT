@@ -14,6 +14,7 @@
     "author": "Martin",
     "text": "Slack mich am Arsch",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -25,7 +26,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -35,6 +36,7 @@
     "author": "anonym",
     "text": "Spiel mir das Lied vom Code!",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -46,7 +48,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -56,6 +58,7 @@
     "author": "anonym",
     "text": "Commit, ik will dir was zeigen :smirk:",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -67,7 +70,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -77,6 +80,7 @@
     "author": "Jeff",
     "text": "Natural Born Developer",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -88,7 +92,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -98,6 +102,7 @@
     "author": "anonym",
     "text": "Na, heute schon gep(f)usht? Coder-Sprache kann Leben retten!",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -109,7 +114,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -119,6 +124,7 @@
     "author": "Jeff",
     "text": "Hypure Hypure",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -130,7 +136,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -140,6 +146,7 @@
     "author": "anonym",
     "text": "2B || !2B",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -151,7 +158,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -161,6 +168,7 @@
     "author": "anonym",
     "text": "Loop Skywalker",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -172,7 +180,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -182,6 +190,7 @@
     "author": "anonym",
     "text": "Loop, die Macht ist mit dir!",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -193,7 +202,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -203,6 +212,7 @@
     "author": "anonym",
     "text": "Warum nicht gleich? || ?!=",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -214,7 +224,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -224,6 +234,7 @@
     "author": "anonym",
     "text": "This is the &&",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -235,7 +246,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Music",
     "price": 19.90
@@ -245,6 +256,7 @@
     "author": "anonym",
     "text": "Leg&&ary",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -256,7 +268,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -266,6 +278,7 @@
     "author": "anonym",
     "text": "We all live in a rgb(255, 255, 0) submarine",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -277,7 +290,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Music",
     "price": 19.90
@@ -287,6 +300,7 @@
     "author": "anonym",
     "text": "!verst&&en",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -298,7 +312,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -308,6 +322,7 @@
     "author": "anonym",
     "text": "mk <3 !war",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -319,7 +334,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -329,6 +344,7 @@
     "author": "anonym",
     "text": "||wurm",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -340,7 +356,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -350,6 +366,7 @@
     "author": "anonym",
     "text": "Pulmentum Clava, taste the chaos...",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -361,7 +378,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -371,6 +388,7 @@
     "author": "anonym",
     "text": "!Kein Problem",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -382,7 +400,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -392,6 +410,7 @@
     "author": "anonym",
     "text": "So ein Slice...",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -403,7 +422,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -413,6 +432,7 @@
     "author": "anonym",
     "text": "Pulp Function",
     "date": "",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -424,7 +444,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -434,6 +454,7 @@
     "author": "Florian",
     "text": "Stranger Strings",
     "date": "2022-07-14",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -445,7 +466,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -455,6 +476,7 @@
     "author": "Martin",
     "text": "coffee.filter() returned immer einen 'Brewlean'",
     "date": "2022-07-13",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -466,7 +488,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -476,6 +498,7 @@
     "author": "anonym",
     "text": "Echt !einfach",
     "date": "2022.07.15",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -487,7 +510,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -497,6 +520,7 @@
     "author": "Martin",
     "text": "My git pull is faster than yours! ",
     "date": "2022-07-22",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -508,7 +532,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -518,6 +542,7 @@
     "author": "Uwe",
     "text": "error functions !arrow functions",
     "date": "2022-07-15",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -529,7 +554,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -539,6 +564,7 @@
     "author": "Martin",
     "text": "Captain Jack Sp=>",
     "date": "2022-07-16",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -550,7 +576,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -560,6 +586,7 @@
     "author": "Martin",
     "text": "Roses are red, violets are blue, unexpected error in line 42",
     "date": "2022-07-20",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -571,7 +598,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -581,6 +608,7 @@
     "author": "Martin",
     "text": "null > 0",
     "date": "2022-07-21",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -592,7 +620,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -602,6 +630,7 @@
     "author": "Carola",
     "text": "Warum pushen wenn man poppen kann?",
     "date": "2022-07-21",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -613,7 +642,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -623,6 +652,7 @@
     "author": "Martin",
     "text": "Pull Metal Jacket",
     "date": "2022-07-21",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -634,7 +664,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -644,6 +674,7 @@
     "author": "Martin",
     "text": ":): => Schrödingers Smiley",
     "date": "2022-07-21",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -655,7 +686,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -665,6 +696,7 @@
     "author": "Robert",
     "text": ">||der",
     "date": "2022-07-21",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -676,7 +708,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -686,6 +718,7 @@
     "author": "Uwe",
     "text": "Badge'l'||'ette'",
     "date": "2022-08-22",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -697,7 +730,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -707,6 +740,7 @@
     "author": "Martin",
     "text": "Sieht ganz ||dentlich aus!",
     "date": "2022-08-30",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -718,7 +752,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -728,6 +762,7 @@
     "author": "Ella",
     "text": "Fetch me if you can!",
     "date": "2022-09-12",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -739,7 +774,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -749,6 +784,7 @@
     "author": "Martin",
     "text": "Link One 80 to='' ",
     "date": "2022-09-28",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -760,7 +796,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Music",
     "price": 19.90
@@ -770,6 +806,7 @@
     "author": "Martin",
     "text": "<Modal/> Combat",
     "date": "2022-10-11",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -781,7 +818,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90
@@ -791,6 +828,7 @@
     "author": "Jeff",
     "text": "Coden? Nicht ohne Mucke im ||!",
     "date": "2022-10-11",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -802,7 +840,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -812,6 +850,7 @@
     "author": "Martin",
     "text": "up-g-mount-@!",
     "date": "2022-10-11",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -823,7 +862,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Developer Philosophie",
     "price": 19.90
@@ -833,6 +872,7 @@
     "author": "Jeff",
     "text": "Back&& Mounten",
     "date": "2022-10-11",
+    "backgroundColor":"black",
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -844,7 +884,7 @@
       "red":redSherd,
       "white": whiteSherd
     },
-    "font-color": "black",
+    "fontColor": "black",
     "size": "M",
     "category": "Movie",
     "price": 19.90

@@ -19,6 +19,8 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
+import Favorite from "./components/Favorite";
+
 console.log(sherds);
 library.add(faMagnifyingGlass);
 
@@ -56,6 +58,7 @@ function App() {
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds}/>} />
+          <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
         </Routes>
       </div>
     </div>

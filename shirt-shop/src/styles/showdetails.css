@@ -1,0 +1,13 @@
+.cardd{
+    background-image: radial-gradient(circle, rgb(45, 45, 45)30%,rgb(0, 0, 0));
+}
+
+.customize{
+    background: linear-gradient(135deg, rgb(45, 45, 45)30%, rgb(0,0,0)80%);
+    color: white;
+    padding: 2rem
+}
+
+.customize h5{
+    margin-top: 2rem;
+}

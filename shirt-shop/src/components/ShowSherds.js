@@ -1,4 +1,6 @@
 import "../styles/showsherds.css"
+
+
 import { Link } from "react-router-dom";
 const ShowSherds = ({sherd}) => {
 const textStyle = {
@@ -18,7 +20,7 @@ const textStyle = {
 const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
 
   return (
-    <div className="sherds-all">
+    <div className="sherds-all black-135-deg">
       <Link className="link" to={`/products/${sherd.id}`}>
         <div className="img-container-all">
           <img src={sherd.sherdColor[colorPalette[Math.floor(Math.random() * colorPalette.length)]]} alt="shirt" width="200" /> 
@@ -26,7 +28,7 @@ const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", 
             <p className="sherd-text-all">{sherd.text}</p> 
           </div>            
         </div>
-    </Link>
+      </Link>
         <div className="details-all">
           <span className="red-text">{"{ "}text: </span>
           <span className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
@@ -34,7 +36,7 @@ const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", 
           <span>{sherd.price.toFixed(2)} €uro</span>
           <span className="red-text">{" }"}</span>
         </div>      
-      </div>    
+      </div>
   );
 };
 
