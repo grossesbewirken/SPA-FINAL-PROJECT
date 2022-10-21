@@ -19,19 +19,18 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
   const filterMovie = () => {
     const newList = sherds.filter(sherd => sherd.category === "Movie")
     setFilterList(newList)
-    console.log(newList);
   }
   const filterMusic = () => {
     const newList = sherds.filter(sherd => sherd.category === "Music")
     setFilterList(newList)
-    console.log(newList);
-
   }
   const filterPhilosophy = () => {
     const newList = sherds.filter(sherd => sherd.category === "Developer Philosophie")
     setFilterList(newList)
-    console.log(newList);
-
+  }
+  const filterNothing = () => {
+    const newList = []
+    setFilterList(newList)
   }
 
   return (
@@ -50,6 +49,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
           sherds.filter()
         </h4>
         <ul className="ul-sidebar">
+        <li className="li-sidebar" onClick={filterNothing}>Main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
           <li className="li-sidebar" onClick={filterMovie}>Movies && Series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
           <li className="li-sidebar" onClick={filterMusic}>Music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
           <li className="li-sidebar" onClick={filterPhilosophy}>Nerdic Philosophy <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>

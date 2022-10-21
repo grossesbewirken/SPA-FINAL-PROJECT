@@ -9,17 +9,22 @@ import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-so
 import { Link } from 'react-router-dom';
 
 
-
 // Styles Import
 import '../styles/header.scss';
 
 
 // Files Import
 import fjm from '../images/fjm-logo.png';
+import sherds from "../data/products";
 
 
+const Header = ({setFilterList}) => {
+  const inputHandler = (event)=>{
+    const searchTerm = event.target.value
+    const newFilter = sherds.filter(sherd => sherd.text.toLowerCase().includes(searchTerm.toLowerCase()))
+    setFilterList(newFilter)
+  }
 
-const Header = () => {
   return (
 <Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
     <Container fluid className="d-flex justify-content-between">
@@ -56,7 +61,7 @@ const Header = () => {
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               
             </span>
-            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1"/>
+            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>inputHandler(event)}/>
           </div>
             <Button
               variant="outline-dark"

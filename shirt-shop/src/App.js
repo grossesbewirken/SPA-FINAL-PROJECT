@@ -54,7 +54,7 @@ function App() {
 
   return (
   <div className="App">
-      <Header
+      <Header setFilterList={setFilterList}
       FontAwesomeIcon={FontAwesomeIcon}
       />
       <button className=
