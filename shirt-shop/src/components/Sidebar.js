@@ -1,6 +1,7 @@
 // Packages Import
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import ColorContext from "../context/colorContext";
+import { useNavigate } from "react-router-dom";
 
 
 // Styles Import
@@ -14,7 +15,7 @@ import sherds from "../data/products"
 
 const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
   const [colorContext] = useContext(ColorContext)
-
+  const navigate = useNavigate()
 
   const filterMovie = () => {
     const newList = sherds.filter(sherd => sherd.category === "Movie")
@@ -31,6 +32,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
   const filterNothing = () => {
     const newList = []
     setFilterList(newList)
+    navigate("/")
   }
 
   return (

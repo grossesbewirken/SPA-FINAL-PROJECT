@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import FavoriteContext from "../context/FavoriteContext";
 // import ColorContext from "../context/colorContext";
 import "../styles/text.css"
@@ -6,6 +7,7 @@ import "../styles/favoriten.css"
 
 const Favorite = () => {
   // const [colorContext] = useContext(ColorContext)
+  const navigate = useNavigate()
   const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
 
   const deleteFav = (sherd)=>{
@@ -40,10 +42,11 @@ const Favorite = () => {
               <p style={{color:sherd.backgroundColor}}> {" } "}</p>
               <button type="button" className="delete-button" onClick={()=>deleteFav(sherd)}>delete</button>
               <button type="button" className="delete-button" onClick={buyHandler}>buy</button>
-            </div>            
+            </div>   
         </div>
         )
       })}
+      <button onClick={()=>navigate("/")}>return Shop;</button>         
 
     </div>
   );
