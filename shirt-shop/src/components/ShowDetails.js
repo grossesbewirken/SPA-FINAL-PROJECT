@@ -41,11 +41,11 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
-    setCurrSherd({...currSherd, backgroundColor: color })
+    setCurrSherd({...currSherd, backgroundColor:color })
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
-    setCurrSherd({...currSherd, fontColor:color})
+    setCurrSherd({...currSherd, fontColor:colorContext[color]})
   }
   const customHandler = (event)=>{
     const color = event.target.value
