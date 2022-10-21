@@ -24,8 +24,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
   }, [currSherd])
-  console.log(currColor);
-  
+
   const textStyle = {
     color: `${currSherd.fontColor}`,
     position: "absolute",
@@ -38,8 +37,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
     marginRight: "32%",
     marginBottom: "25%",
     textAlign:"center",
-  }
-  
+  }  
   
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
@@ -47,7 +45,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
-    setCurrSherd({...currSherd, fontColor:colorContext[color]})
+    setCurrSherd({...currSherd, fontColor:color})
   }
   const customHandler = (event)=>{
     const color = event.target.value
