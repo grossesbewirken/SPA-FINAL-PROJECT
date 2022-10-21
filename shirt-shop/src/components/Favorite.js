@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import FavoriteContext from "../context/FavoriteContext";
+import ColorContext from "../context/colorContext";
 import "../styles/text.css"
 import "../styles/favoriten.css"
 
 const Favorite = () => {
+  const [colorContext] = useContext(ColorContext)
   const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
-  const deleteFav = (event, sherd)=>{
+
+  const deleteFav = (sherd)=>{
     const newFav = favoriteContext.filter(favSherd => favSherd !== sherd)
     setFavoriteContext(newFav)
   }
@@ -23,7 +26,7 @@ const Favorite = () => {
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="200" /> 
                 <div className="text-container-all" >
-                  <p className="sherd-text-all" style={{color:sherd.fontColor}}>{sherd.text} </p> 
+                  <p className="sherd-text-all" style={{color:colorContext[sherd.fontColor]}}>{sherd.text} </p> 
                 </div>            
               </div>   
             </div>
@@ -35,7 +38,7 @@ const Favorite = () => {
               <p>fontColor: {sherd.fontColor},</p>
               <p>value: {sherd.price.toFixed(2)}€uro </p>
               <p style={{color:sherd.backgroundColor}}> {" } "}</p>
-              <button type="button" className="delete-button" onClick={(event)=>deleteFav(event, sherd)}>delete</button>
+              <button type="button" className="delete-button" onClick={()=>deleteFav(sherd)}>delete</button>
               <button type="button" className="delete-button" onClick={buyHandler}>buy</button>
             </div>            
         </div>

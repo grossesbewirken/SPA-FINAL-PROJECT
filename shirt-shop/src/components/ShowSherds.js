@@ -1,6 +1,5 @@
 import "../styles/showsherds.css"
 
-
 import { Link } from "react-router-dom";
 const ShowSherds = ({sherd}) => {
 const textStyle = {
@@ -16,7 +15,7 @@ const textStyle = {
   textAlign:"center",
 }
 
-const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
 
   return (
     <div className="sherds-all black-135-deg">

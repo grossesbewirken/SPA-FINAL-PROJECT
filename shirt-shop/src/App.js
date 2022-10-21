@@ -29,6 +29,7 @@ library.add(faMagnifyingGlass);
 
 function App() {
   // const [color, setColor] = useContext(ColorContext)
+  const [filterList, setFilterList] = useState([])
   const [toggle, setToggle] = useState(true);
   const showSidebar = () => {
     setToggle(curr => !curr);
@@ -70,12 +71,14 @@ function App() {
         <div className=
           {`sidebar-container-all  
           ${toggle ? "hide-sidebar" : ""}`}>
-        <Sidebar toggle={toggle} showSidebar={showSidebar} currColor={currColor} setCurrColor={setCurrColor}/>
+        <Sidebar toggle={toggle} showSidebar={showSidebar} currColor={currColor} setCurrColor={setCurrColor} setFilterList={setFilterList}/>
       </div>
       <div className="sherd-container-all">
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
-          <Route path="/" element={sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
+          <Route path="/" element={filterList.length === 0 ? 
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
+          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>} />
           <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
         </Routes>
