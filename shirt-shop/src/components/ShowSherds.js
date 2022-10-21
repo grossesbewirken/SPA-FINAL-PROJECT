@@ -16,11 +16,11 @@ const textStyle = {
   textAlign:"center",
 }
 
-const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red", "white"]
+const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "red"]
 
   return (
-    <div className="sherds-all black-135-deg">
-      <Link className="link" to={`/products/${sherd.id}`}>
+    <div className="sherds-all black-grad-135">
+      <Link className="link " to={`/products/${sherd.id}`}>
         <div className="img-container-all">
           <img src={sherd.sherdColor[colorPalette[Math.floor(Math.random() * colorPalette.length)]]} alt="shirt" width="200" /> 
           <div className="text-container-all" style={textStyle}>

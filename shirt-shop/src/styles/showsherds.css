@@ -5,14 +5,19 @@
   display:flex;
   flex-wrap:wrap;
   flex: 3;
+  margin: 5px
 }
 
 .sherds-all{
-  margin:25px;
-  width: 200px;
+  margin:5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 300px;
+  height: 300px;
   display:flex;
   flex-direction:column;
-  border:1px solid black;
+  border-radius: 10px;
+
 }
 .sherd-text-all{
   line-height: -50px,
@@ -22,7 +27,7 @@
 }
 
 .link  {
-  color:black;
+  color:white;
   text-decoration:none;
 }
 .link:hover{
