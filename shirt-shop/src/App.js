@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-// import ColorContext from './context/colorContext';
-// import { useContext } from 'react';
-
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
 import FavoriteContext from "./context/FavoriteContext";
@@ -24,11 +21,7 @@ import Favorite from "./components/Favorite";
 
 library.add(faMagnifyingGlass);
 
-
-
-
 function App() {
-  // const [color, setColor] = useContext(ColorContext)
   const [filterList, setFilterList] = useState([])
   const [toggle, setToggle] = useState(true);
   const showSidebar = () => {

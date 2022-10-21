@@ -1,12 +1,10 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import FavoriteContext from "../context/FavoriteContext";
-// import ColorContext from "../context/colorContext";
 import "../styles/text.css"
 import "../styles/favoriten.css"
 
 const Favorite = () => {
-  // const [colorContext] = useContext(ColorContext)
   const navigate = useNavigate()
   const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
 
@@ -15,7 +13,7 @@ const Favorite = () => {
     setFavoriteContext(newFav)
   }
   const buyHandler = ()=>{
-
+    
   }
 
   return (

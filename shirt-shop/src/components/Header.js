@@ -21,7 +21,10 @@ import sherds from "../data/products";
 const Header = ({setFilterList}) => {
   const inputHandler = (event)=>{
     const searchTerm = event.target.value
-    const newFilter = sherds.filter(sherd => sherd.text.toLowerCase().includes(searchTerm.toLowerCase()))
+    const newFilter = sherds.filter(sherd => 
+      sherd.text.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      sherd.author.toLocaleLowerCase().includes(searchTerm.toLowerCase()) ||
+      sherd.date.includes(searchTerm))
     setFilterList(newFilter)
   }
 
