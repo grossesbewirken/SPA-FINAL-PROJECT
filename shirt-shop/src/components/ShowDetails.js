@@ -23,6 +23,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currSherd])
 
   const textStyle = {

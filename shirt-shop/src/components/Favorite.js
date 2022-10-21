@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import FavoriteContext from "../context/FavoriteContext";
-import ColorContext from "../context/colorContext";
+// import ColorContext from "../context/colorContext";
 import "../styles/text.css"
 import "../styles/favoriten.css"
 
 const Favorite = () => {
-  const [colorContext] = useContext(ColorContext)
+  // const [colorContext] = useContext(ColorContext)
   const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
 
   const deleteFav = (sherd)=>{

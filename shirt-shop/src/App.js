@@ -40,10 +40,9 @@ function App() {
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
     if(getFav !== null && getFav.length !== 0){
-      console.log("hallo");
       setFavorite(getFav)
-    }
-    console.log("nichtHallo");
+        }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   useEffect(()=>{
