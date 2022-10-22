@@ -14,12 +14,10 @@ console.log(sherd);
 const textStyle = {
   position: "absolute",
   top:0,
-  left:0,
-  right:0,
+  left:19,
+  right:20,
   bottom:0,
-  marginTop: "10%",
-  marginLeft: "32%",
-  marginRight: "32%",
+  marginTop: "8%",
   marginBottom: "25%",
   textAlign:"center",
 }
@@ -37,7 +35,7 @@ const favoriteHandler = () => {
     <div className="sherds-all black-grad-135">
       <Link className="link " to={`/products/${sherd.id}`}>
         <div className="img-container-all">
-          <img src={sherd.sherdColor[randomColor]} alt="shirt" width="200" /> 
+          <img src={sherd.sherdColor[randomColor]} alt="shirt" width="290" /> 
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{sherd.text}</p> 
           </div>            
