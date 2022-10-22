@@ -106,7 +106,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
                   icon={faHeart} />
                 </button>
               </div>
-
+              
             </div>
           </div>
         </div>   
