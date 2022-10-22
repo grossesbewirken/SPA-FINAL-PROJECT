@@ -1,4 +1,4 @@
-// Packages Import
+// I M P O R T   P A C K A G E S
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom';
 import { useContext } from "react";
 
 
+// I M P O R T   C O N T E X T
 import ColorContext from "../context/colorContext";
+
 
 // Styles Import
 import '../styles/header.scss';
@@ -21,7 +23,7 @@ import "../styles/App.scss"
 import sherds from "../data/products";
 
 
-const Header = ({setFilterList, currColor, setCurrColor}) => {
+const Header = ({setFilterList, currColor}) => {
   const inputHandler = (event)=>{
     event.preventDefault()
     const searchTerm = event.target.value
@@ -34,11 +36,11 @@ const Header = ({setFilterList, currColor, setCurrColor}) => {
   const [colorContext] = useContext(ColorContext);
 
   return (
-<Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
+<Navbar expand="lg" className="shadow-lg sticky-top navbar">
     <Container fluid className="d-flex justify-content-between">
       <Navbar bg="dark">
         <Container>
-        <Navbar.Brand href="#home" className="text-white">
+        <Navbar.Brand href="#home" className="text-white header-hl">
         <span style={{color: colorContext[currColor]}}>{"nerd"}</span>sherd
         </Navbar.Brand>
         </Container>
@@ -55,12 +57,10 @@ const Header = ({setFilterList, currColor, setCurrColor}) => {
         </Nav>
         <Form onChange={(event)=>inputHandler(event)} className="d-flex justify-content-end">
           <div className="input-group">
-            <span className="input-group-text search" id="basic-addon1">
-                
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-              
-            </span>
-            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>inputHandler(event)}/>
+            <input type="text" 
+              className="me-2 form-control searchfield" placeholder="Search" 
+              aria-label="Username" aria-describedby="basic-addon1" 
+              onChange={(event)=>inputHandler(event)}/>
             </div>
             <Link className="link" to="/favoriten">
               <Button

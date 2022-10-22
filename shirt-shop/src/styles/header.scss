@@ -59,8 +59,24 @@ input[type="color"]:focus,
 .uneditable-input:focus {  
   border-color: grey;
   box-shadow: none;
-  // border-color: rgba(126, 239, 104, 0.8);
-  // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
   outline: 0 none;
 }
 
+
+.navbar{
+  background-color: #212529;
+}
+
+.searchfield{
+  border: 1px solid white;
+  border-radius: 50px;
+  width: 75px;
+  height: 3rem;
+  background-color: rgba(0,0,0,0)
+}
+
+.header-hl{
+  font-weight: 600;
+  font-size: 1.75rem;
+  transform: rotate(-5deg);
+}
