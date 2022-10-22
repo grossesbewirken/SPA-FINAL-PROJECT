@@ -13,8 +13,6 @@ import ShoppingContext from "../context/ShoppingContext";
 
 // Files Import
 
-
-
 const ShowSherds = ({sherd}) => {
 const [randomColor, setRandomColor] = useState("black");
 const [favorite, setFavorite] = useContext(FavoriteContext);

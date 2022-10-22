@@ -49,35 +49,21 @@ function App() {
   // useEffects to set the choosen favorite "sherds" in the localStorage and get them back after reload the side
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
-    // const getGoods = JSON.parse(localStorage.getItem("goods"))
+    const getGoods = JSON.parse(localStorage.getItem("goods"))
     if(getFav !== null && getFav.length !== 0){
       setFavorite(getFav)
     }
-    // if(getGoods !== null && getGoods.length !== 0){
-    //   setGoods(getGoods)
-    // }
+    if(getGoods !== null && getGoods.length !== 0){
+      setGoods(getGoods)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   useEffect(()=>{
     localStorage.setItem("favorite", JSON.stringify(favorite))
-    // localStorage.setItem("goods", JSON.stringify(goods))
-  }, [favorite, /*goods*/])
+    localStorage.setItem("goods", JSON.stringify(goods))
+  }, [favorite, goods])
   
-  // useEffects to set the Shopping Cart and their "sherds" in the localStorage and get them back after reload the side
-  // useEffect(()=>{
-  //   const getGoods = JSON.parse(localStorage.getItem("goods"))
-  //   if(getGoods !== null && getGoods.length !== 0){
-  //     setGoods(getGoods)
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // },[])
-  
-  // useEffect(()=>{
-  //   localStorage.setItem("goods", JSON.stringify(goods))
-  // },[goods])
-  
-
   return (
   <div className="App">
     {/* Toggle shows the Carousel until the carouselToggle is turned to false (with onClick on "enter"). Then the regular shop is shown */}
@@ -122,7 +108,7 @@ function App() {
           {<Favorite sherds={sherds} />}/>
           <Route path="/shoppingCart" element=
           {<ShoppingCart sherds={sherds} />} />
-          {/* <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
+          <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/>
         </Routes>
       </div>
     </div>

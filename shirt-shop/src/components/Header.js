@@ -76,15 +76,6 @@ const Header = ({setFilterList}) => {
                 icon={faHeart} />  
               </Button>
             </Link> 
-            <Link className="link" to="/favoriten">
-              <Button
-              variant="outline-dark"
-              className="me-2 text-white border border-light circle"
-              >
-              <FontAwesomeIcon className="heart"
-                icon={faHeart}/>  
-              </Button>
-            </Link>
             <Link className='link' to="/shoppingCart">
               <Button
               variant="outline-dark"
