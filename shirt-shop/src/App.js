@@ -24,25 +24,24 @@ library.add(faMagnifyingGlass);
 function App() {
   const [filterList, setFilterList] = useState([])
   const [toggle, setToggle] = useState(true);
-  const showSidebar = () => {
-    setToggle(curr => !curr);
-  }
-
   const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [currColor, setCurrColor] = useState("")
   
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
     if(getFav !== null && getFav.length !== 0){
       setFavorite(getFav)
-        }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
-
+  
   useEffect(()=>{
     localStorage.setItem("favorite", JSON.stringify(favorite))
   },[favorite])
-
-  const [currColor, setCurrColor] = useState("")
+  
+  const showSidebar = () => {
+    setToggle(curr => !curr);
+  }  
 
   return (
   <div className="App">

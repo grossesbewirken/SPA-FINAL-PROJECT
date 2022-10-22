@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import FavoriteContext from "../context/FavoriteContext";
+import FavoriteContext from "../context/FavoriteContext"
 import "../styles/text.css"
 import "../styles/favoriten.css"
+import ColorContext from "../context/colorContext";
 
 const Favorite = () => {
   const navigate = useNavigate()
   const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
+  const [colorContext] = useContext(ColorContext)
 
   const deleteFav = (sherd)=>{
     const newFav = favoriteContext.filter(favSherd => favSherd !== sherd)
@@ -31,13 +33,13 @@ const Favorite = () => {
               </div>   
             </div>
             <div className="favoriten-details">
-              <p style={{color:sherd.backgroundColor}}>sherdObject{"{"}</p>
+              <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
               <p>text: {sherd.text},</p>
               <p>author: {sherd.author},</p>
               <p>backgroundColor: {sherd.backgroundColor},</p>
               <p>fontColor: {sherd.fontColor},</p>
               <p>value: {sherd.price.toFixed(2)}€uro </p>
-              <p style={{color:sherd.backgroundColor}}> {" } "}</p>
+              <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
               <button type="button" className="delete-button" onClick={()=>deleteFav(sherd)}>delete</button>
               <button type="button" className="delete-button" onClick={buyHandler}>buy</button>
             </div>   
