@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // I M P O R T   C O N T E X T
 import FavoriteContext from "./context/FavoriteContext";
-
+import ShoppingContext from "./context/ShoppingContext";
 
 // Files Import
 import sherds from "./data/products"
@@ -29,32 +29,54 @@ import ShoppingCart from './components/ShoppingCart';
 library.add(faMagnifyingGlass);
 
 function App() {
+  const [currColor, setCurrColor] = useState("")
   const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [goods, setGoods] = useContext(ShoppingContext);
   const [filterList, setFilterList] = useState([])
+
+  // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
+
   const showCarousel = () => {
     setCarouselToggle(curr => !curr);
   }
-  console.log(carouselToggle)
 
-  const [currColor, setCurrColor] = useState("")
+  const showSidebar = () => {
+    setToggle(curr => !curr);
+  }  
   
+  // useEffects to set the choosen favorite "sherds" in the localStorage and get them back after reload the side
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
+    // const getGoods = JSON.parse(localStorage.getItem("goods"))
     if(getFav !== null && getFav.length !== 0){
       setFavorite(getFav)
     }
+    // if(getGoods !== null && getGoods.length !== 0){
+    //   setGoods(getGoods)
+    // }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   useEffect(()=>{
     localStorage.setItem("favorite", JSON.stringify(favorite))
-  },[favorite])
+    // localStorage.setItem("goods", JSON.stringify(goods))
+  }, [favorite, /*goods*/])
   
-  const showSidebar = () => {
-    setToggle(curr => !curr);
-  }  
+  // useEffects to set the Shopping Cart and their "sherds" in the localStorage and get them back after reload the side
+  // useEffect(()=>{
+  //   const getGoods = JSON.parse(localStorage.getItem("goods"))
+  //   if(getGoods !== null && getGoods.length !== 0){
+  //     setGoods(getGoods)
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // },[])
+  
+  // useEffect(()=>{
+  //   localStorage.setItem("goods", JSON.stringify(goods))
+  // },[goods])
+  
 
   return (
   <div className="App">
@@ -98,8 +120,9 @@ function App() {
           <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
           <Route path="/favoriten" element=
           {<Favorite sherds={sherds} />}/>
-          {/* <Route path="/shoppingCart" element={<ShoppingCart sherds={sherds} />} />
-          <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
+          <Route path="/shoppingCart" element=
+          {<ShoppingCart sherds={sherds} />} />
+          {/* <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
         </Routes>
       </div>
     </div>

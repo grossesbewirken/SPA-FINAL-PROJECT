@@ -21,17 +21,17 @@ const Favorite = () => {
     const newFav = favoriteContext.filter(favSherd => favSherd !== sherd)
     setFavoriteContext(newFav)
   }
-  // const shoppingHandler = (sherd)=>{
-  //   const newGood = currSherd
-  //   setGood([...good, newGood])
-  // }
+  const shoppingHandler = (sherd) => {
+    const newGood = sherd;
+    setGoods([...goods, {...newGood}])
+  }
 
   return (
     <div>
       <h1>Favoriten</h1>
-      {favoriteContext.map((sherd) =>{ 
+      {favoriteContext.map((sherd, i) =>{ 
         return(
-          <div className="favorite-container flex">
+          <div className="favorite-container flex" key={i}>
             <div className="sherds-all black-135-deg">            
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="200" /> 
@@ -49,7 +49,7 @@ const Favorite = () => {
               <p>value: {sherd.price.toFixed(2)}€uro </p>
               <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
               <button type="button" className="delete-button" onClick={()=>deleteFav(sherd)}>delete</button>
-              {/* <button type="button" className="delete-button" onClick={shoppingHandler}>buy</button> */}
+              <button type="button" className="add-button" onClick={() => shoppingHandler(sherd)}>buy</button>
             </div>   
         </div>
         )
