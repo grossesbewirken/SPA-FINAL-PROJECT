@@ -1,10 +1,20 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import FavoriteContext from "../context/FavoriteContext";
 import "../styles/text.css"
 import "../styles/favoriten.css"
 
 const Favorite = () => {
-  const [favoriteContext] = useContext(FavoriteContext)
+  const navigate = useNavigate()
+  const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
+
+  const deleteFav = (sherd)=>{
+    const newFav = favoriteContext.filter(favSherd => favSherd !== sherd)
+    setFavoriteContext(newFav)
+  }
+  const buyHandler = ()=>{
+    
+  }
 
   return (
     <div>
@@ -28,10 +38,13 @@ const Favorite = () => {
               <p>fontColor: {sherd.fontColor},</p>
               <p>value: {sherd.price.toFixed(2)}€uro </p>
               <p style={{color:sherd.backgroundColor}}> {" } "}</p>
-            </div>            
+              <button type="button" className="delete-button" onClick={()=>deleteFav(sherd)}>delete</button>
+              <button type="button" className="delete-button" onClick={buyHandler}>buy</button>
+            </div>   
         </div>
         )
       })}
+      <button onClick={()=>navigate("/")}>return Shop;</button>         
 
     </div>
   );

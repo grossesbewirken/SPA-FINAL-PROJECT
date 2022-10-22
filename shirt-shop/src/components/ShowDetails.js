@@ -8,6 +8,7 @@ import FavoriteContext from "../context/FavoriteContext";
 // Styles Import
 import "../styles/showdetails.css"
 
+
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
@@ -21,9 +22,9 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currSherd])
-  console.log(currColor);
-  
+
   const textStyle = {
     color: `${currSherd.fontColor}`,
     position: "absolute",
@@ -40,7 +41,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
-    setCurrSherd({...currSherd, backgroundColor: color })
+    setCurrSherd({...currSherd, backgroundColor:color })
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]

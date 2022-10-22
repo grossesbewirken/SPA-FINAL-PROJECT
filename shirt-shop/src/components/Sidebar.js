@@ -1,6 +1,7 @@
 // Packages Import
-import { useContext } from "react";
+import { useContext} from "react";
 import ColorContext from "../context/colorContext";
+import { useNavigate } from "react-router-dom";
 
 
 // Styles Import
@@ -10,9 +11,29 @@ import "../styles/showsherds.css"
 
 // Files Import
 import fjm from '../images/fjm-logo.png';
+import sherds from "../data/products"
 
-const Sidebar = ({toggle, showSidebar, currColor}) => {
-  const [colorContext, setColorContext] = useContext(ColorContext)
+const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
+  const [colorContext] = useContext(ColorContext)
+  const navigate = useNavigate()
+
+  const filterMovie = () => {
+    const newList = sherds.filter(sherd => sherd.category === "Movie")
+    setFilterList(newList)
+  }
+  const filterMusic = () => {
+    const newList = sherds.filter(sherd => sherd.category === "Music")
+    setFilterList(newList)
+  }
+  const filterPhilosophy = () => {
+    const newList = sherds.filter(sherd => sherd.category === "Developer Philosophie")
+    setFilterList(newList)
+  }
+  const filterNothing = () => {
+    const newList = []
+    setFilterList(newList)
+    navigate("/")
+  }
 
   return (
     <div className="sidebar">
@@ -31,10 +52,10 @@ const Sidebar = ({toggle, showSidebar, currColor}) => {
           sherds.filter()
         </h4>
         <ul className="ul-sidebar">
-          <li className="li-sidebar">Movies <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar">Series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar">Music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar">Nerdic Philosophy <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+        <li className="li-sidebar" onClick={filterNothing}>Main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar" onClick={filterMovie}>Movies && Series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar" onClick={filterMusic}>Music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar" onClick={filterPhilosophy}>Nerdic Philosophy <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
         </ul>
         <div>
           <img
