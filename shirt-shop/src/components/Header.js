@@ -78,7 +78,7 @@ const Header = ({setFilterList}) => {
             ><Link className="link" to="/favoriten">
               <FontAwesomeIcon className="heart"
                 icon={faHeart} />  
-             </Link> 
+            </Link> 
             </Button>
         </Form>
       </Navbar.Collapse>
