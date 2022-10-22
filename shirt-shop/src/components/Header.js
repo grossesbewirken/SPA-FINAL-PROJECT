@@ -67,24 +67,23 @@ const Header = ({setFilterList}) => {
             </span>
             <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>inputHandler(event)}/>
             </div>
-            <Link className='link' to="/shoppingCart">
-              <Button
-              variant="outline-dark"
-              className="me-2 text-white border border-light circle">
-              
-              <FontAwesomeIcon
-                icon={faCartShopping} />              
-              </Button>
-            </Link>
             <Link className="link" to="/favoriten">
               <Button
               variant="outline-dark"
               className="me-2 text-white border border-light circle"
               >
               <FontAwesomeIcon className="heart"
-                icon={faHeart} />  
+                icon={faHeart}/>  
               </Button>
-            </Link> 
+            </Link>
+            <Link className='link' to="/shoppingCart">
+              <Button
+              variant="outline-dark"
+              className="me-2 text-white border border-light circle">
+              <FontAwesomeIcon
+                icon={faCartShopping} />              
+              </Button>
+            </Link>
         </Form>
       </Navbar.Collapse>
 
