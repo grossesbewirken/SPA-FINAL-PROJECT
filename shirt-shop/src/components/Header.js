@@ -7,7 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import { useContext } from "react";
 
+
+import ColorContext from "../context/colorContext";
 
 // Styles Import
 import '../styles/header.scss';
@@ -15,12 +18,10 @@ import "../styles/App.scss"
 
 
 // Files Import
-import fjm from '../images/fjm-logo.png';
 import sherds from "../data/products";
 
 
-const Header = ({setFilterList}) => {
-  
+const Header = ({setFilterList, currColor, setCurrColor}) => {
   const inputHandler = (event)=>{
     event.preventDefault()
     const searchTerm = event.target.value
@@ -30,27 +31,19 @@ const Header = ({setFilterList}) => {
       sherd.date.includes(searchTerm))
     setFilterList(newFilter)
   }
+  const [colorContext] = useContext(ColorContext);
 
   return (
 <Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
     <Container fluid className="d-flex justify-content-between">
       <Navbar bg="dark">
         <Container>
-          <Navbar.Brand href="#home">
-            <img
-              src={fjm}
-              width="50"
-              height="50"
-              className="d-inline-block align-top"
-              alt="FJM logo"
-            />
-          </Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-white">
+        <span style={{color: colorContext[currColor]}}>{"nerd"}</span>sherd
+        </Navbar.Brand>
         </Container>
       </Navbar>
 
-        <Navbar.Brand className="text-white">
-          <span className="red-text">{"nerd"}</span>sherd
-        </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="navbarScroll" className="border border-light"/>
       <Navbar.Collapse id="navbarScroll">
@@ -69,15 +62,6 @@ const Header = ({setFilterList}) => {
             </span>
             <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>inputHandler(event)}/>
             </div>
-            <Link className="link" to="/favoriten">
-              <Button
-              variant="outline-dark"
-              className="me-2 text-white border border-light circle"
-              >
-              <FontAwesomeIcon className="heart"
-                icon={faHeart} />  
-              </Button>
-            </Link> 
             <Link className="link" to="/favoriten">
               <Button
               variant="outline-dark"

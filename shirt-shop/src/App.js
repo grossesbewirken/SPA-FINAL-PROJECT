@@ -91,9 +91,11 @@ function App() {
       (
     <>        
       <Header
-      FontAwesomeIcon={FontAwesomeIcon}
-      setFilterList={setFilterList}
-    />
+        currColor={currColor} 
+        setCurrColor={setCurrColor} 
+        FontAwesomeIcon={FontAwesomeIcon}
+        setFilterList={setFilterList}
+      />
     {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
     <button className=
     {`sidebar-outer-toggle-button 
@@ -109,7 +111,12 @@ function App() {
       <div className=
           {`sidebar-container-all  
           ${toggle ? "hide-sidebar" : ""}`}>
-        <Sidebar toggle={toggle} showSidebar={showSidebar} currColor={currColor} setCurrColor={setCurrColor} setFilterList={setFilterList}/>
+        <Sidebar
+          toggle={toggle} 
+          showSidebar={showSidebar} 
+          currColor={currColor} 
+          setCurrColor={setCurrColor} 
+          setFilterList={setFilterList}/>
       </div>
       <div className="sherd-container-all">
         <Routes>
