@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 
 // Styles Import
 import '../styles/carousel.scss';
-import "../styles/App.scss"
+import "../styles/App.scss";
+
+// I M P O R T   C O N T E X T
+import FavoriteContext from "../context/FavoriteContext";
+import ShoppingContext from "../context/ShoppingContext";
 
 // Files Import
 import fjm from '../images/fjm-logo.png';
@@ -61,12 +65,28 @@ const carouselPicArr =
   ]
 
 const Carousell = ({showCarousel}) => {
+  // const [randomColor, setRandomColor] = useState("black");
+  // const [favorite, setFavorite] = useContext(FavoriteContext);
+  // const [good, setGood] = useContext(ShoppingContext);
+
+  // const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
+
+  // const textStyle = {
+  //   position: "absolute",
+  //   top:0,
+  //   left:19,
+  //   right:20,
+  //   bottom:0,
+  //   marginTop: "8%",
+  //   marginBottom: "25%",
+  //   textAlign:"center",
+  // }
 
   return (
     <div className='outer-container'>
-      <div className="headline">
+      <h1 className="headline display-1" >
         nerdsherd
-      </div>
+      </h1>
       <Carousel className='carousel-inner-container'>
         {carouselPicArr.map((img, i) => {
           return (
