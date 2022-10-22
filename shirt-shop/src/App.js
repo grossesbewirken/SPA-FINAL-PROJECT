@@ -20,10 +20,12 @@ import Favorite from "./components/Favorite";
 import FavoriteContext from "./context/FavoriteContext";
 import Carousell from "./components/Carousell";
 import ShoppingCart from './components/ShoppingCart';
+
 library.add(faMagnifyingGlass);
 
 function App() {
   const [filterList, setFilterList] = useState([])
+  const [favorite, setFavorite] = useContext(FavoriteContext)
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
   const showCarousel = () => {
@@ -61,8 +63,9 @@ function App() {
       :
       (
     <>        
-    <Header
+      <Header
       FontAwesomeIcon={FontAwesomeIcon}
+      setFilterList={setFilterList}
     />
     {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
     <button className=
@@ -92,6 +95,7 @@ function App() {
         </Routes>
       </div>
     </div>
+    </>)}
   </div>
   );
 }
