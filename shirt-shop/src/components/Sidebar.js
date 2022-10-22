@@ -17,6 +17,7 @@ const Sidebar = ({toggle, showSidebar, currColor}) => {
   return (
     <div className="sidebar">
       <div>
+        {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
         <button className=
         {`sidebar-inner-toggle-button 
         ${!toggle ?

@@ -8,8 +8,6 @@ import FavoriteContext from "../context/FavoriteContext";
 // Styles Import
 import "../styles/showdetails.css"
 
-
-
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
@@ -38,8 +36,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
     marginRight: "32%",
     marginBottom: "25%",
     textAlign:"center",
-  }
-  
+  }  
   
   const colorHandler = (event)=>{
     const color = event.target.className.split(" ")[0]
@@ -126,8 +123,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
         </div>
         </div>
       </div>
-
-
     </div>
   );
 };
