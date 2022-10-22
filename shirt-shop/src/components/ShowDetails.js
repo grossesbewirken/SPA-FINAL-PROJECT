@@ -18,6 +18,8 @@ import ShoppingContext from "../context/ShoppingContext";
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
+
+
 const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   const { id } = useParams();
   const navigate = useNavigate();

@@ -7,6 +7,7 @@ import '../styles/carousel.scss';
 import "../styles/App.scss"
 
 // Files Import
+import fjm from '../images/fjm-logo.png';
 import carousel_black1 from "../images/carousel_black1.png";
 import carousel_black2 from "../images/carousel_black2.png";
 import carousel_black3 from "../images/carousel_black3.png";
@@ -64,7 +65,7 @@ const Carousell = ({showCarousel}) => {
   return (
     <div className='outer-container'>
       <div className="headline">
-        nerdshirt
+        nerdsherd
       </div>
       <Carousel className='carousel-inner-container'>
         {carouselPicArr.map((img, i) => {
@@ -87,6 +88,14 @@ const Carousell = ({showCarousel}) => {
           return Shop;
         </button>
       </Link>
+
+      <img
+        src={fjm}
+        width="45"
+        height="45"
+        className="d-inline-block align-top"
+        alt="FJM logo"
+      />
 
     </div>  
   );
