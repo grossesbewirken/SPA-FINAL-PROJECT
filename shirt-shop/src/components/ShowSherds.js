@@ -9,8 +9,7 @@ const [favorite, setFavorite] = useContext(FavoriteContext)
 const [randomColor, setRandomColor] = useState("black")
 
 const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
-console.log("random Color:", randomColor);
-console.log(sherd);
+
 const textStyle = {
   position: "absolute",
   top:0,
@@ -45,9 +44,9 @@ const favoriteHandler = () => {
       </Link>
         <div className="details-all">
           <span className="red-text">{"{ "}text: </span>
-          <span className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
+          <span style={{color:"white"}} className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
           <span className="text-details-all red-text">price: </span>
-          <span>{sherd.price.toFixed(2)} €uro</span>
+          <span style={{color:"white"}}>{sherd.price.toFixed(2)} €uro</span>
           <span className="red-text">{" }"}</span>
         </div>
         <div>

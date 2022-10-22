@@ -9,7 +9,7 @@ import FavoriteContext from "../context/FavoriteContext";
 import "../styles/showdetails.css"
 
 
-const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv","black"]
+const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds, currColor, setCurrColor}) => {
