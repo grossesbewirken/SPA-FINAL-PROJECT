@@ -1,3 +1,6 @@
+ import { useContext } from "react"
+ import ColorContext from "../context/colorContext"
+
  import beigeSherd from "../images/beige-sherd.png"
  import blackSherd from "../images/black-sherd.png"
  import blueSherd from "../images/blue-sherd.png"
@@ -8,13 +11,14 @@
  import redSherd from "../images/red-sherd.png"
  import whiteSherd from "../images/white-sherd.png"
 
- const products = [
+ const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
+  const products = [
   {
     "id":1,
     "author": "Martin",
     "text": "Slack mich am Arsch",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor": colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -36,7 +40,7 @@
     "author": "anonym",
     "text": "Spiel mir das Lied vom Code!",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -58,7 +62,7 @@
     "author": "anonym",
     "text": "Commit, ik will dir was zeigen :smirk:",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -80,7 +84,7 @@
     "author": "Jeff",
     "text": "Natural Born Developer",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -102,7 +106,7 @@
     "author": "anonym",
     "text": "Na, heute schon gep(f)usht? Coder-Sprache kann Leben retten!",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -124,7 +128,7 @@
     "author": "Jeff",
     "text": "Hypure Hypure",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -146,7 +150,7 @@
     "author": "anonym",
     "text": "2B || !2B",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -168,7 +172,7 @@
     "author": "anonym",
     "text": "Loop Skywalker",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -190,7 +194,7 @@
     "author": "anonym",
     "text": "Loop, die Macht ist mit dir!",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -212,7 +216,7 @@
     "author": "anonym",
     "text": "Warum nicht gleich? || ?!=",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -234,7 +238,7 @@
     "author": "anonym",
     "text": "This is the &&",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -256,7 +260,7 @@
     "author": "anonym",
     "text": "Leg&&ary",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -278,7 +282,7 @@
     "author": "anonym",
     "text": "We all live in a rgb(255, 255, 0) submarine",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -300,7 +304,7 @@
     "author": "anonym",
     "text": "!verst&&en",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -322,7 +326,7 @@
     "author": "anonym",
     "text": "mk <3 !war",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -344,7 +348,7 @@
     "author": "anonym",
     "text": "||wurm",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -366,7 +370,7 @@
     "author": "anonym",
     "text": "Pulmentum Clava, taste the chaos...",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -388,7 +392,7 @@
     "author": "anonym",
     "text": "!Kein Problem",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -410,7 +414,7 @@
     "author": "anonym",
     "text": "So ein Slice...",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -432,7 +436,7 @@
     "author": "anonym",
     "text": "Pulp Function",
     "date": "",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -454,7 +458,7 @@
     "author": "Florian",
     "text": "Stranger Strings",
     "date": "2022-07-14",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -476,7 +480,7 @@
     "author": "Martin",
     "text": "coffee.filter() returned immer einen 'Brewlean'",
     "date": "2022-07-13",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -498,7 +502,7 @@
     "author": "anonym",
     "text": "Echt !einfach",
     "date": "2022.07.15",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -520,7 +524,7 @@
     "author": "Martin",
     "text": "My git pull is faster than yours! ",
     "date": "2022-07-22",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -542,7 +546,7 @@
     "author": "Uwe",
     "text": "error functions !arrow functions",
     "date": "2022-07-15",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -564,7 +568,7 @@
     "author": "Martin",
     "text": "Captain Jack Sp=>",
     "date": "2022-07-16",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -586,7 +590,7 @@
     "author": "Martin",
     "text": "Roses are red, violets are blue, unexpected error in line 42",
     "date": "2022-07-20",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -608,7 +612,7 @@
     "author": "Martin",
     "text": "null > 0",
     "date": "2022-07-21",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -630,7 +634,7 @@
     "author": "Carola",
     "text": "Warum pushen wenn man poppen kann?",
     "date": "2022-07-21",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -652,7 +656,7 @@
     "author": "Martin",
     "text": "Pull Metal Jacket",
     "date": "2022-07-21",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -674,7 +678,7 @@
     "author": "Martin",
     "text": ":): => Schrödingers Smiley",
     "date": "2022-07-21",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -696,7 +700,7 @@
     "author": "Robert",
     "text": ">||der",
     "date": "2022-07-21",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -718,7 +722,7 @@
     "author": "Uwe",
     "text": "Badge'l'||'ette'",
     "date": "2022-08-22",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -740,7 +744,7 @@
     "author": "Martin",
     "text": "Sieht ganz ||dentlich aus!",
     "date": "2022-08-30",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -762,7 +766,7 @@
     "author": "Ella",
     "text": "Fetch me if you can!",
     "date": "2022-09-12",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -784,7 +788,7 @@
     "author": "Martin",
     "text": "Link One 80 to='' ",
     "date": "2022-09-28",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -806,7 +810,7 @@
     "author": "Martin",
     "text": "<Modal/> Combat",
     "date": "2022-10-11",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -828,7 +832,7 @@
     "author": "Jeff",
     "text": "Coden? Nicht ohne Mucke im ||!",
     "date": "2022-10-11",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -850,7 +854,7 @@
     "author": "Martin",
     "text": "up-g-mount-@!",
     "date": "2022-10-11",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,
@@ -872,7 +876,7 @@
     "author": "Jeff",
     "text": "Back&& Mounten",
     "date": "2022-10-11",
-    "backgroundColor":"black",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
       "black": blackSherd,

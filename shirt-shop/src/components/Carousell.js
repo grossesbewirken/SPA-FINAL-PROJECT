@@ -64,9 +64,9 @@ const Carousell = ({showCarousel}) => {
 
   return (
     <div className='outer-container'>
-      <div className="headline">
+      <h1 className="headline display-1" >
         nerdsherd
-      </div>
+      </h1>
       <Carousel className='carousel-inner-container'>
         {carouselPicArr.map((img, i) => {
           return (

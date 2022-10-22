@@ -37,12 +37,12 @@ const textStyle = {
 
 
 const favoriteHandler = () => {
-  const newFav = [...favorite, { ...sherd, backgroundColor: randomColor }];
+  const newFav = [...favorite, { ...sherd}];
   setFavorite(newFav);
 }
   
 const shoppingHandler = () => {
-  const newGood = [...good, { ...sherd, backgroundColor: randomColor }];
+  const newGood = [...good, { ...sherd}];
   setGood(newGood);
 }
 
@@ -50,16 +50,16 @@ const shoppingHandler = () => {
     <div className="sherds-all black-grad-135">
       <Link className="link " to={`/products/${sherd.id}`}>
         <div className="img-container-all">
-          <img src={sherd.sherdColor[randomColor]} alt="shirt" width="290" /> 
+          <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{sherd.text}</p> 
           </div>            
         </div>
       </Link>
         <div className="details-all">
-          <span style={{color: randomColor}}>{"{ "}text: </span>
+          <span style={{color: sherd.backgroundColor}}>{"{ "}text: </span>
           <span style={{color:"white"}} className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
-          <span style={{color: randomColor}}>price: </span>
+          <span style={{color: sherd.backgroundColor}}>price: </span>
           <span style={{color:"white"}}>{sherd.price.toFixed(2)} €uro</span>
           <span style={{color:"white"}}>{" }"}</span>
         </div>
