@@ -17,7 +17,7 @@ import FavoriteContext from "./context/FavoriteContext";
 import ShoppingContext from "./context/ShoppingContext";
 
 // Files Import
-import sherds from "./data/products"
+import sherds from "./data/products";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
@@ -29,6 +29,8 @@ import Carousell from "./components/Carousell";
 library.add(faMagnifyingGlass);
 
 function App() {
+  const [randomColor, setRandomColor] = useState("black")
+  const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"] 
   const [currColor, setCurrColor] = useState("")
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [goods, setGoods] = useContext(ShoppingContext);
@@ -71,7 +73,7 @@ function App() {
       carouselToggle
       ?
       (<Carousell
-        showCarousel={showCarousel}
+            showCarousel={showCarousel}
       />)
       :
       (
@@ -108,14 +110,14 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
-          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette} />): 
+          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>)} />
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
           <Route path="/favoriten" element=
           {<Favorite sherds={sherds} />}/>
           <Route path="/shoppingCart" element=
           {<ShoppingCart sherds={sherds} />} />
-          <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/>
+          {/* <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
         </Routes>
       </div>
     </div>

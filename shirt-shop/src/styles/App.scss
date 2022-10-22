@@ -1,14 +1,18 @@
-// SIDEAR SETTINGS
-
 .App {
   background-color: #212529;
-  
 }
-.outer-container{
-  width: 100%;
-  height:100vh;
-  overflow: hidden;
+
+.link  {
+  color:white;
+  text-decoration:none;
 }
+.link:hover{
+  color:white;
+  text-decoration:none;
+}
+
+// SIDEBAR SETTINGS
+
 .sidebar-content-flex {
   display: flex;
 }
@@ -39,16 +43,15 @@
   color: white;
 }
 
-
 button{
   background-color: rgba(0,0,0,0);
   text-decoration: none;
-  padding: 1rem;
   border: 1px solid white;
   border-radius: 50px !important;
-  padding-left: 2rem;
-  padding-right: 2rem;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hide-sidebar {

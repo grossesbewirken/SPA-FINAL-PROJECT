@@ -1,6 +1,6 @@
 // I M P O R T   P A C K A G E S
 // Packages Import
-import { useContext, useEffect,useState } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -13,12 +13,12 @@ import ShoppingContext from "../context/ShoppingContext";
 
 // Files Import
 
-const ShowSherds = ({sherd}) => {
+const ShowSherds = ({sherd, colorPalette, setRandomColor}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
 
-const [randomColor, setRandomColor] = useState("black")
-const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
+// const [randomColor, setRandomColor] = useState("black")
+// const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
 
 useEffect(()=>{
   setRandomColor(colorPalette[Math.floor(Math.random() * colorPalette.length)])
@@ -35,8 +35,6 @@ const textStyle = {
   marginBottom: "25%",
   textAlign:"center",
 }
-
-
 
 const favoriteHandler = () => {
   const newFav = [...favorite, { ...sherd}];
@@ -66,11 +64,16 @@ const shoppingHandler = () => {
           <span style={{color:"white"}}>{" }"}</span>
         </div>
         <div className="flex">
-        <button className="circle" onClick={favoriteHandler}>
-          <FontAwesomeIcon className="heart"
-          icon={faHeart} /></button>
-          <button onClick={shoppingHandler} className="circle"><FontAwesomeIcon
-          icon={faCartShopping}/></button>
+          <button className="circle"
+            onClick={favoriteHandler}>
+            <FontAwesomeIcon className="heart"
+              icon={faHeart} />
+          </button>
+          <button
+            onClick={shoppingHandler} className="circle">
+            <FontAwesomeIcon
+              icon={faCartShopping} />
+          </button>
         </div>      
       </div>
   );
