@@ -19,7 +19,9 @@ import sherds from "../data/products";
 
 
 const Header = ({setFilterList}) => {
+  
   const inputHandler = (event)=>{
+    event.preventDefault()
     const searchTerm = event.target.value
     const newFilter = sherds.filter(sherd => 
       sherd.text.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -57,16 +59,16 @@ const Header = ({setFilterList}) => {
             navbarScroll
         >
         </Nav>
-        <Form className="d-flex justify-content-end">
+        <Form onChange={(event)=>inputHandler(event)} className="d-flex justify-content-end">
           <div className="input-group">
             <span className="input-group-text search" id="basic-addon1">
                 
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               
             </span>
-            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>inputHandler(event)}/>
+            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" />
           </div>
-            <Button
+            <Button              
               variant="outline-dark"
               className="me-2 text-white border border-light circle">
               <FontAwesomeIcon

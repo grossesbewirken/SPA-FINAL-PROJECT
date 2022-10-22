@@ -19,7 +19,7 @@ import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
 import FavoriteContext from "./context/FavoriteContext";
 import Carousell from "./components/Carousell";
-import ShoppingCart from './components/ShoppingCart';
+// import ShoppingCart from './components/ShoppingCart';
 
 library.add(faMagnifyingGlass);
 
@@ -28,12 +28,20 @@ function App() {
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
+  const [randomColor, setRandomColor] = useState("black")
+  const [currColor, setCurrColor] = useState("")
+  const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
+
+  useEffect(()=>{
+    setRandomColor(colorPalette[Math.floor(Math.random() * colorPalette.length)])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+
   const showCarousel = () => {
     setCarouselToggle(curr => !curr);
   }
   console.log(carouselToggle)
 
-  const [currColor, setCurrColor] = useState("")
   
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
@@ -57,9 +65,7 @@ function App() {
     {
       carouselToggle
       ?
-      (<Carousell
-        showCarousel={showCarousel}          
-      />)
+      (<Carousell showCarousel={showCarousel}/>)
       :
       (
     <>        
@@ -88,9 +94,9 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} randomColor={randomColor} setRandomColor={setRandomColor}/>): 
           filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>} />
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds} randomColor={randomColor} currColor={currColor} setCurrColor={setCurrColor}/>} />
           <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
         </Routes>
       </div>

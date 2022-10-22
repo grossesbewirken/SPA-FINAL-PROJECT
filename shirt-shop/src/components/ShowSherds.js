@@ -1,14 +1,14 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 import "../styles/showsherds.css"
 import FavoriteContext from "../context/FavoriteContext";
 
 import { Link } from "react-router-dom";
-const ShowSherds = ({sherd}) => {
+const ShowSherds = ({sherd, randomColor, setRandomColor}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
-const [randomColor, setRandomColor] = useState("black")
 
-const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
+
+
 
 const textStyle = {
   position: "absolute",
@@ -23,9 +23,7 @@ const textStyle = {
   textAlign:"center",
 }
 
-useEffect(()=>{
-  setRandomColor(colorPalette[Math.floor(Math.random() * colorPalette.length)])
-},[])
+
 
 const favoriteHandler = () => {
   const newFav = [...favorite, {...sherd, backgroundColor: randomColor}]

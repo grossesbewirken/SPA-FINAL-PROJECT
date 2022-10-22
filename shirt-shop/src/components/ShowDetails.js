@@ -12,7 +12,7 @@ import "../styles/showdetails.css"
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds, currColor, setCurrColor}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
 
@@ -66,7 +66,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
         
         {/* C A R D */}
         <div className="img-container-single img-container-all cardd">
-          <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="650" />
+          <img src={currSherd.sherdColor[randomColor]} alt="" width="650" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>
