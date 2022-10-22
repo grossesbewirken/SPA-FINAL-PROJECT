@@ -90,8 +90,11 @@ function App() {
           <Route path="/" element={filterList.length === 0 ? 
           sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
           filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>} />
-          <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
+          <Route path="/favoriten" element=
+          {<Favorite sherds={sherds} />}/>
+          {/* <Route path="/shoppingCart" element={<ShoppingCart sherds={sherds} />} />
+          <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
         </Routes>
       </div>
     </div>
