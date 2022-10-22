@@ -7,7 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import { useContext } from "react";
 
+
+import ColorContext from "../context/colorContext";
 
 // Styles Import
 import '../styles/header.scss';
@@ -15,12 +18,12 @@ import "../styles/App.scss"
 
 
 // Files Import
-import fjm from '../images/fjm-logo.png';
 import sherds from "../data/products";
 
 
-const Header = ({setFilterList}) => {
+const Header = ({setFilterList, currColor, setCurrColor}) => {
   const inputHandler = (event)=>{
+    event.preventDefault()
     const searchTerm = event.target.value
     const newFilter = sherds.filter(sherd => 
       sherd.text.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -28,27 +31,19 @@ const Header = ({setFilterList}) => {
       sherd.date.includes(searchTerm))
     setFilterList(newFilter)
   }
+  const [colorContext] = useContext(ColorContext);
 
   return (
 <Navbar bg="dark" expand="lg" className="shadow-lg sticky-top">
     <Container fluid className="d-flex justify-content-between">
       <Navbar bg="dark">
         <Container>
-          <Navbar.Brand href="#home">
-            <img
-              src={fjm}
-              width="50"
-              height="50"
-              className="d-inline-block align-top"
-              alt="FJM logo"
-            />
-          </Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-white">
+        <span style={{color: colorContext[currColor]}}>{"nerd"}</span>sherd
+        </Navbar.Brand>
         </Container>
       </Navbar>
 
-        <Navbar.Brand className="text-white">
-          <span className="red-text">{"nerd"}</span>sherd
-        </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="navbarScroll" className="border border-light"/>
       <Navbar.Collapse id="navbarScroll">
@@ -58,7 +53,7 @@ const Header = ({setFilterList}) => {
             navbarScroll
         >
         </Nav>
-        <Form className="d-flex justify-content-end">
+        <Form onChange={(event)=>inputHandler(event)} className="d-flex justify-content-end">
           <div className="input-group">
             <span className="input-group-text search" id="basic-addon1">
                 
@@ -73,9 +68,9 @@ const Header = ({setFilterList}) => {
               className="me-2 text-white border border-light circle"
               >
               <FontAwesomeIcon className="heart"
-                icon={faHeart} />  
+                icon={faHeart}/>  
               </Button>
-            </Link> 
+            </Link>
             <Link className='link' to="/shoppingCart">
               <Button
               variant="outline-dark"

@@ -5,7 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
-
+import ShoppingCart from "./components/ShoppingCart"
 
 // I M P O R T   S T Y L I N G
 import './styles/App.scss';
@@ -24,7 +24,7 @@ import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
 import Carousell from "./components/Carousell";
-import ShoppingCart from './components/ShoppingCart';
+// import ShoppingCart from './components/ShoppingCart';
 
 library.add(faMagnifyingGlass);
 
@@ -33,7 +33,7 @@ function App() {
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [goods, setGoods] = useContext(ShoppingContext);
   const [filterList, setFilterList] = useState([])
-
+  console.log(sherds);
   // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
@@ -77,9 +77,11 @@ function App() {
       (
     <>        
       <Header
-      FontAwesomeIcon={FontAwesomeIcon}
-      setFilterList={setFilterList}
-    />
+        currColor={currColor} 
+        setCurrColor={setCurrColor} 
+        FontAwesomeIcon={FontAwesomeIcon}
+        setFilterList={setFilterList}
+      />
     {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
     <button className=
     {`sidebar-outer-toggle-button 
@@ -95,7 +97,12 @@ function App() {
       <div className=
           {`sidebar-container-all  
           ${toggle ? "hide-sidebar" : ""}`}>
-        <Sidebar toggle={toggle} showSidebar={showSidebar} currColor={currColor} setCurrColor={setCurrColor} setFilterList={setFilterList}/>
+        <Sidebar
+          toggle={toggle} 
+          showSidebar={showSidebar} 
+          currColor={currColor} 
+          setCurrColor={setCurrColor} 
+          setFilterList={setFilterList}/>
       </div>
       <div className="sherd-container-all">
         <Routes>

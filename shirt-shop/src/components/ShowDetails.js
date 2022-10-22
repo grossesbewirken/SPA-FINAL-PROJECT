@@ -18,9 +18,11 @@ import ShoppingContext from "../context/ShoppingContext";
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
+
+
 const ShowDetails = ({sherds, currColor, setCurrColor}) => {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const {id} = useParams()
+  const navigate = useNavigate()
 
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
@@ -88,11 +90,11 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
             <div className="details-single">
 
               <div className="details-single-description">
-                <span style={{color: currColor}}>{"{ "}text: </span>
+                <span style={{color: colorContext[currColor]}}>{"{ "}text: </span>
                 <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
-                <span style={{color: currColor}}>price: </span>
+                <span style={{color: colorContext[currColor]}}>price: </span>
                 <span>{currSherd.price.toFixed(2)} €uro</span>
-                <span style={{color: currColor}}>{" }"}</span>
+                <span style={{color: colorContext[currColor]}}>{" }"}</span>
               </div>
 
               <div className="details-single-buttons flex">
