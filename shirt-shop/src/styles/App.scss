@@ -1,3 +1,5 @@
+// SIDEAR SETTINGS
+
 .sidebar-content-flex {
   display: flex;
 }
@@ -28,7 +30,6 @@
   color: white;
 }
 
-
 .hide-sidebar {
   display: flex;
 }
@@ -49,9 +50,10 @@
   display: none;
 }
 
-// 992px 
+// CAROUSEL SETTINGS
 
-// MEDIA QUERY
+
+// MEDIA QUERY (992px is Breakpoint!)
 
 @media (max-width: 992px)
 {

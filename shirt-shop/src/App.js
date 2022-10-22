@@ -5,7 +5,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
-import FavoriteContext from "./context/FavoriteContext";
 
 // Styles Import
 import './styles/App.scss';
@@ -18,49 +17,69 @@ import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
+import FavoriteContext from "./context/FavoriteContext";
+import Carousell from "./components/Carousell";
+import ShoppingCart from './components/ShoppingCart';
 
 library.add(faMagnifyingGlass);
 
 function App() {
   const [filterList, setFilterList] = useState([])
-  const [toggle, setToggle] = useState(true);
-  const showSidebar = () => {
-    setToggle(curr => !curr);
-  }
-
   const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [toggle, setToggle] = useState(true);
+  const [carouselToggle, setCarouselToggle] = useState(true);
+  const showCarousel = () => {
+    setCarouselToggle(curr => !curr);
+  }
+  console.log(carouselToggle)
+
+  const [currColor, setCurrColor] = useState("")
   
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
     if(getFav !== null && getFav.length !== 0){
       setFavorite(getFav)
-        }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
-
+  
   useEffect(()=>{
     localStorage.setItem("favorite", JSON.stringify(favorite))
   },[favorite])
-
-  const [currColor, setCurrColor] = useState("")
+  
+  const showSidebar = () => {
+    setToggle(curr => !curr);
+  }  
 
   return (
   <div className="App">
-      <Header setFilterList={setFilterList}
+    {/* Toggle shows the Carousel until the carouselToggle is turned to false (with onClick on "enter"). Then the regular shop is shown */}
+    {
+      carouselToggle
+      ?
+      (<Carousell
+        showCarousel={showCarousel}          
+      />)
+      :
+      (
+    <>        
+      <Header
       FontAwesomeIcon={FontAwesomeIcon}
-      />
-      <button className=
-      // "sidebar-outer-toggle-button "
-      {`sidebar-outer-toggle-button 
-      ${toggle ?
-        "hide-outer-sidebar-button" :
-        "hide-outer-sidebar-button-onClick"}`}
-        onClick={showSidebar}
-      >
-        getSidebar
-      </button>
-    <div className="sidebar-content-flex">
-        <div className=
+      setFilterList={setFilterList}
+    />
+    {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
+    <button className=
+    {`sidebar-outer-toggle-button 
+    ${toggle ?
+      "hide-outer-sidebar-button" :
+      "hide-outer-sidebar-button-onClick"}`}
+      onClick={showSidebar}
+    >
+      getSidebar
+    </button>
+      <div className="sidebar-content-flex">
+      {/*Toggle regulates if the Sidebar is shown or not. It is also chained to the window size*/}
+      <div className=
           {`sidebar-container-all  
           ${toggle ? "hide-sidebar" : ""}`}>
         <Sidebar toggle={toggle} showSidebar={showSidebar} currColor={currColor} setCurrColor={setCurrColor} setFilterList={setFilterList}/>
@@ -76,8 +95,10 @@ function App() {
         </Routes>
       </div>
     </div>
+    </>)}
   </div>
   );
 }
 
 export default App;
+
