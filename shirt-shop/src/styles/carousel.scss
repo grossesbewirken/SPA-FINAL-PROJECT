@@ -1,6 +1,7 @@
 .outer-container {
   display: flex;
-  flex-direction: column;align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel-inner-container {
@@ -9,17 +10,18 @@
 }
 
 
-.carousel-outer-container button {
-  margin-bottom: 0;
-  border: 2 solid white;
-  border-radius: 5px;
-  background-color: #212529;
+.headline{
+  position: absolute;
+  margin-top: 10%;
+  z-index: 1000;
+  font-size: 20rem;
   color: white;
-
+  font-weight: 600;
+  text-shadow: 0px 0px 20px black;
 }
 
+
 .carousel-item-container {
-  border: 2px solid greenyellow;
 }
 
 

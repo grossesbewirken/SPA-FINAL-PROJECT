@@ -33,13 +33,15 @@
   color: white;
 }
 
+
 button{
   background-color: rgba(0,0,0,0);
   text-decoration: none;
   padding: 1rem;
-  background-color: none;
   border: 1px solid white;
-  border-radius: 50px;
+  border-radius: 50px !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
   color: white;
 }
 

@@ -63,6 +63,9 @@ const Carousell = ({showCarousel}) => {
 
   return (
     <div className='outer-container'>
+      <div className="headline">
+        nerdshirt
+      </div>
       <Carousel className='carousel-inner-container'>
         {carouselPicArr.map((img, i) => {
           return (
@@ -80,7 +83,7 @@ const Carousell = ({showCarousel}) => {
       </Carousel>
 
       <Link className="link" to="/">
-        <button className="button-container-single nerdbutton" onClick={showCarousel}>
+        <button className="button-container-single" onClick={showCarousel}>
           return Shop;
         </button>
       </Link>
