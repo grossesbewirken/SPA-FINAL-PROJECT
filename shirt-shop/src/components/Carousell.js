@@ -1,5 +1,6 @@
 // Packages Import
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 
 // Styles Import
 import '../styles/carousel.scss';
@@ -78,9 +79,11 @@ const Carousell = ({showCarousel}) => {
         })}
       </Carousel>
 
-      <button className="button-container-single nerdbutton" onClick={showCarousel}>
-        return Shop;
-      </button>
+      <Link className="link" to="/">
+        <button className="button-container-single nerdbutton" onClick={showCarousel}>
+          return Shop;
+        </button>
+      </Link>
 
     </div>  
   );
