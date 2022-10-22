@@ -124,8 +124,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
         </div>
         </div>
       </div>
-
-
     </div>
   );
 };

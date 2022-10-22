@@ -5,7 +5,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
-import FavoriteContext from "./context/FavoriteContext";
 
 // Styles Import
 import './styles/App.scss';
@@ -18,13 +17,20 @@ import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
-
+import FavoriteContext from "./context/FavoriteContext";
+import Carousell from "./components/Carousell";
+import ShoppingCart from './components/ShoppingCart';
 library.add(faMagnifyingGlass);
 
 function App() {
   const [filterList, setFilterList] = useState([])
   const [toggle, setToggle] = useState(true);
-  const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [carouselToggle, setCarouselToggle] = useState(true);
+  const showCarousel = () => {
+    setCarouselToggle(curr => !curr);
+  }
+  console.log(carouselToggle)
+
   const [currColor, setCurrColor] = useState("")
   
   useEffect(()=>{
@@ -45,21 +51,32 @@ function App() {
 
   return (
   <div className="App">
-      <Header setFilterList={setFilterList}
+    {/* Toggle shows the Carousel until the carouselToggle is turned to false (with onClick on "enter"). Then the regular shop is shown */}
+    {
+      carouselToggle
+      ?
+      (<Carousell
+        showCarousel={showCarousel}          
+      />)
+      :
+      (
+    <>        
+    <Header
       FontAwesomeIcon={FontAwesomeIcon}
-      />
-      <button className=
-      // "sidebar-outer-toggle-button "
-      {`sidebar-outer-toggle-button 
-      ${toggle ?
-        "hide-outer-sidebar-button" :
-        "hide-outer-sidebar-button-onClick"}`}
-        onClick={showSidebar}
-      >
-        getSidebar
-      </button>
-    <div className="sidebar-content-flex">
-        <div className=
+    />
+    {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
+    <button className=
+    {`sidebar-outer-toggle-button 
+    ${toggle ?
+      "hide-outer-sidebar-button" :
+      "hide-outer-sidebar-button-onClick"}`}
+      onClick={showSidebar}
+    >
+      getSidebar
+    </button>
+      <div className="sidebar-content-flex">
+      {/*Toggle regulates if the Sidebar is shown or not. It is also chained to the window size*/}
+      <div className=
           {`sidebar-container-all  
           ${toggle ? "hide-sidebar" : ""}`}>
         <Sidebar toggle={toggle} showSidebar={showSidebar} currColor={currColor} setCurrColor={setCurrColor} setFilterList={setFilterList}/>
@@ -80,3 +97,4 @@ function App() {
 }
 
 export default App;
+
