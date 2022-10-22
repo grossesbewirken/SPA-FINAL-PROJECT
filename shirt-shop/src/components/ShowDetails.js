@@ -1,24 +1,28 @@
+// Packages Import
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
 import { useContext } from "react";
-import ColorContext from "../context/colorContext";
-import FavoriteContext from "../context/FavoriteContext";
 
 // Styles Import
 import "../styles/showdetails.css"
 
+// Files Import
+import ColorContext from "../context/colorContext";
+import FavoriteContext from "../context/FavoriteContext";
+import ShoppingContext from "../context/ShoppingContext";
 
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds, currColor, setCurrColor}) => {
-  const {id} = useParams()
-  const navigate = useNavigate()
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
+  const [good, setGood] = useContext(ShoppingContext);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
@@ -59,6 +63,10 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
   }
+  const shoppingHandler= ()=>{
+    const newGood = currSherd
+    setGood([...good, newGood])
+  }
 
   return (
     <div>
@@ -85,8 +93,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
               </div>
 
               <div className="details-single-buttons">
-                <button>warenkorb</button>
-                <button onClick={favoriteHandler}>herz</button>
+                <button onClick={shoppingHandler}>CART</button>
+                <button onClick={favoriteHandler}>HEART</button>
               </div>
 
             </div>

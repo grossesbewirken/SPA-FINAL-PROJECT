@@ -1,24 +1,20 @@
 // I M P O R T   P A C K A G E S
+// Packages Import
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+// Styles Import
 
 // I M P O R T   C O N T E X T
+
+// Files Import
 import FavoriteContext from "../context/FavoriteContext";
-import ColorContext from "../context/colorContext";
+import ShoppingContext from "../context/ShoppingContext";
 
-
-// I M P O R T   S T Y L I N G
-import "../styles/showsherds.css"
-import '../styles/header.scss';
-import "../styles/App.scss"
-
-
-
-const ShowSherds = ({sherd, currColor}) => {
-const [favorite, setFavorite] = useContext(FavoriteContext)
-const [colorContext] = useContext(ColorContext)
-const [randomColor, setRandomColor] = useState("black")
+const ShowSherds = ({sherd}) => {
+const [randomColor, setRandomColor] = useState("black");
+const [favorite, setFavorite] = useContext(FavoriteContext);
+const [good, setGood] = useContext(ShoppingContext);
 
 const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
 
@@ -38,8 +34,13 @@ useEffect(()=>{
 },[])
 
 const favoriteHandler = () => {
-  const newFav = [...favorite, {...sherd, backgroundColor: randomColor}]
-  setFavorite(newFav)
+  const newFav = [...favorite, { ...sherd, backgroundColor: randomColor }];
+  setFavorite(newFav);
+}
+  
+const shoppingHandler = () => {
+  const newGood = [...good, { ...sherd, backgroundColor: randomColor }];
+  setGood(newGood);
 }
 
   return (
@@ -61,7 +62,7 @@ const favoriteHandler = () => {
         </div>
         <div className="flex">
           <button className="circle" onClick={favoriteHandler}>FAV</button>
-          <button className="circle">BUY</button>
+          <button onClick={shoppingHandler} className="circle">BUY</button>
         </div>      
       </div>
   );

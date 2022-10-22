@@ -29,8 +29,8 @@ import ShoppingCart from './components/ShoppingCart';
 library.add(faMagnifyingGlass);
 
 function App() {
-  const [filterList, setFilterList] = useState([])
   const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [filterList, setFilterList] = useState([])
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
   const showCarousel = () => {
@@ -63,7 +63,7 @@ function App() {
       carouselToggle
       ?
       (<Carousell
-        showCarousel={showCarousel}          
+        showCarousel={showCarousel}
       />)
       :
       (
@@ -93,16 +93,19 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} currColor={currColor} setCurrColor={setCurrColor}/>): 
-          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} currColor={currColor} setCurrColor={setCurrColor}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>} />
-          <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
+          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
+          <Route path="/favoriten" element=
+          {<Favorite sherds={sherds} />}/>
+          {/* <Route path="/shoppingCart" element={<ShoppingCart sherds={sherds} />} />
+          <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
         </Routes>
       </div>
     </div>
     </>)}
   </div>
-  );
+  ) 
 }
 
 export default App;
