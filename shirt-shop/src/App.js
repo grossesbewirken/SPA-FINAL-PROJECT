@@ -1,4 +1,4 @@
-// Packages Import
+// I M P O R T   P A C K A G E S
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -6,9 +6,15 @@ import { useState } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
 
-// Styles Import
+
+// I M P O R T   S T Y L I N G
 import './styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+// I M P O R T   C O N T E X T
+import FavoriteContext from "./context/FavoriteContext";
+
 
 // Files Import
 import sherds from "./data/products"
@@ -17,7 +23,6 @@ import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
-import FavoriteContext from "./context/FavoriteContext";
 import Carousell from "./components/Carousell";
 import ShoppingCart from './components/ShoppingCart';
 
@@ -88,8 +93,8 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
-          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} currColor={currColor} setCurrColor={setCurrColor}/>): 
+          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} currColor={currColor} setCurrColor={setCurrColor}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>} />
           <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
         </Routes>

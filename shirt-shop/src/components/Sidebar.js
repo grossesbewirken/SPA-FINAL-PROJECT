@@ -1,10 +1,13 @@
 // Packages Import
 import { useContext} from "react";
-import ColorContext from "../context/colorContext";
 import { useNavigate } from "react-router-dom";
 
 
-// Styles Import
+// I M P O R T   C O N T E X T
+import ColorContext from "../context/colorContext";
+
+
+// I M P O R T   S T Y L I N G
 import '../styles/sidebar.scss';
 import "../styles/showsherds.css"
 

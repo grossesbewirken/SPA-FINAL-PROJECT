@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 // Styles Import
 import '../styles/header.scss';
+import "../styles/App.scss"
 
 
 // Files Import
