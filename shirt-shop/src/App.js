@@ -37,14 +37,6 @@ function App() {
   // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
-  const [randomColor, setRandomColor] = useState("black")
-  const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
-
-  useEffect(()=>{
-    setRandomColor(colorPalette[Math.floor(Math.random() * colorPalette.length)])
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-
 
   const showCarousel = () => {
     setCarouselToggle(curr => !curr);
@@ -123,7 +115,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} randomColor={randomColor} setRandomColor={setRandomColor}/>): 
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
           filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
           <Route path="/favoriten" element=

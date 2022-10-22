@@ -18,7 +18,7 @@ import ShoppingContext from "../context/ShoppingContext";
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
 
@@ -77,7 +77,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
         
         {/* C A R D */}
         <div className="img-container-single img-container-all cardd">
-          <img src={currSherd.sherdColor[randomColor]} alt="" width="650" />
+          <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="650" />
           <div className="text-container-all" style={textStyle}>
             <p className="sherd-text-all">{currSherd.text}</p> 
           </div>
@@ -88,11 +88,11 @@ const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
             <div className="details-single">
 
               <div className="details-single-description">
-                <span style={{color: currColor}}>{"{ "}text: </span>
+                <span style={{color: colorContext[currColor]}}>{"{ "}text: </span>
                 <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
-                <span style={{color: currColor}}>price: </span>
+                <span style={{color: colorContext[currColor]}}>price: </span>
                 <span>{currSherd.price.toFixed(2)} €uro</span>
-                <span style={{color: currColor}}>{" }"}</span>
+                <span style={{color: colorContext[currColor]}}>{" }"}</span>
               </div>
 
               <div className="details-single-buttons flex">
