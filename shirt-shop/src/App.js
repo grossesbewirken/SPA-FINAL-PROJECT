@@ -26,7 +26,6 @@ library.add(faMagnifyingGlass);
 function App() {
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [filterList, setFilterList] = useState([])
-  const [favorite, setFavorite] = useContext(FavoriteContext)
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
   const showCarousel = () => {
