@@ -1,6 +1,5 @@
 .cardd{
     width: 40vw;
-    background-image: radial-gradient(circle, rgb(45, 45, 45)30%,rgb(0, 0, 0));
     display: flex;
     flex-direction: column;
 }
@@ -9,7 +8,7 @@
     justify-content: center;
 }
 .customize{
-    background: linear-gradient(135deg, rgb(45, 45, 45)30%, rgb(0,0,0)80%);
+
     color: white;
     padding: 2rem
 }
@@ -30,4 +29,12 @@
 
 .details-single-description{
     flex: 2
+}
+
+.detail-cardd{
+    margin: 3rem;
+    height: 600px;
+    border-radius: 15px;
+    border: 5px solid green;
+    background: linear-gradient(135deg, rgb(45, 45, 45)30%, rgb(0,0,0)80%);
 }

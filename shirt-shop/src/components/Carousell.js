@@ -85,7 +85,7 @@ const Carousell = ({showCarousel}) => {
 
       <Link className="link" to="/">
         <button className="button-container-single" onClick={showCarousel}>
-          return Shop;
+          enter
         </button>
       </Link>
 

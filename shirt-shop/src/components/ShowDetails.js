@@ -74,7 +74,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
   }
 
   return (
-    <div>
+    <div className="detail-cardd">
       <div className="details-top-container">
         
         {/* C A R D */}
