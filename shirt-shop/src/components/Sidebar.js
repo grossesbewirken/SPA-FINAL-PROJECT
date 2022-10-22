@@ -1,10 +1,13 @@
 // Packages Import
 import { useContext} from "react";
-import ColorContext from "../context/colorContext";
 import { useNavigate } from "react-router-dom";
 
 
-// Styles Import
+// I M P O R T   C O N T E X T
+import ColorContext from "../context/colorContext";
+
+
+// I M P O R T   S T Y L I N G
 import '../styles/sidebar.scss';
 import "../styles/showsherds.css"
 
@@ -49,7 +52,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
       </div>
       <div>
         <h4>
-          sherds.filter()
+          {`sherds.filter((sherd) => {`}
         </h4>
         <ul className="ul-sidebar">
         <li className="li-sidebar" onClick={filterNothing}>Main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
@@ -57,6 +60,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
           <li className="li-sidebar" onClick={filterMusic}>Music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
           <li className="li-sidebar" onClick={filterPhilosophy}>Nerdic Philosophy <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
         </ul>
+        <h4>{`})`}</h4>
         <div>
           <img
                   src={fjm}
@@ -72,4 +76,3 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
 };
 
 export default Sidebar;
-

@@ -1,4 +1,7 @@
 // SIDEAR SETTINGS
+.App {
+  background-color: #212529;
+}
 
 .sidebar-content-flex {
   display: flex;
@@ -30,6 +33,18 @@
   color: white;
 }
 
+
+button{
+  background-color: rgba(0,0,0,0);
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 50px !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
+}
+
 .hide-sidebar {
   display: flex;
 }
@@ -50,7 +65,7 @@
   display: none;
 }
 
-// CAROUSEL SETTINGS
+// SHERD CONTAINER SETTINGS
 
 
 // MEDIA QUERY (992px is Breakpoint!)

@@ -1,12 +1,18 @@
+// Packages Import
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
 import { useContext } from "react";
-import ColorContext from "../context/colorContext";
-import FavoriteContext from "../context/FavoriteContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Styles Import
 import "../styles/showdetails.css"
+
+// Files Import
+import ColorContext from "../context/colorContext";
+import FavoriteContext from "../context/FavoriteContext";
+import ShoppingContext from "../context/ShoppingContext";
 
 
 const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
@@ -19,6 +25,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
+  const [good, setGood] = useContext(ShoppingContext);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
@@ -59,6 +66,10 @@ const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
   }
+  const shoppingHandler= ()=>{
+    const newGood = currSherd
+    setGood([...good, newGood])
+  }
 
   return (
     <div>
@@ -84,9 +95,14 @@ const ShowDetails = ({sherds, currColor, setCurrColor, randomColor}) => {
                 <span style={{color: currColor}}>{" }"}</span>
               </div>
 
-              <div className="details-single-buttons">
-                <button>warenkorb</button>
-                <button onClick={favoriteHandler}>herz</button>
+              <div className="details-single-buttons flex">
+                <button onClick={shoppingHandler} className="circle">
+                  <FontAwesomeIcon
+                  icon={faCartShopping}/></button>
+                <button onClick={favoriteHandler} className="circle">
+                  <FontAwesomeIcon className="heart"
+                  icon={faHeart} />
+                </button>
               </div>
 
             </div>

@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 // Styles Import
 import '../styles/header.scss';
+import "../styles/App.scss"
 
 
 // Files Import
@@ -48,7 +49,7 @@ const Header = ({setFilterList}) => {
       </Navbar>
 
         <Navbar.Brand className="text-white">
-          <span className="red-text">{"n"}</span>erd<span className="red-text">{"s"}</span>herd
+          <span className="red-text">{"nerd"}</span>sherd
         </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="navbarScroll" className="border border-light"/>
@@ -66,22 +67,35 @@ const Header = ({setFilterList}) => {
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               
             </span>
-            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" />
-          </div>
-            <Button              
+            <input type="text" className="me-2 form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(event)=>inputHandler(event)}/>
+            </div>
+            <Link className="link" to="/favoriten">
+              <Button
+              variant="outline-dark"
+              className="me-2 text-white border border-light circle"
+              >
+              <FontAwesomeIcon className="heart"
+                icon={faHeart} />  
+              </Button>
+            </Link> 
+            <Link className="link" to="/favoriten">
+              <Button
+              variant="outline-dark"
+              className="me-2 text-white border border-light circle"
+              >
+              <FontAwesomeIcon className="heart"
+                icon={faHeart}/>  
+              </Button>
+            </Link>
+            <Link className='link' to="/shoppingCart">
+              <Button
               variant="outline-dark"
               className="me-2 text-white border border-light circle">
               <FontAwesomeIcon
-                icon={faCartShopping} />
-            </Button>
-            <Button
-              variant="outline-dark"
-              className="me-2 text-white border border-light circle"
-            ><Link className="link" to="/favoriten">
-              <FontAwesomeIcon className="heart"
-                icon={faHeart} />  
-             </Link> 
-            </Button>
+                icon={faCartShopping} />              
+              </Button>
+            </Link>
+
         </Form>
       </Navbar.Collapse>
 

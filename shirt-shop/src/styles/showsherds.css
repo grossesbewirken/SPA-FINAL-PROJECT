@@ -5,22 +5,26 @@
   display:flex;
   flex-wrap:wrap;
   flex: 3;
-  margin: 5px
+  margin: 5px;
 }
 
 .sherds-all{
   margin:5px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 400px;
   display:flex;
   flex-direction:column;
-  border-radius: 10px;
-
+  align-items: center;
+  border-radius: 20px;
 }
+
 .sherd-text-all{
-  line-height: -50px,
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+
 }
 .red-text{
   color:red;
@@ -73,6 +77,12 @@
   justify-content: center;
 }
 
+.test{
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  border: 1px solid green;
+}
 
 .red{
   background-color:rgb(200, 0, 50);
@@ -135,7 +145,9 @@
 .black-grad-135{
   background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(0, 0, 0)80%);
 }
-
+.black-grad-135{
+  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(0, 0, 0)80%);
+}
 
 
 

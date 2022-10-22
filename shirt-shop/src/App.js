@@ -1,14 +1,20 @@
-// Packages Import
+// I M P O R T   P A C K A G E S
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
+import ShoppingCart from "./components/ShoppingCart"
 
-// Styles Import
+// I M P O R T   S T Y L I N G
 import './styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+// I M P O R T   C O N T E X T
+import FavoriteContext from "./context/FavoriteContext";
+import ShoppingContext from "./context/ShoppingContext";
 
 // Files Import
 import sherds from "./data/products"
@@ -17,19 +23,21 @@ import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
-import FavoriteContext from "./context/FavoriteContext";
 import Carousell from "./components/Carousell";
 // import ShoppingCart from './components/ShoppingCart';
 
 library.add(faMagnifyingGlass);
 
 function App() {
-  const [filterList, setFilterList] = useState([])
+  const [currColor, setCurrColor] = useState("")
   const [favorite, setFavorite] = useContext(FavoriteContext)
+  const [goods, setGoods] = useContext(ShoppingContext);
+  const [filterList, setFilterList] = useState([])
+
+  // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
   const [randomColor, setRandomColor] = useState("black")
-  const [currColor, setCurrColor] = useState("")
   const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
 
   useEffect(()=>{
@@ -37,27 +45,46 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
+
   const showCarousel = () => {
     setCarouselToggle(curr => !curr);
   }
-  console.log(carouselToggle)
 
+  const showSidebar = () => {
+    setToggle(curr => !curr);
+  }  
   
+  // useEffects to set the choosen favorite "sherds" in the localStorage and get them back after reload the side
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
+    // const getGoods = JSON.parse(localStorage.getItem("goods"))
     if(getFav !== null && getFav.length !== 0){
       setFavorite(getFav)
     }
+    // if(getGoods !== null && getGoods.length !== 0){
+    //   setGoods(getGoods)
+    // }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   useEffect(()=>{
     localStorage.setItem("favorite", JSON.stringify(favorite))
-  },[favorite])
+    // localStorage.setItem("goods", JSON.stringify(goods))
+  }, [favorite, /*goods*/])
   
-  const showSidebar = () => {
-    setToggle(curr => !curr);
-  }  
+  // useEffects to set the Shopping Cart and their "sherds" in the localStorage and get them back after reload the side
+  // useEffect(()=>{
+  //   const getGoods = JSON.parse(localStorage.getItem("goods"))
+  //   if(getGoods !== null && getGoods.length !== 0){
+  //     setGoods(getGoods)
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // },[])
+  
+  // useEffect(()=>{
+  //   localStorage.setItem("goods", JSON.stringify(goods))
+  // },[goods])
+  
 
   return (
   <div className="App">
@@ -65,7 +92,9 @@ function App() {
     {
       carouselToggle
       ?
-      (<Carousell showCarousel={showCarousel}/>)
+      (<Carousell
+        showCarousel={showCarousel}
+      />)
       :
       (
     <>        
@@ -96,14 +125,18 @@ function App() {
           <Route path="/" element={filterList.length === 0 ? 
           sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} randomColor={randomColor} setRandomColor={setRandomColor}/>): 
           filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} randomColor={randomColor} currColor={currColor} setCurrColor={setCurrColor}/>} />
-          <Route path="/favoriten" element={<Favorite sherds={sherds}/>}></Route>
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
+          <Route path="/favoriten" element=
+          {<Favorite sherds={sherds} />}/>
+          <Route path="/shoppingCart" element=
+          {<ShoppingCart sherds={sherds} />} />
+          {/* <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
         </Routes>
       </div>
     </div>
     </>)}
   </div>
-  );
+  ) 
 }
 
 export default App;

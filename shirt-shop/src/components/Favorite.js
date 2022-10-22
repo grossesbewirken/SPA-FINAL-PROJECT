@@ -1,29 +1,37 @@
+// Packages Import
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import FavoriteContext from "../context/FavoriteContext"
+
+// Styles Import
 import "../styles/text.css"
 import "../styles/favoriten.css"
+
+// Files Import
+import FavoriteContext from "../context/FavoriteContext"
 import ColorContext from "../context/colorContext";
+import ShoppingContext from "../context/ShoppingContext";
 
 const Favorite = () => {
   const navigate = useNavigate()
-  const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext)
-  const [colorContext] = useContext(ColorContext)
+  const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext);
+  const [colorContext] = useContext(ColorContext);
+  const [goods, setGoods] = useContext(ShoppingContext)
 
   const deleteFav = (sherd)=>{
     const newFav = favoriteContext.filter(favSherd => favSherd !== sherd)
     setFavoriteContext(newFav)
   }
-  const buyHandler = ()=>{
-    
+  const shoppingHandler = (sherd) => {
+    const newGood = sherd;
+    setGoods([...goods, {...newGood}])
   }
 
   return (
     <div>
       <h1>Favoriten</h1>
-      {favoriteContext.map((sherd) =>{ 
+      {favoriteContext.map((sherd, i) =>{ 
         return(
-          <div className="favorite-container flex">
+          <div className="favorite-container flex" key={i}>
             <div className="sherds-all black-135-deg">            
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="200" /> 
@@ -41,7 +49,7 @@ const Favorite = () => {
               <p>value: {sherd.price.toFixed(2)}€uro </p>
               <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
               <button type="button" className="delete-button" onClick={()=>deleteFav(sherd)}>delete</button>
-              <button type="button" className="delete-button" onClick={buyHandler}>buy</button>
+              <button type="button" className="add-button" onClick={() => shoppingHandler(sherd)}>buy</button>
             </div>   
         </div>
         )

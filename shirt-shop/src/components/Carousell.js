@@ -1,10 +1,10 @@
 // Packages Import
-// import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // Styles Import
 import '../styles/carousel.scss';
+import "../styles/App.scss"
 
 // Files Import
 import carousel_black1 from "../images/carousel_black1.png";
@@ -62,142 +62,34 @@ const carouselPicArr =
 const Carousell = ({showCarousel}) => {
 
   return (
-    <div className='carousel-outer-container'>
+    <div className='outer-container'>
+      <div className="headline">
+        nerdshirt
+      </div>
       <Carousel className='carousel-inner-container'>
         {carouselPicArr.map((img, i) => {
           return (
             <Carousel.Item
               key={i}
               interval={1500} className="carousel-item-container">
-              <img
-                className="d-block w-100"
-                src={img}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
+                <img
+                  className="d-block w-100"
+                  src={img}
+                  alt="First slide"
+                />
             </Carousel.Item>
           )
         })}
       </Carousel>
-      <button
-        className="button-container-single"
-        onClick={showCarousel} >return Shop;</button>
+
+      <Link className="link" to="/">
+        <button className="button-container-single" onClick={showCarousel}>
+          return Shop;
+        </button>
+      </Link>
+
     </div>  
   );
 };
 
 export default Carousell;
-
-// import Swiper from 'swiper';
-
-// var swiper = new Swiper(".mySwiper", {
-
-//   loop: true,
-//   autoplay: true,
-//   autoplayTimeout: 1000, //2000ms = 2s;
-//   autoplayHoverPause: true,
-
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPreview: "auto",
-//   coverflowEffect: {
-//     rotate: 0,
-//     stretch: 0,
-//     depth: 300,
-//     modifier: 1,
-//     slideShadows: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// })
-
-{/* <section className="swiper mySwiper">
-      <div className="swiper-wrapper">
-        <div className='card swiper-slide'>
-          <div className='card_image'>
-            <img src={carouselPicArr[0]} alt="Test" />
-          </div>
-          <div className='card_content'>
-            <span className='card_title'>Sherd</span>
-            <span className='card_name'>Name</span>
-            <p className='card_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, asperiores?</p>
-            <button className='card_btn'>View More</button>
-          </div>
-        </div>
-      </div>
-
-      <div className="swiper-wrapper">
-        <div className='card swiper-slide'>
-          <div className='card_image'>
-            <img src={carouselPicArr[1]} alt="Test" />
-          </div>
-          <div className='card_content'>
-            <span className='card_title'>Sherd</span>
-            <span className='card_name'>Name</span>
-            <p className='card_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, asperiores?</p>
-            <button className='card_btn'>View More</button>
-          </div>
-        </div>
-      </div>
-      
-      <div className="swiper-wrapper">
-        <div className='card swiper-slide'>
-          <div className='card_image'>
-            <img src={carouselPicArr[2]} alt="Test" />
-          </div>
-          <div className='card_content'>
-            <span className='card_title'>Sherd</span>
-            <span className='card_name'>Name</span>
-            <p className='card_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, asperiores?</p>
-            <button className='card_btn'>View More</button>
-          </div>
-        </div>
-      </div>
-
-      <div className="swiper-wrapper">
-        <div className='card swiper-slide'>
-          <div className='card_image'>
-            <img src={carouselPicArr[3]} alt="Test" />
-          </div>
-          <div className='card_content'>
-            <span className='card_title'>Sherd</span>
-            <span className='card_name'>Name</span>
-            <p className='card_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, asperiores?</p>
-            <button className='card_btn'>View More</button>
-          </div>
-        </div>
-      </div>
-
-      <div className="swiper-wrapper">
-        <div className='card swiper-slide'>
-          <div className='card_image'>
-            <img src={carouselPicArr[4]} alt="Test" />
-          </div>
-          <div className='card_content'>
-            <span className='card_title'>Sherd</span>
-            <span className='card_name'>Name</span>
-            <p className='card_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, asperiores?</p>
-            <button className='card_btn'>View More</button>
-          </div>
-        </div>
-      </div>
-
-      <div className="swiper-wrapper">
-        <div className='card swiper-slide'>
-          <div className='card_image'>
-            <img src={carouselPicArr[5]} alt="Test" />
-          </div>
-          <div className='card_content'>
-            <span className='card_title'>Sherd</span>
-            <span className='card_name'>Name</span>
-            <p className='card_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, asperiores?</p>
-            <button className='card_btn'>View More</button>
-          </div>
-        </div>
-      </div>
-    </section> */}
