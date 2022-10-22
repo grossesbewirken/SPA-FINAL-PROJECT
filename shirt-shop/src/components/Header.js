@@ -47,7 +47,7 @@ const Header = ({setFilterList}) => {
       </Navbar>
 
         <Navbar.Brand className="text-white">
-          <span className="red-text">{"n"}</span>erd<span className="red-text">{"s"}</span>herd
+          <span className="red-text">{"nerd"}</span>sherd
         </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="navbarScroll" className="border border-light"/>

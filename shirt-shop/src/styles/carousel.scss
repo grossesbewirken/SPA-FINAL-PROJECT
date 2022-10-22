@@ -1,25 +1,25 @@
-.carousel-outer-container {
+.outer-container {
   display: flex;
   flex-direction: column;align-items: center;
-  // border: 2px solid green;
 }
 
 .carousel-inner-container {
-  margin: 2rem;
   width: 50%;
+  margin-bottom: 2rem;
 }
 
+
 .carousel-outer-container button {
-  margin:25px;
   margin-bottom: 0;
   border: 2 solid white;
   border-radius: 5px;
   background-color: #212529;
   color: white;
+
 }
 
 .carousel-item-container {
-  border: 2px solid red;
+  border: 2px solid greenyellow;
 }
 
 

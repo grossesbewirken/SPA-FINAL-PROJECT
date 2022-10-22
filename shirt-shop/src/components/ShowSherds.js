@@ -2,6 +2,7 @@
 // Packages Import
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Styles Import
 
@@ -10,6 +11,8 @@ import { Link } from "react-router-dom";
 // Files Import
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
+
+
 
 const ShowSherds = ({sherd}) => {
 const [randomColor, setRandomColor] = useState("black");

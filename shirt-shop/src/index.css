@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background-color: rgb(60, 60, 60);
 }
 
 .flex{
@@ -15,4 +14,8 @@ body {
 
 .flex{
   display:flex;
+}
+
+.root{
+  background-color:orange;
 }

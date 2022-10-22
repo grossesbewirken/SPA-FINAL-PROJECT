@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // Styles Import
 import '../styles/carousel.scss';
+import "../styles/App.scss"
 
 // Files Import
 import carousel_black1 from "../images/carousel_black1.png";
@@ -62,29 +63,27 @@ const carouselPicArr =
 const Carousell = ({showCarousel}) => {
 
   return (
-    <div className='carousel-outer-container'>
+    <div className='outer-container'>
       <Carousel className='carousel-inner-container'>
         {carouselPicArr.map((img, i) => {
           return (
             <Carousel.Item
               key={i}
               interval={1500} className="carousel-item-container">
-              <img
-                className="d-block w-100"
-                src={img}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
+                <img
+                  className="d-block w-100"
+                  src={img}
+                  alt="First slide"
+                />
             </Carousel.Item>
           )
         })}
       </Carousel>
-      <button
-        className="button-container-single"
-        onClick={showCarousel} >return Shop;</button>
+
+      <button className="button-container-single nerdbutton" onClick={showCarousel}>
+        return Shop;
+      </button>
+
     </div>  
   );
 };
