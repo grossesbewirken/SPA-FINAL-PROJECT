@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
 import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Styles Import
 import "../styles/showdetails.css"
@@ -94,9 +95,14 @@ const ShowDetails = ({sherds, currColor, setCurrColor}) => {
                 <span style={{color: currColor}}>{" }"}</span>
               </div>
 
-              <div className="details-single-buttons">
-                <button onClick={shoppingHandler}>CART</button>
-                <button onClick={favoriteHandler}>HEART</button>
+              <div className="details-single-buttons flex">
+                <button onClick={shoppingHandler} className="circle">
+                  <FontAwesomeIcon
+                  icon={faCartShopping}/></button>
+                <button onClick={favoriteHandler} className="circle">
+                  <FontAwesomeIcon className="heart"
+                  icon={faHeart} />
+                </button>
               </div>
 
             </div>

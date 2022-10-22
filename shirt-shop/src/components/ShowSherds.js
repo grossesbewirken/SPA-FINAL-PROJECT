@@ -8,10 +8,10 @@ import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 // Styles Import
 
 // I M P O R T   C O N T E X T
-
-// Files Import
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
+
+// Files Import
 
 
 
