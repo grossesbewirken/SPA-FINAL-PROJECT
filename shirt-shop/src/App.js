@@ -8,6 +8,7 @@ import { useContext, useEffect } from "react";
 import ShoppingCart from "./components/ShoppingCart"
 
 // I M P O R T   S T Y L I N G
+import "./index.css"
 import './styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

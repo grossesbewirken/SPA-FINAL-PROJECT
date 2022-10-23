@@ -68,15 +68,15 @@ const shoppingHandler = () => {
           <span style={{color: sherd.backgroundColor}}>{" }"}</span>
         </div>
         <div className="flex">
-          <button className="circle"
+          <button
+            className="circle"
             onClick={favoriteHandler}>
-            <FontAwesomeIcon className="heart"
-              icon={faHeart} />
+            <FontAwesomeIcon className="heart" icon={faHeart} />
           </button>
           <button
-            onClick={shoppingHandler} className="circle">
-            <FontAwesomeIcon
-              icon={faCartShopping} />
+            className="circle"
+            onClick={shoppingHandler}>
+            <FontAwesomeIcon icon={faCartShopping} />
           </button>
         </div>      
       </div>

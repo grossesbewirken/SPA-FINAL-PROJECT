@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import { useContext} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faGreaterThanEqual, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Styles Import
 import '../styles/carousel.scss';
@@ -72,16 +72,6 @@ const Carousell = ({showCarousel}) => {
   const [favorite, setFavorite] = useContext(FavoriteContext);
   const [good, setGood] = useContext(ShoppingContext);
 
-  const textStyle = {
-    position: "absolute",
-    top:0,
-    left:19,
-    right:20,
-    bottom:0,
-    marginTop: "8%",
-    marginBottom: "25%",
-    textAlign:"center",
-  }
 
   const favoriteHandler = (sherd) => {
     const newFav = [...favorite, { ...sherd}];
@@ -104,14 +94,19 @@ const Carousell = ({showCarousel}) => {
             return (
               <Carousel.Item
                 key={i}
-                interval={1500} className="carousel-item-container">
-                  <Link className="link " onClick={showCarousel} to={`/products/${sherd.id}`}>
-                    <div className="img-container-all">
-                    <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
-                    <div className="text-container-all" style={textStyle}>
-                    <p className="sherd-text-all">{sherd.text}</p>
+                interval={3000} 
+                className="carousel-item-container">
+                  <Link 
+                    className="link" 
+                    onClick={showCarousel} 
+                    to={`/products/${sherd.id}`}>
+                    <div className="carousel-image-container">
+                      <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
+                      width="60%" /> 
+                    <div className="carousel-text-field">
+                      <p className="sherd-text-all carousel-text">{sherd.text}</p>
                     </div>            
-                    </div>
+                  </div>
                 </Link>
               </Carousel.Item>
             )
@@ -141,18 +136,24 @@ const Carousell = ({showCarousel}) => {
             alt="FJM logo"
           />
           <Link className="link" to="/">
-            <button className="button-container-single" onClick={showCarousel}>
-              return Shop;
+            <button 
+              className="button-container-single button" 
+              onClick={showCarousel}>ENTER
             </button>
           </Link>
           <div className="flex">
-            <button className="circle" onClick={favoriteHandler}>
-            <FontAwesomeIcon className="heart"
-            icon={faHeart} /></button>
-            <button onClick={shoppingHandler} className="circle"><FontAwesomeIcon
-            icon={faCartShopping}/></button>
-          </div>
+          <button 
+            className="circle" 
+            onClick={favoriteHandler}>
+              <FontAwesomeIcon className="heart" icon={faHeart} />
+          </button>
+          <button 
+            onClick={shoppingHandler} 
+            className="circle">
+            <FontAwesomeIcon icon={faCartShopping}/>
+          </button>
         </div>
+      </div>
     </div>  
   );
 };
