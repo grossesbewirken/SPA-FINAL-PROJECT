@@ -1,6 +1,7 @@
 // Packages Import
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Styles Import
 import '../styles/carousel.scss';
@@ -10,6 +11,15 @@ import "../styles/App.scss";
 import sherds from "../data/products";
 import fjm from '../images/fjm-logo.png';
 const Carousell = ({showCarousel, counter}) => {
+
+const navigate = useNavigate()
+
+const getSherd=()=>{
+  const active = document.querySelector(".active")
+  const slide = active.ariaLabel.slice(6)
+  showCarousel()
+  navigate(`/products/${slide}`) 
+}
 
   return (
     <div className='carousel-outer-container'>
@@ -29,19 +39,14 @@ const Carousell = ({showCarousel, counter}) => {
               <Carousel.Item
                 key={i}
                 interval={3000} 
-                className="carousel-item-container">
-                  <Link 
-                    className="link" 
-                    onClick={showCarousel} 
-                    to={`/products/${sherd.id}`}>
+                className="carousel-item-container">             
                     <div className="carousel-image-container">
                       <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
                       width="60%" /> 
                     <div className="carousel-text-field">
                       <p style={{color: sherd.backgroundColor === "white" ? "black" : "white"}}className="sherd-text-all carousel-text">{sherd.text}</p>
                     </div>            
-                  </div>
-                </Link>
+                  </div>             
               </Carousel.Item>
             )
           })}
@@ -54,6 +59,7 @@ const Carousell = ({showCarousel, counter}) => {
             className="d-inline-block align-top"
             alt="FJM logo"
           />
+          <button onClick={()=>getSherd()}>getSherd</button>
           <Link className="link" to="/">
             <button 
               className="button-container-single button" 

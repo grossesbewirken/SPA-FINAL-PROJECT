@@ -100,7 +100,11 @@
   margin-top: 5vw;
   // display: none;
 }
-
+.carousel-control-prev,
+.carousel-control-next{
+  height:fit-content;
+  margin:auto
+}
 
 
 
