@@ -20,11 +20,11 @@ const sizes = ["XS", "S", "M", "L", "XL"]
 const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
   const {id} = useParams()
   const navigate = useNavigate()
-
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
+  console.log(currSherd);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
@@ -32,7 +32,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
   }, [currSherd])
 
   const textStyleDetail = {
-    color: `${currSherd.fontColor}`,
+    color: currSherd.fontColor,
   }  
   
   const colorHandler = (event)=>{

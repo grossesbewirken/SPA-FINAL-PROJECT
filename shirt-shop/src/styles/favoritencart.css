@@ -1,7 +1,6 @@
-*{
-  color: white
+.favorite-card{
+  color:white;
 }
-
 .favcart-cardd{
   margin-bottom: 10px;
   border-radius: 15px;
