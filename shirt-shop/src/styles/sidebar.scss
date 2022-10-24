@@ -3,22 +3,30 @@
   justify-content: space-between; 
   flex-direction: row-reverse; 
   color: white; 
-  background: linear-gradient(-90deg, rgb(55, 55, 55),rgb(10, 10, 10)); 
+  background-color: #1b1e21;
   width: 100%; padding: 2rem; 
 } 
 
 .ul-sidebar { 
   margin: 2rem; 
-  width: 100%; 
-  .li-sidebar { 
-    list-style-type: none; 
-    margin-bottom: 4rem; 
-    border-bottom: 1px solid white; 
-    &:hover {
-      box-shadow: 0 0.2rem 0.5rem var(--bs-white) !important;
-    }
-    &:active {
-      box-shadow: inset 0 0.1rem 0.5rem var(--bs-white) !important;
-    }
-  } 
+  width: 100%;}
+
+.li-sidebar { 
+  background-color: #121517;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+  list-style-type: none;
+  margin-bottom: 0.5rem; 
+  border-radius: 50px;
+
+  &:hover {
+    outline: 1px solid white !important;
+  }
+  &:active {
+    background-color: white;
+    color: #121517;
+    outline: 1px solid white !important; 
+  }
 } 
+

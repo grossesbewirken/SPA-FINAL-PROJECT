@@ -13,3 +13,19 @@
 .img-container-all{
   position:relative;
 }
+
+
+/* font highlight */
+.fh{
+  font-family: 'Qwigley', cursive;
+  letter-spacing: 0.05rem;
+}
+
+/* font big */
+.fb{
+  font-family: 'Readex Pro', sans-serif;
+}
+
+.hl{
+  font-size: 2.5rem;
+}
