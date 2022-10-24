@@ -43,7 +43,7 @@ const Favorite = () => {
                 </div>            
               </div>   
             </div>
-            <div className="favoriten-details">
+            <div className="favoriten-details favcart-p">
               <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
               <p>backgroundColor: {sherd.backgroundColor},</p>
               <p>fontColor: {sherd.fontColor},</p>
