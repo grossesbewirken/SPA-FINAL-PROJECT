@@ -23,14 +23,17 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
   const filterMovie = () => {
     const newList = sherds.filter(sherd => sherd.category === "Movie")
     setFilterList(newList)
+    navigate("/")
   }
   const filterMusic = () => {
     const newList = sherds.filter(sherd => sherd.category === "Music")
     setFilterList(newList)
+    navigate("/")
   }
   const filterPhilosophy = () => {
     const newList = sherds.filter(sherd => sherd.category === "Developer Philosophie")
     setFilterList(newList)
+    navigate("/")
   }
   const filterNothing = () => {
     const newList = []

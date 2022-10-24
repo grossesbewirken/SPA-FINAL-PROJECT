@@ -21,7 +21,6 @@ const sizes = ["XS", "S", "M", "L", "XL"]
 const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
-  
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
