@@ -1,49 +1,110 @@
+// S T A G E
 .carousel-outer-container {
   height: 100vh;
   margin: 0;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
+
+// C A R O U S E L
 .carousel-inner-container {
   height: 90% !important;
-  width: 50%;
+  width: 100%;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
 
-.carousel-item-container {
-  border: 2px solid red;
+
+// I M A G E - C O N T A I N E R
+.carousel-image-container{
+  display: flex;
+  justify-content: center;
 }
 
+//  C A R O U S E L - T E X T - F I E L D
+.carousel-text-field{
+  display: flex;
+  position: absolute;
+  width: 50vw;
+  margin-top: 3.9vw;
+  margin-bottom: 25%;
+}
+
+
+//  C A R O U S E L - T E X T - F I E L D
+.carousel-text{
+  font-size: 3.9vw;
+  line-height: 4.3vw;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  text-align: center;
+}
+
+
+// H E A D L I N E
+.carousell-headline{
+  display: flex;
+  position: absolute;
+  margin-top: -5%;
+  z-index: 2;
+  font-size: calc(12vw + 2vmin);
+  color: white;
+  text-shadow: 0px 0px 20px black;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 700;
+}
+
+
+// B U T T O N - L E I S T E
 .carousel-btn {
-  width: 50%;
+  width: 87%;
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .button{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
-.headline{
-  position: absolute;
-  margin-top: 10%;
-  z-index: 2;
-  font-size: calc(12vw + 2vmin);
-  color: white;
-  font-weight: 600;
-  text-shadow: 0px 0px 20px black;
+
+
+// B U T T O N - L E I S T E
+.carousel-btn {
+  width: 87%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
+
 
 .carousel-indicators {
   display: none;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  display: none;
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  margin-top: 5vw;
+  // display: none;
 }
+
+
+
+
+
 
 
 

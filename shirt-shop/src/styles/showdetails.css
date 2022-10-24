@@ -1,33 +1,69 @@
-.cardd{
-    width: 40vw;
-    background-image: radial-gradient(circle, rgb(45, 45, 45)30%,rgb(0, 0, 0));
+/* D E T A I L - C A R D*/
+.detail-card{
+    margin: 3rem;
+    height: 34vw;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgb(45, 45, 45)30%, rgb(0,0,0));
+}
+
+
+/* LEFT */
+/* S H E R D - S H E R D */
+.detail-sherd{
+    width: 35vw;
+    height: 34vw;
     display: flex;
     flex-direction: column;
+    display: flex;
+    position: relative;
 }
-
-.cardd img{
+.detail-sherd img{
     justify-content: center;
 }
-.customize{
-    background: linear-gradient(135deg, rgb(45, 45, 45)30%, rgb(0,0,0)80%);
-    color: white;
-    padding: 2rem
-}
-
-.customize h5{
-    margin-top: 2rem;
-}
-
-.details-single{
+.detail-text{
+    font-size: 2.25vw;
+    line-height: 2.5vw;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 13vw;
+    margin-left: 12.5vw;
     display: flex;
-    width: 100%
-
+    position: absolute;
+    top: 4.8vw;
 }
+.detail-text-hl{
+    font-size: 1.4vw
+}
+
+/* S H E R D - I N F O */
+.details-single{
+    font-weight: 600;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 1.5rem;
+    padding-left: 2.8vw;
+    padding-right: 2.8vw
+}
+
+.details-single-description{
+    flex: 2
+}
+
 .details-single-buttons{
     align-items:flex-end;
     flex: 1,
 }
 
-.details-single-description{
-    flex: 2
+
+
+/* RIGHT */
+/* C U S T O M I Z E R */
+.customize{
+    color: white;
+    padding: 2rem
+}
+.customize h5{
+    margin-top: 2rem;
 }

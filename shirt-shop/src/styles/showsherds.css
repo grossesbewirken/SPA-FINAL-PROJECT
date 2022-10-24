@@ -5,11 +5,11 @@
   display:flex;
   flex-wrap:wrap;
   flex: 3;
-  margin: 5px;
+  padding: 2rem
 }
 
 .sherds-all{
-  margin:5px;
+  margin:10px;
   padding-left: 10px;
   padding-right: 10px;
   width: 280px;
@@ -134,10 +134,10 @@
   background-color: rgb(0, 0, 0);
 }
 .black-grad-135{
-  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(0, 0, 0)80%);
+  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(10, 10, 10));
 }
 .black-grad-135{
-  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(0, 0, 0)80%);
+  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(10, 10, 10));
 }
 
 

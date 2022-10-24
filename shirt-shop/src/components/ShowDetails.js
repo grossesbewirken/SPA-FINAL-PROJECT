@@ -1,4 +1,4 @@
-// Packages Import
+// I M P O R T   P A C K A G E S
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
@@ -21,29 +21,19 @@ const sizes = ["XS", "S", "M", "L", "XL"]
 const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
-
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
+  console.log(currSherd);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currSherd])
 
-  const textStyle = {
-    color: `${currSherd.fontColor}`,
-    position: "absolute",
-    top:0,
-    left:0,
-    right:0,
-    bottom:300,
-    marginTop: "10%",
-    marginLeft: "32%",
-    marginRight: "32%",
-    marginBottom: "25%",
-    textAlign:"center",
+  const textStyleDetail = {
+    color: currSherd.fontColor,
   }  
   
   const colorHandler = (event)=>{
@@ -72,29 +62,27 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   }
 
   return (
-    <div>
+    <div className="detail-card">
       <div className="details-top-container">
         
-        {/* C A R D */}
-        <div className="img-container-single img-container-all cardd">
-          <img src={currSherd.sherdColor[currSherd.backgroundColor]} alt="" width="650" />
-          <div className="text-container-all" style={textStyle}>
-            <p className="sherd-text-all">{currSherd.text}</p> 
+        {/* S H E R D - S H E R D*/}
+        <div className="detail-sherd">
+          <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
+          <div className="detail-text-container" style={textStyleDetail}>
+            <p className="detail-text">{currSherd.text}</p> 
           </div>
 
-          {/* C A R D */}
-          <div className="details-bottom-container">
-
+          {/* S H E R D - I N F O */}
             <div className="details-single">
-
               <div className="details-single-description">
-                <span style={{color: colorContext[currColor]}}>{"{ "}text: </span>
-                <span className="text-details-all">{currSherd.text.length > 15 ? currSherd.text.slice(0, 15) : currSherd.text}...,</span><br />
-                <span style={{color: colorContext[currColor]}}>price: </span>
-                <span>{currSherd.price.toFixed(2)} €uro</span>
+                <span style={{color: colorContext[currColor]}}>{"{ "}author: </span>
+                <span style={{color:"white"}}>{currSherd.author}</span><br/>
+                <span style={{color: colorContext[currColor]}}>text: </span>
+                <span className="detail-text-hl" style={{color:"white"}}>{currSherd.text}</span><br/>
+                <span style={{color: colorContext[currColor]}}>date: </span>
+                <span style={{color:"white"}}>{currSherd.date}</span>
                 <span style={{color: colorContext[currColor]}}>{" }"}</span>
               </div>
-
               <div className="details-single-buttons flex">
                 <button onClick={shoppingHandler} className="circle">
                   <FontAwesomeIcon
@@ -104,9 +92,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
                   icon={faHeart} />
                 </button>
               </div>
-
+              
             </div>
-          </div>
         </div>   
 
         {/* C U S T O M I Z E R */}

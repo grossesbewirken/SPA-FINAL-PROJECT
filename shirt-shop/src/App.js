@@ -8,6 +8,7 @@ import { useContext, useEffect } from "react";
 import ShoppingCart from "./components/ShoppingCart"
 
 // I M P O R T   S T Y L I N G
+import "./index.css"
 import './styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -35,7 +36,8 @@ function App() {
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [goods, setGoods] = useContext(ShoppingContext);
   const [filterList, setFilterList] = useState([])
-  console.log(sherds);
+  // console.log(sherds);
+  
   // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
@@ -117,7 +119,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette} />): 
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>): 
           filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
           <Route path="/favoriten" element=
