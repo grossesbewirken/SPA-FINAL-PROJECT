@@ -63,14 +63,13 @@ return (
     <div className="favcart-button-container">
       {goods.length === 0 ? 
         ("") :
-        (<Link className="link" to="/carousel">
-          
+        (
         <button 
           type="button" 
           className="buy-button favcart-button" 
           onClick={shoppingHandler}>BUY
         </button>
-        </Link>)
+        )
       }  
       <button
         className="favcart-button" 
