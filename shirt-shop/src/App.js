@@ -30,7 +30,6 @@ import Carousell from "./components/Carousell";
 library.add(faMagnifyingGlass);
 
 function App() {
-  const [randomColor, setRandomColor] = useState("black")
   const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"] 
   const [currColor, setCurrColor] = useState("")
   const [favorite, setFavorite] = useContext(FavoriteContext)
@@ -119,8 +118,8 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>): 
-          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>)} />
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette}/>): 
+          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette}/>)} />
           <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
           <Route path="/favoriten" element=
           {<Favorite sherds={sherds} />}/>

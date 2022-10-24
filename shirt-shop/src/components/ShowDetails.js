@@ -15,8 +15,6 @@ import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
 
-// const [randomColor, setRandomColor] = useState("black")
-// const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
@@ -65,8 +63,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   return (
     <div className="detail-card">
         
-        {/* S H E R D - S H E R D*/}
-        <div className="detail-sherd details-top-container">
+        {/* S H E R D - S H E R D */}
+        <div className="detail-sherd">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
             <p className="detail-text">{currSherd.text}</p> 
