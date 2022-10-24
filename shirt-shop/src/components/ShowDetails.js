@@ -11,6 +11,7 @@ import "../styles/showdetails.css"
 import "../styles/App.scss"
 
 // Files Import
+import colorPick from "../images/color-pick.png"
 import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
@@ -79,7 +80,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
             <p style={{color: currSherd.backgroundColor === "white" ? "black" : currSherd.fontColor,
-                       fontSize: currSherd.text.length > 20 && "14px"}} className="detail-text">{currSherd.text}</p> 
+            fontSize: currSherd.text.length > 20 && "14px"}} className="detail-text">{currSherd.text}</p> 
           </div>
 
           {/* S H E R D - I N F O */}
@@ -116,8 +117,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           <div>
             <h5>color:</h5>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`}  onClick={(event)=>fontHandler(event)}></div>)}
-              <label className="customColor circle" htmlFor="customColor">?</label>
+              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              <label className="customColor circle" htmlFor="customColor"><img src={colorPick} alt="color-pick" className="color-pick"/></label>
               <input onChange={(event)=> customHandler(event)} className="hidden" type="color" id="customColor" />
             </div>            
           </div>

@@ -26,7 +26,6 @@
 }
 
 .detail-text{
-    border: 2px solid red;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 600;
@@ -81,6 +80,11 @@
 }
 .select-single{
     height:fit-content;
+}
+
+.color-pick {
+    width: 100%;
+    height: 100%;
 }
 
 
