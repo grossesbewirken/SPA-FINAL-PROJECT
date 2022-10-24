@@ -120,7 +120,7 @@ function App() {
       <div className="show-sherds-header-and-routes">
                   
         <div className="show-sherds-header">
-          {filterHeader === 'nothing' ? <h1 className="favcart-hl">Main</h1> :
+          {filterHeader === 'main' ? <h1 className="favcart-hl">Main</h1> :
             filterHeader === 'movie' ? <h1 className="favcart-hl">Movie</h1> :
             filterHeader === 'music' ? <h1 className="favcart-hl">Music</h1> :
             filterHeader === 'philosophy' ? <h1 className="favcart-hl">Philosophy</h1> :
