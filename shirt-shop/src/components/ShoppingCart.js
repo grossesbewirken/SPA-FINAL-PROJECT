@@ -27,7 +27,7 @@ const shoppingHandler = ()=>{
 }
 
 return (
-  <div>
+  <div className="favorite-card">
     <h1 className="favcart-hl">your shopping cart</h1>
     {goods.map((sherd, i) =>{ 
       return(
