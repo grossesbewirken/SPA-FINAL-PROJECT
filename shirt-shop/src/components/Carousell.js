@@ -34,7 +34,6 @@ const getSherd=()=>{
       }
       <Carousel className='carousel-inner-container'>
           {sherds.map((sherd, i) => {
-            console.log(sherd)
             return (
               <Carousel.Item
                 key={i}
