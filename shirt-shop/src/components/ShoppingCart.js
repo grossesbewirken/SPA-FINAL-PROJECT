@@ -43,7 +43,7 @@ return (
           </div>
           <div className="shopping-details">
             <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
-            <p >backgroundColor: {sherd.backgroundColor},</p>
+            <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
             <p>author: {sherd.author},</p>
             <p>value: {sherd.price.toFixed(2)} €uro </p>
