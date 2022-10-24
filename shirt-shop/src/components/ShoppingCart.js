@@ -24,6 +24,7 @@ const deleteGood = (sherd)=>{
   
 const shoppingHandler = ()=>{
   setGoods([]);
+  showCarousel();
 }
 
 return (
@@ -68,7 +69,7 @@ return (
         <button 
           type="button" 
           className="buy-button favcart-button" 
-          onClick={shoppingHandler && showCarousel}>BUY
+          onClick={shoppingHandler}>BUY
         </button>
         </Link>)
       }  
