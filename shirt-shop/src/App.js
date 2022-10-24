@@ -125,7 +125,8 @@ function App() {
             filterHeader === 'music' ? <h1 className="favcart-hl">Music</h1> :
             filterHeader === 'philosophy' ? <h1 className="favcart-hl">Philosophy</h1> :
             filterHeader === 'favorites' ? <h1 className="favcart-hl">Favorites</h1> :
-            filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">Shopping Cart</h1> : 
+            filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">Shopping Cart</h1> :
+            filterHeader === 'showDetails' ? <h1 className="favcart-hl">customize your sherd</h1> :                                    
             <></>
           }
         </div>
@@ -134,9 +135,9 @@ function App() {
             <Route path="*" element={<Navigate to="/"/>}/>
             <Route path="/" element={
             filterList.length === 0 ?
-            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette} />) :
+            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette}  />) :
             filterList.map(sherd => <ShowSherds key={sherd.id}
-            sherd={sherd} colorPalette={colorPalette} />)} />
+            sherd={sherd} colorPalette={colorPalette}/>)} />
             <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
             <Route path="/favoriten" element=
             {<Favorite sherds={sherds} />}/>

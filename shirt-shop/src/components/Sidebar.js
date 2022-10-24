@@ -42,7 +42,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
     const newList = []
     setFilterList(newList)
     navigate("/")
-    setFilterHeader('nothing');
+    setFilterHeader('main');
   }
 
   const changeFilterHeaderFav = () => {
@@ -73,13 +73,13 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
           {`sherds.find (() => {`}
         </h4>
         <ul className="ul-sidebar">
-        <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+        <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{" =>{}"}</span></li>
           <li className="li-sidebar fb">
-            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
+            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{" =>{}"}</span>
             </Link>
           </li>
           <li className="li-sidebar fb">
-            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
+            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{" =>{}"}</span></Link>
           </li>
         </ul>
         <h4 className="hl fh">{`});`}</h4>
@@ -90,17 +90,11 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
           {`sherds.filter (() => {`}
         </h4>
         <ul className="ul-sidebar">
-          <li className="li-sidebar fb">
-            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
-            </Link>
-          </li>
-          <li className="li-sidebar fb">
-            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
-          </li>
+            <li className="li-sidebar fb" onClick={filterMovie}>movies && series<span style={{ color: colorContext[currColor] }}>{" =>{}"}</span></li>
+            <li className="li-sidebar fb" onClick={filterMusic}>songs <span style={{color: colorContext[currColor] }}>{" =>{}"}</span></li>
+            <li className="li-sidebar fb" onClick={filterPhilosophy}>nerdic philosophy <span style={{color: colorContext[currColor] }}>{" =>{}"}</span></li>
         </ul>
         <h4 className="hl fh">{`})`}</h4>
-
-
         <div>
           <img
             src={fjm}

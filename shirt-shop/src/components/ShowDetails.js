@@ -73,6 +73,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
 
   return (
     <div>
+      
     <div className="detail-card black-grad-135">
         
         {/* S H E R D - S H E R D */}
