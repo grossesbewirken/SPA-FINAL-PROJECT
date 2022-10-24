@@ -1,6 +1,6 @@
 // I M P O R T   P A C K A G E S
 // Packages Import
-import { useContext, useEffect,useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -15,14 +15,6 @@ const ShowSherds = ({sherd}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
 
-const [randomColor, setRandomColor] = useState("black")
-const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
-
-useEffect(()=>{
-  setRandomColor(colorPalette[Math.floor(Math.random() * colorPalette.length)])
-// eslint-disable-next-line react-hooks/exhaustive-deps
-},[])
-
 const textStyle = {
   position: "absolute",
   top:0,
@@ -33,8 +25,6 @@ const textStyle = {
   marginBottom: "25%",
   textAlign:"center",
 }
-
-
 
 const favoriteHandler = () => {
   const newFav = [...favorite, { ...sherd}];

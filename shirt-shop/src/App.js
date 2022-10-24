@@ -34,6 +34,7 @@ function App() {
   const [goods, setGoods] = useContext(ShoppingContext);
   const [filterList, setFilterList] = useState([])
   console.log(sherds);
+  
   // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
