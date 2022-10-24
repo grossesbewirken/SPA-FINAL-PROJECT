@@ -42,14 +42,14 @@ const shoppingHandler = () => {
   const newGood = [...good, { ...sherd}];
   setGood(newGood);
 }
-  console.log(sherd);
   return (
     <div className="sherds-all black-grad-135">
       <Link className="link " to={`/products/${sherd.id}`}>
         <div className="img-container-all">
           <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
           <div className="text-container-all" style={textStyle}>
-            <p style={{color: sherd.backgroundColor === "white" ? "black" : "white"}}className="sherd-text-all">{sherd.text}</p> 
+            <p style={{color: sherd.backgroundColor === "white" ? "black" : "white",
+            fontSize: sherd.text.length > 21 && "12px"}}className="sherd-text-all">{sherd.text}</p> 
           </div>            
         </div>
       </Link>

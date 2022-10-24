@@ -46,7 +46,6 @@ function App() {
     setCarouselToggle(curr => !curr);
     const newCount = 1
     setCounter(counter + newCount);
-    console.log(counter);
   }
 
   const showSidebar = () => {

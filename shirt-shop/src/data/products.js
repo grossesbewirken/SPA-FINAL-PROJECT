@@ -33,7 +33,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 2,
@@ -55,7 +56,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 3,
@@ -77,7 +79,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 4,
@@ -99,7 +102,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 5,
@@ -121,7 +125,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 6,
@@ -143,7 +148,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 7,
@@ -165,7 +171,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 8,
@@ -187,7 +194,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 9,
@@ -209,7 +217,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 10,
@@ -231,7 +240,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 11,
@@ -253,7 +263,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Music",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 12,
@@ -275,7 +286,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 13,
@@ -297,7 +309,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Music",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 14,
@@ -319,7 +332,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 15,
@@ -341,7 +355,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 16,
@@ -363,7 +378,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 17,
@@ -385,7 +401,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 18,
@@ -407,7 +424,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 19,
@@ -429,7 +447,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 20,
@@ -451,7 +470,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 21,
@@ -473,7 +493,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 22,
@@ -495,7 +516,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 23,
@@ -517,7 +539,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 24,
@@ -539,7 +562,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 25,
@@ -561,7 +585,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 26,
@@ -583,7 +608,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 27,
@@ -605,7 +631,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 28,
@@ -627,7 +654,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 29,
@@ -649,7 +677,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 30,
@@ -671,7 +700,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 31,
@@ -693,7 +723,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 32,
@@ -715,12 +746,13 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 33,
     "author": "Uwe",
-    "text": "Badge'l'||'ette'",
+    "text": "Badge'l'||'ette'               ",
     "date": "2022-08-22",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
@@ -737,7 +769,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 34,
@@ -759,7 +792,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 35,
@@ -781,7 +815,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 36,
@@ -803,7 +838,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Music",
-    "price": 19.90
+    "price": 19.90,    
+    "quantity":1
   },
   {
     "id": 37,
@@ -825,7 +861,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 38,
@@ -847,7 +884,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 39,
@@ -869,7 +907,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Developer Philosophie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   },
   {
     "id": 40,
@@ -891,7 +930,8 @@
     "fontColor": "white",
     "size": "M",
     "category": "Movie",
-    "price": 19.90
+    "price": 19.90,
+    "quantity":1
   }
 ]
 
