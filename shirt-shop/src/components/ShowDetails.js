@@ -61,7 +61,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   }
   const shoppingHandler= ()=>{
     let alreadyThere = good.filter( good => good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor)
-    console.log(alreadyThere);
 
     const newGood = good.map(good=> 
       good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor ? {...good, quantity: +good.quantity + +currSherd.quantity} : good
@@ -78,7 +77,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
         <div className="detail-sherd ">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
-            <p style={{color: currSherd.backgroundColor === "white" ? "black" : currSherd.fontColor}} className="detail-text">{currSherd.text}</p> 
+            <p style={{color: currSherd.backgroundColor === "white" ? "black" : "white",
+                       fontSize: currSherd.text.length > 20 && "14px"}} className="detail-text">{currSherd.text}</p> 
           </div>
 
           {/* S H E R D - I N F O */}

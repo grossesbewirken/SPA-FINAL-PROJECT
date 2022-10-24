@@ -752,7 +752,7 @@
   {
     "id": 33,
     "author": "Uwe",
-    "text": "Badge'l'||'ette'",
+    "text": "Badge'l'||'ette'               ",
     "date": "2022-08-22",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {

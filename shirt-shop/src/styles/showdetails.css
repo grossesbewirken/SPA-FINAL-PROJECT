@@ -29,11 +29,12 @@
     line-height: 2.5rem;
     font-weight: 600;
     text-align: center;
-    margin-right: 13rem;
-    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-left: 11rem;
     display: flex;
     position: absolute;
-    top: 4.8rem;
+    top: 4.8rem;    
+    font-weight: bold;
 }
 .detail-text-hl{
     font-size: 1.5rem
