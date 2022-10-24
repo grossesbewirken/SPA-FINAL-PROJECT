@@ -35,7 +35,7 @@ const shoppingHandler = ()=>{
 }
 
 return (
-  <div className="color-white">
+  <div className="color-white hundert">
     <h1 className="favcart-hl">your shopping cart</h1>
     {goods.map((sherd, i) =>{ 
       return(

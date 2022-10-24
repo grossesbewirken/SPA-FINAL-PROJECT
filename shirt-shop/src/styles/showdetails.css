@@ -2,7 +2,6 @@
 .detail-card{
     display: flex;
     flex-direction: row;
-    outline: 5px solid lime;
     border-radius: 15px;
 }
 
@@ -12,8 +11,6 @@
 /* S H E R D - S H E R D */
 .detail-sherd{
     display: flex;
-    outline: 5px solid orange;
-
     flex-direction: column;
     width: 500px;
     /* height: 490px; */
@@ -26,7 +23,6 @@
 }
 
 .detail-text{
-    border: 2px solid red;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 600;
@@ -68,7 +64,6 @@
 /* C U S T O M I Z E R */
 .customize{
     display: flex;
-    outline: 5px solid orangered;
     /* height: 490px; */
 
     flex-direction: column;
@@ -76,13 +71,14 @@
     padding: 2rem;
 
 }
-.customize h5{
-    margin-top: 2rem;
-}
+
 .select-single{
     height:fit-content;
 }
 
+.between{
+    justify-content: space-between;
+}
 
 
 @media (max-width: 1300px) {
