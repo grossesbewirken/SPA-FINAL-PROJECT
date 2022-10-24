@@ -17,6 +17,13 @@ const ShoppingCart = ({showCarousel}) => {
   const [colorContext] = useContext(ColorContext)
   const [goods, setGoods] = useContext(ShoppingContext);
 
+  console.log(goods);
+
+const sum = goods.map((good)=>{
+  return good.quantity ? good.price * good.quantity : good.price
+})
+const total = goods.length !== 0 && sum.reduce((a,b)=> a+b)
+
 const deleteGood = (sherd)=>{
   const newGood = goods.filter(shoppedGood => shoppedGood !== sherd);
   setGoods(newGood);
@@ -46,9 +53,9 @@ return (
             <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
             <p>author: {sherd.author},</p>
-            <p>value: {sherd.price.toFixed(2)} €uro </p>
+            {sherd.quantity ? <p>quantity: {sherd.quantity}</p> : <p>quantity: 1</p> }
+            <p>value: {sherd.quantity ? (sherd.price * sherd.quantity).toFixed(2): sherd.price.toFixed(2)} €uro </p>
             <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
-
             <div className="favcart-button-container">
               <button 
                 type="button" 
@@ -56,11 +63,15 @@ return (
                 onClick={()=>deleteGood(sherd)}><FontAwesomeIcon icon={faTrash} />delete
               </button>
             </div>
-
           </div>   
       </div>
       )
     })}
+    {goods.length !== 0 && <div style={{color:"white"}}>
+        <p>Versandkosten: 4.95€</p>
+        <p >Total: {`${(total + 4.95).toFixed(2)} €uro`}</p>
+      </div>}
+      
     <div className="favcart-button-container">
       {goods.length === 0 ? 
         ("") :

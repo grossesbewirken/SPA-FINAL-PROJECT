@@ -25,7 +25,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
-  console.log(currSherd);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
@@ -53,16 +52,22 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     setCurrSherd({...currSherd, size:size})
   }
   const quantityHandler = (event)=>{
-    
+    const quantity = event.target.value
+    setCurrSherd({...currSherd, quantity:quantity})
   }
   const favoriteHandler= ()=>{
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
   }
   const shoppingHandler= ()=>{
+    let alreadyThere = good.filter( good => good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor)
+    console.log(alreadyThere);
 
-    const newGood = currSherd
-    setGood([...good, newGood])
+    const newGood = good.map(good=> 
+      good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor ? {...good, quantity: +good.quantity + +currSherd.quantity} : good
+    )
+    setGood(alreadyThere.length !== 0 ? newGood : [...good, {...currSherd, quantity:currSherd.quantity}])
+    alreadyThere = []
   }
 
   return (
@@ -123,7 +128,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           </div>
           <div>
             <h5>quantity:</h5>
-            <input onClick={event=>quantityHandler(event)} type="number" id="quantity" />
+            <input onChange={event=>quantityHandler(event)} type="number" id="quantity" />
           </div>
           <div>
             <h5>value:</h5>

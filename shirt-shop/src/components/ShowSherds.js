@@ -42,7 +42,6 @@ const shoppingHandler = () => {
   const newGood = [...good, { ...sherd}];
   setGood(newGood);
 }
-  console.log(sherd);
   return (
     <div className="sherds-all black-grad-135">
       <Link className="link " to={`/products/${sherd.id}`}>
