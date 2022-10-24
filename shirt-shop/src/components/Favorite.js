@@ -39,7 +39,8 @@ const Favorite = () => {
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
                 <div className="text-container-all" >
-                  <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor}}>{sherd.text} </p> 
+                  <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : "white",
+                  fontSize: sherd.text.length > 21 && "12px"}}>{sherd.text} </p> 
                 </div>            
               </div>   
             </div>
@@ -50,7 +51,6 @@ const Favorite = () => {
               <p>author: {sherd.author},</p>
               <p>value: {sherd.price.toFixed(2)} €uro </p>
               <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
-
 
               <div className="favcart-button-container">
                 <button 
