@@ -24,7 +24,9 @@
     justify-content: center;
     object-fit: contain;
 }
+
 .detail-text{
+    border: 2px solid red;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 600;

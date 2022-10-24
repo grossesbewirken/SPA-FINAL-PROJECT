@@ -51,24 +51,34 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
         >hideSidebar</button>
       </div>
       <div>
-        <h4>
+
+        {/* F I L T E R */}
+        <h4 className="hl fh">
           {`sherds.filter((sherd) => {`}
         </h4>
         <ul className="ul-sidebar">
-        <li className="li-sidebar" onClick={filterNothing}>Main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar" onClick={filterMovie}>Movies && Series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar" onClick={filterMusic}>Music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar" onClick={filterPhilosophy}>Nerdic Philosophy <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <div className="spacing-div"></div>
-          <li className="li-sidebar">
-            <Link className='link' to="/favoriten">Favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
+          <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar fb" onClick={filterMovie}>movies && series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar fb" onClick={filterMusic}>music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar fb" onClick={filterPhilosophy}>nerdic philosophy <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></li>
+        </ul>
+        <h4 className="hl fh">{`});`}</h4>
+
+        {/* R U B R I K E N */}
+        <h4 className="hl fh">
+          {`sherds.find((your) => {`}
+        </h4>
+        <ul className="ul-sidebar">
+          <li className="li-sidebar fb">
+            <Link className='link' to="/favoriten">your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
             </Link>
           </li>
-          <li className="li-sidebar">
-          <Link className='link' to="/shoppingCart">Shopping Cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
+          <li className="li-sidebar fb">
+          <Link className='link' to="/shoppingCart">your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
           </li>
         </ul>
-        <h4>{`})`}</h4>
+        <h4 className="hl fh">{`})`}</h4>
+
         <div>
           <img
                   src={fjm}
