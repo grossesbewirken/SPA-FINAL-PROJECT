@@ -21,11 +21,13 @@ const sizes = ["XS", "S", "M", "L", "XL"]
 const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
+  
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
 
+  console.log(currSherd);
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -77,7 +79,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
         <div className="detail-sherd ">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
-            <p style={{color: currSherd.backgroundColor === "white" ? "black" : "white",
+            <p style={{color: currSherd.backgroundColor === "white" ? "black" : currSherd.fontColor,
                        fontSize: currSherd.text.length > 20 && "14px"}} className="detail-text">{currSherd.text}</p> 
           </div>
 
