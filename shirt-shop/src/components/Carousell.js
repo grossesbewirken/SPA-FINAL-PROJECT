@@ -1,7 +1,7 @@
 // Packages Import
 import Carousel from 'react-bootstrap/Carousel';
-import { Link, useParams } from 'react-router-dom';
-import { useContext, useState, useEffect} from "react";
+import { Link } from 'react-router-dom';
+import { useContext} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faGreaterThanEqual, faHeart } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,98 +16,6 @@ import ShoppingContext from "../context/ShoppingContext";
 // Files Import
 import sherds from "../data/products";
 import fjm from '../images/fjm-logo.png';
-
-const Carousell = ({ showCarousel, currColor, setCurrColor, counter }) => {
-  const {id} = useParams()
-  const [favorite, setFavorite] = useContext(FavoriteContext);
-  const [good, setGood] = useContext(ShoppingContext);
-  const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id));
-
-  const textStyle = {
-    position: "absolute",
-    top:0,
-    left:19,
-    right:20,
-    bottom:0,
-    marginTop: "8%",
-    marginBottom: "25%",
-    textAlign:"center",
-  }
-
-  const favoriteHandler = () => {
-    const newFav = currSherd;
-    setFavorite([...favorite, newFav]);
-  }
-    
-  const shoppingHandler = () => {
-    const newGood = currSherd;
-    setGood([...good, newGood]);
-  }
-
-  return (
-    <div className='carousel-outer-container'>
-      {counter < 1
-        ? 
-      (<h1 className="headline display-1" >
-        nerdsherd
-        </h1>)
-        :
-      (<h1 className="headline display-1 alternative-headline">
-        Thank you for shopping</h1>)
-      }
-      <Carousel className='carousel-inner-container'>
-        {sherds.map((sherd, i) => {
-            return (
-              <Carousel.Item
-                key={i}
-                interval={1500} className="carousel-item-container">
-                <Link className="link " onClick={showCarousel} to={`/products/${sherd.id}`}>
-                  <div className="img-container-all">
-                    <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
-                    <div className="text-container-all" style={textStyle}>
-                    <p className="sherd-text-all">{sherd.text}</p> 
-                    </div>            
-                  </div>
-                </Link>
-            </Carousel.Item>
-            )
-        })}
-        </Carousel>
-        <div className='carousel-btn'>
-          <img
-            src={fjm}
-            width="45"
-            height="45"
-            className="d-inline-block align-top"
-            alt="FJM logo"
-          />
-          <Link className="link" to="/">
-            <button className="button-container-single" onClick={showCarousel}>
-              return Shop;
-            </button>
-          </Link>
-        <div className="flex">
-          <button
-            className="circle"
-            onClick={favoriteHandler}>
-            <FontAwesomeIcon
-              className="heart"
-              icon={faHeart} />
-          </button>
-          <button
-            onClick={shoppingHandler}
-            className="circle">
-            <FontAwesomeIcon
-              icon={faCartShopping} />
-          </button>
-        </div>
-      </div>
-    </div>  
-  );
-};
-
-export default Carousell;
-
 // import carousel_black1 from "../images/carousel_black1.png";
 // import carousel_black2 from "../images/carousel_black2.png";
 // import carousel_black3 from "../images/carousel_black3.png";
@@ -160,5 +68,94 @@ export default Carousell;
 //     carousel_red3
 //   ]
 
+const Carousell = ({showCarousel}) => {
+  const [favorite, setFavorite] = useContext(FavoriteContext);
+  const [good, setGood] = useContext(ShoppingContext);
 
 
+  const favoriteHandler = (sherd) => {
+    const newFav = [...favorite, { ...sherd}];
+    setFavorite(newFav);
+  }
+    
+  const shoppingHandler = (sherd) => {
+    const newGood = [...good, { ...sherd}];
+    setGood(newGood);
+  }
+
+  return (
+    <div className='carousel-outer-container'>
+      
+      <h1 className="carousell-headline display-1" >
+        nerdsherd
+      </h1>
+      <Carousel className='carousel-inner-container'>
+          {sherds.map((sherd, i) => {
+            return (
+              <Carousel.Item
+                key={i}
+                interval={3000} 
+                className="carousel-item-container">
+                  <Link 
+                    className="link" 
+                    onClick={showCarousel} 
+                    to={`/products/${sherd.id}`}>
+                    <div className="carousel-image-container">
+                      <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
+                      width="60%" /> 
+                    <div className="carousel-text-field">
+                      <p className="sherd-text-all carousel-text">{sherd.text}</p>
+                    </div>            
+                  </div>
+                </Link>
+              </Carousel.Item>
+            )
+          })}
+        </Carousel>
+      {/* <Carousel className='carousel-inner-container'>
+          {carouselPicArr.map((img, i) => {
+            return (
+              <Carousel.Item
+                key={i}
+                interval={1500} className="carousel-item-container">
+                  <img
+                    className="d-block w-100"
+                    src={img}
+                    alt="First slide"
+                  />
+              </Carousel.Item>
+            )
+          })}
+        </Carousel> */}
+        <div className='carousel-btn'>
+          <img
+            src={fjm}
+            width="45"
+            height="45"
+            className="d-inline-block align-top"
+            alt="FJM logo"
+          />
+          <Link className="link" to="/">
+            <button 
+              className="button-container-single button" 
+              onClick={showCarousel}>ENTER
+            </button>
+          </Link>
+          <div className="flex">
+          <button 
+            className="circle" 
+            onClick={favoriteHandler}>
+              <FontAwesomeIcon className="heart" icon={faHeart} />
+          </button>
+          <button 
+            onClick={shoppingHandler} 
+            className="circle">
+            <FontAwesomeIcon icon={faCartShopping}/>
+          </button>
+        </div>
+      </div>
+    </div>  
+  );
+};
+
+export default Carousell;

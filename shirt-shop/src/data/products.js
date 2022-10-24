@@ -17,7 +17,7 @@
     "id":1,
     "author": "Martin",
     "text": "Slack mich am Arsch",
-    "date": "",
+    "date": "2022",
     "backgroundColor": colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -38,7 +38,7 @@
   {
     "id": 2,
     "author": "anonym",
-    "text": "Spiel mir das Lied vom Code!",
+    "text": "Spiel mir das Lied vom Code",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
@@ -60,7 +60,7 @@
   {
     "id": 3,
     "author": "anonym",
-    "text": "Commit, ik will dir was zeigen!",
+    "text": "Commit, ik will dir was zeigen",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {

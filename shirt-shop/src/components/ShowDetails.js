@@ -8,6 +8,7 @@ import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Styles Import
 import "../styles/showdetails.css"
+import "../styles/App.scss"
 
 // Files Import
 import ColorContext from "../context/colorContext";
@@ -63,10 +64,9 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
 
   return (
     <div className="detail-card">
-      <div className="details-top-container">
         
         {/* S H E R D - S H E R D*/}
-        <div className="detail-sherd">
+        <div className="detail-sherd details-top-container">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
             <p className="detail-text">{currSherd.text}</p> 
@@ -92,7 +92,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
                   icon={faHeart} />
                 </button>
               </div>
-              
             </div>
         </div>   
 
@@ -126,7 +125,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           <button onClick={()=>navigate("/")}>return Shop;</button>        
         </div>
         </div>
-      </div>
     </div>
   );
 };
