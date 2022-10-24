@@ -84,10 +84,10 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
                 <span style={{color: colorContext[currColor]}}>{" }"}</span>
               </div>
               <div className="details-single-buttons flex">
-                <button onClick={shoppingHandler} className="circle">
+                <button onClick={shoppingHandler} className="circle btn text-white border border-light">
                   <FontAwesomeIcon
                   icon={faCartShopping}/></button>
-                <button onClick={favoriteHandler} className="circle">
+                <button onClick={favoriteHandler} className="circle btn text-white border border-light">
                   <FontAwesomeIcon className="heart"
                   icon={faHeart} />
                 </button>
@@ -114,7 +114,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           <div>
             <h5>width: </h5>
             <div className="color-container">
-            {sizes.map(size => <div className="circle" onClick={(event)=>sizeHandler(event)}>{size}</div>)}
+            {sizes.map(size => <button className="circle btn text-white border border-light" onClick={(event)=>sizeHandler(event)}>{size}</button>)}
             </div>
           </div>
           <div>
