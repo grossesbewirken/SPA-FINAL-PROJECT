@@ -59,8 +59,8 @@ return (
             <div className="favcart-button-container">
               <button 
                 type="button" 
-                className="delete-button favcart-button" 
-                onClick={()=>deleteGood(sherd)}><FontAwesomeIcon icon={faTrash} />delete
+                className="delete-button favcart-button btn circle text-white border border-light" 
+                onClick={()=>deleteGood(sherd)}><FontAwesomeIcon icon={faTrash} />
               </button>
             </div>
           </div>   
@@ -75,14 +75,13 @@ return (
     <div className="favcart-button-container">
       {goods.length === 0 ? 
         ("") :
-        (<Link className="link" to="/carousel">
-          
+        (
         <button 
           type="button" 
           className="buy-button favcart-button" 
           onClick={shoppingHandler}>BUY
         </button>
-        </Link>)
+        )
       }  
       <button
         className="favcart-button" 
