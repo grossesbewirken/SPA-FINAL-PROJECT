@@ -5,19 +5,18 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import { useContext } from "react";
 
-
 // I M P O R T   C O N T E X T
 import ColorContext from "../context/colorContext";
-
+import ShoppingContext from '../context/ShoppingContext';
+import FavoriteContext from '../context/FavoriteContext';
 
 // Styles Import
 import '../styles/header.scss';
 import "../styles/App.scss"
-
 
 // Files Import
 import sherds from "../data/products";
@@ -33,6 +32,8 @@ const Header = ({setFilterList, currColor}) => {
     setFilterList(newFilter)
   }
   const [colorContext] = useContext(ColorContext);
+  const [shoppingContext] = useContext(ShoppingContext)
+  const [favoritenContext] = useContext(FavoriteContext)
 
   return (
 <Navbar expand="lg" className="shadow-lg sticky-top navbar">
@@ -61,23 +62,31 @@ const Header = ({setFilterList, currColor}) => {
               aria-label="Username" aria-describedby="basic-addon1" 
               onChange={(event)=>inputHandler(event)}/>
             </div>
-            <Link className="link" to="/favoriten">
-              <Button
-              variant="outline-dark"
-              className="me-2 text-white border border-light circle"
-              >
-              <FontAwesomeIcon className="heart"
-                icon={faHeart}/>  
-              </Button>
-            </Link>
-            <Link className='link' to="/shoppingCart">
-              <Button
-              variant="outline-dark"
-              className="me-2 text-white border border-light circle">
-              <FontAwesomeIcon
-                icon={faCartShopping} />              
-              </Button>
-            </Link>
+            <div id="length-parent">
+              <Link id="length-parent" className="link" to="/favoriten">
+                <Button
+                variant="outline-dark"
+                className="me-2 text-white border border-light circle"
+                >
+                <FontAwesomeIcon className="heart"
+                  icon={faHeart}/>
+                </Button>
+                {favoritenContext.length !== 0 &&
+              <div id='quantity-fav'>{favoritenContext.length}</div>}
+              </Link>
+            </div>
+            <div id="length-parent">
+              <Link className='link' to="/shoppingCart">
+                <Button
+                variant="outline-dark"
+                className="me-2 text-white border border-light circle">
+                <FontAwesomeIcon
+                  icon={faCartShopping} />
+                </Button>
+                {shoppingContext.length !== 0 &&
+                <div id='quantity-cart'>{shoppingContext.length}</div>}
+              </Link>
+            </div>
 
         </Form>
       </Navbar.Collapse>

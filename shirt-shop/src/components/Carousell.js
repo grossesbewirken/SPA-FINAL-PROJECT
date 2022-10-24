@@ -9,7 +9,7 @@ import "../styles/App.scss";
 // Files Import
 import sherds from "../data/products";
 import fjm from '../images/fjm-logo.png';
-const Carousell = ({showCarousel, currColor, setCurrColor, counter}) => {
+const Carousell = ({showCarousel, counter}) => {
 
   return (
     <div className='carousel-outer-container'>

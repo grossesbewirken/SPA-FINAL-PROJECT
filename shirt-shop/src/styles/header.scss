@@ -1,5 +1,38 @@
 // BootStrap Class Override for Header/Navbar Components
-
+#length-parent{
+  position: relative;
+  z-index: 1;
+}
+#quantity-fav{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom:-5px;
+  right:5px;
+  z-index:2;
+  background-color: red;
+  border: 1px solid white;
+  width:20px;
+  height:20px;
+  text-align: center;
+  border-radius: 50%
+}
+#quantity-cart{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom:0;
+  right:0;
+  z-index:2;
+  background-color: red;
+  border: 1px solid white;
+  width:20px;
+  height:20px;
+  text-align: center;
+  border-radius: 50%
+}
 // 3 bars from responsive toggler "button"
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
