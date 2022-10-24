@@ -39,7 +39,7 @@ const Favorite = () => {
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
                 <div className="text-container-all" >
-                  <p className="sherd-text-all favcart-text" style={{color:sherd.fontColor}}>{sherd.text} </p> 
+                  <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor}}>{sherd.text} </p> 
                 </div>            
               </div>   
             </div>

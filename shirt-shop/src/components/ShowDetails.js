@@ -42,7 +42,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
-    setCurrSherd({...currSherd, fontColor:colorContext[color]})
+    setCurrSherd({...currSherd, fontColor: colorContext[color]})
   }
   const customHandler = (event)=>{
     const color = event.target.value
@@ -69,7 +69,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
         <div className="detail-sherd ">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
-            <p className="detail-text">{currSherd.text}</p> 
+            <p style={{color: currSherd.backgroundColor === "white" ? "black" : currSherd.fontColor}} className="detail-text">{currSherd.text}</p> 
           </div>
 
           {/* S H E R D - I N F O */}
