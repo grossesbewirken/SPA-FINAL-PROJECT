@@ -17,7 +17,7 @@ import ShoppingContext from "../context/ShoppingContext";
 
 // Files Import
 
-const ShowSherds = ({sherd, colorPalette, setRandomColor, currColor}) => {
+const ShowSherds = ({sherd}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
 console.log(sherd);

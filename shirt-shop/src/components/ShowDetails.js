@@ -14,7 +14,6 @@ import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
 
-// const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
 const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
@@ -64,7 +63,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
     <div className="detail-card">
       <div className="details-top-container">
         
-        {/* S H E R D - S H E R D*/}
+        {/* S H E R D - S H E R D */}
         <div className="detail-sherd">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
