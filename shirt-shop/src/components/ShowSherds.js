@@ -17,7 +17,7 @@ import ColorContext from "../context/colorContext";
 
 // Files Import
 
-const ShowSherds = ({sherd}) => {
+const ShowSherds = ({sherd, nothing, movie, music, philosophy}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
 const [colorContext] = useContext(ColorContext)
@@ -42,6 +42,8 @@ const shoppingHandler = () => {
   const newGood = [...good, { ...sherd}];
   setGood(newGood);
 }
+  
+
   return (
     <div className="sherds-all black-grad-135">
       <Link className="link " to={`/products/${sherd.id}`}>

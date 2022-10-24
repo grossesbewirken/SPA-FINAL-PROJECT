@@ -16,7 +16,7 @@ import "../styles/showsherds.css"
 import fjm from '../images/fjm-logo.png';
 import sherds from "../data/products"
 
-const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
+const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader}) => {
   const [colorContext] = useContext(ColorContext)
   const navigate = useNavigate()
 
@@ -24,21 +24,33 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
     const newList = sherds.filter(sherd => sherd.category === "Movie")
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('movie');
   }
   const filterMusic = () => {
     const newList = sherds.filter(sherd => sherd.category === "Music")
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('music');
   }
   const filterPhilosophy = () => {
     const newList = sherds.filter(sherd => sherd.category === "Developer Philosophie")
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('philosophy');
   }
   const filterNothing = () => {
     const newList = []
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('nothing');
+  }
+
+  const changeFilterHeaderFav = () => {
+    setFilterHeader('favorites');
+  }
+
+  const changeFilterHeaderSC = () => {
+    setFilterHeader('shoppingCart');
   }
 
   return (
@@ -73,23 +85,23 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
         </h4>
         <ul className="ul-sidebar">
           <li className="li-sidebar fb">
-            <Link className='link' to="/favoriten">your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
+            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
             </Link>
           </li>
           <li className="li-sidebar fb">
-          <Link className='link' to="/shoppingCart">your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
+            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
           </li>
         </ul>
         <h4 className="hl fh">{`})`}</h4>
 
         <div>
           <img
-                  src={fjm}
-                  width="45"
-                  height="45"
-                  className="d-inline-block align-top"
-                  alt="FJM logo"
-                />
+            src={fjm}
+            width="45"
+            height="45"
+            className="d-inline-block align-top"
+            alt="FJM logo"
+          />
         </div>  
       </div>
     </div>

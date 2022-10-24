@@ -31,7 +31,7 @@ const Favorite = () => {
 
   return (
     <div className="color-white">
-      <h1 className="favcart-hl">your favorites</h1>
+      {/* <h1 className="favcart-hl">your favorites</h1> */}
       {favoriteContext.map((sherd, i) =>{ 
         return(
           <div className="favcart-cardd black-grad-135 flex" key={i}>

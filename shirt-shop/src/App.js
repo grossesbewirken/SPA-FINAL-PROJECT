@@ -5,7 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useContext, useEffect } from "react";
-import ShoppingCart from "./components/ShoppingCart"
+
 
 // I M P O R T   S T Y L I N G
 import "./index.css"
@@ -25,22 +25,24 @@ import ShowSherds from './components/ShowSherds';
 import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
 import Carousell from "./components/Carousell";
-// import ShoppingCart from './components/ShoppingCart';
+import ShoppingCart from './components/ShoppingCart';
 
 library.add(faMagnifyingGlass);
 
 function App() {
-  const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"] 
+  const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange", "black", "red"]
   const [currColor, setCurrColor] = useState("")
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [goods, setGoods] = useContext(ShoppingContext);
   const [filterList, setFilterList] = useState([])
-  // console.log(sherds);
   
   // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
   const [counter, setCounter] = useState(0);
+
+  // Set the Headline for each Route and Filter
+  const [filterHeader, setFilterHeader] = useState('main');
 
   const showCarousel = () => {
     setCarouselToggle(curr => !curr);
@@ -69,7 +71,7 @@ function App() {
     localStorage.setItem("favorite", JSON.stringify(favorite))
     localStorage.setItem("goods", JSON.stringify(goods))
   }, [favorite, goods])
-  
+
   return (
   <div className="App">
     {/* Toggle shows the Carousel until the carouselToggle is turned to false (with onClick on "enter"). Then the regular shop is shown */}
@@ -111,20 +113,38 @@ function App() {
           showSidebar={showSidebar} 
           currColor={currColor} 
           setCurrColor={setCurrColor} 
-          setFilterList={setFilterList}/>
+          setFilterList={setFilterList}
+          setFilterHeader={setFilterHeader}
+          />
       </div>
-      <div className="sherd-container-all">
-        <Routes>
-          <Route path="*" element={<Navigate to="/"/>}/>
-          <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette}/>): 
-          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
-          <Route path="/favoriten" element=
-          {<Favorite sherds={sherds} />}/>
-          <Route path="/shoppingCart" element=
-          {<ShoppingCart sherds={sherds} showCarousel={showCarousel} />} />
+      <div className="show-sherds-header-and-routes">
+                  
+        <div className="show-sherds-header">
+          {filterHeader === 'nothing' ? <h1 className="favcart-hl">Main</h1> :
+            filterHeader === 'movie' ? <h1 className="favcart-hl">Movie</h1> :
+            filterHeader === 'music' ? <h1 className="favcart-hl">Music</h1> :
+            filterHeader === 'philosophy' ? <h1 className="favcart-hl">Philosophy</h1> :
+            filterHeader === 'favorites' ? <h1 className="favcart-hl">Favorites</h1> :
+            filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">Shopping Cart</h1> : 
+            <></>
+          }
+        </div>
+        <div className="sherd-container-all">
+          <Routes>
+            <Route path="*" element={<Navigate to="/"/>}/>
+            <Route path="/" element={
+            filterList.length === 0 ?
+            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette} />) :
+            filterList.map(sherd => <ShowSherds key={sherd.id}
+            sherd={sherd} colorPalette={colorPalette} />)} />
+            <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
+            <Route path="/favoriten" element=
+            {<Favorite sherds={sherds} />}/>
+            <Route path="/shoppingCart" element=
+            {<ShoppingCart sherds={sherds} showCarousel={showCarousel} />
+            } />
         </Routes>
+      </div>          
       </div>
     </div>
     </>)}

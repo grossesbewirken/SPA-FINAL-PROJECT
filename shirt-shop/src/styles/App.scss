@@ -77,6 +77,15 @@ button{
 
 // SHERD CONTAINER SETTINGS
 
+.show-sherds-header-and-routes {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-sherds-header {
+  margin-left: 2.5rem;
+  margin-top: 1.5rem;
+}
 
 // MEDIA QUERY (992px is Breakpoint!)
 
