@@ -43,7 +43,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
 
   return (
     <div className="sidebar">
-      <div>
+      <div className="fixed-sb">
         {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
         <button className=
         {`sidebar-inner-toggle-button 
@@ -53,7 +53,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
         onClick={showSidebar}
         >hideSidebar</button>
       </div>
-      <div>
+      <div className="fixed-sb">
 
         {/* F I L T E R */}
         <h4 className="hl fh">
