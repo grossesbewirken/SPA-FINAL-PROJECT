@@ -6,9 +6,6 @@ import { Link } from 'react-router-dom';
 import '../styles/carousel.scss';
 import "../styles/App.scss";
 
-// I M P O R T   C O N T E X T
-
-
 // Files Import
 import sherds from "../data/products";
 import fjm from '../images/fjm-logo.png';
@@ -27,6 +24,7 @@ const Carousell = ({showCarousel, currColor, setCurrColor, counter}) => {
       }
       <Carousel className='carousel-inner-container'>
           {sherds.map((sherd, i) => {
+            console.log(sherd)
             return (
               <Carousel.Item
                 key={i}
@@ -40,7 +38,7 @@ const Carousell = ({showCarousel, currColor, setCurrColor, counter}) => {
                       <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
                       width="60%" /> 
                     <div className="carousel-text-field">
-                      <p className="sherd-text-all carousel-text">{sherd.text}</p>
+                      <p style={{color: sherd.backgroundColor === "white" ? "black" : "white"}}className="sherd-text-all carousel-text">{sherd.text}</p>
                     </div>            
                   </div>
                 </Link>

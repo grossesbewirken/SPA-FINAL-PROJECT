@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 
-
 // Styles Import
 import '../styles/header.scss';
 import "../styles/App.scss"
@@ -13,14 +12,16 @@ import "../styles/App.scss"
 // I M P O R T   C O N T E X T
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
+import ColorContext from "../context/colorContext";
 
 
 // Files Import
 
-const ShowSherds = ({sherd, colorPalette, setRandomColor, currColor}) => {
+const ShowSherds = ({sherd}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
-console.log(sherd);
+const [colorContext] = useContext(ColorContext)
+
 const textStyle = {
   position: "absolute",
   top:0,
@@ -41,7 +42,7 @@ const shoppingHandler = () => {
   const newGood = [...good, { ...sherd}];
   setGood(newGood);
 }
-
+  console.log(sherd);
   return (
     <div className="sherds-all black-grad-135">
       <Link className="link " to={`/products/${sherd.id}`}>
@@ -53,11 +54,11 @@ const shoppingHandler = () => {
         </div>
       </Link>
         <div className="details-all">
-          <span style={{color: sherd.backgroundColor}}>{"{ "}text: </span>
+          <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>{"{ "}text: </span>
           <span style={{color: "white"}} className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
-          <span style={{color: sherd.backgroundColor}}>price: </span>
+          <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>price: </span>
           <span style={{color:"white"}}>{sherd.price.toFixed(2)} €uro</span>
-          <span style={{color: sherd.backgroundColor}}>{" }"}</span>
+          <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>{" }"}</span>
         </div>
         <div className="flex">
           <button
