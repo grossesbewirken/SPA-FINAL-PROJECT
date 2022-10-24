@@ -60,18 +60,6 @@ return (
       </div>
       )
     })}
-    {goods.length === 0 ? 
-      ("") :
-      (<Link className="link" to="/carousel">
-        <button type="button" className="buy-button"
-          onClick={shoppingHandler && showCarousel}
-        >BUY
-        </button>
-      </Link>)
-    }  
-    <button onClick={()=>navigate("/")}>return Shop;</button>         
-
-
     <div className="favcart-button-container">
       {goods.length === 0 ? 
         ("") :
@@ -80,7 +68,7 @@ return (
         <button 
           type="button" 
           className="buy-button favcart-button" 
-          onClick={shoppingHandler}>BUY
+          onClick={shoppingHandler && showCarousel}>BUY
         </button>
         </Link>)
       }  
