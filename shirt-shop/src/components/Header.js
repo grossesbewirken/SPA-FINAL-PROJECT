@@ -40,9 +40,13 @@ const Header = ({setFilterList, currColor}) => {
     <Container fluid className="d-flex justify-content-between">
       <Navbar bg="dark">
         <Container>
-        <Navbar.Brand href="#home" className="text-white header-hl">
-        <span style={{color: colorContext[currColor]}}>{"nerd"}</span>sherd
-        </Navbar.Brand>
+
+        <Link className="link" to="/">
+          <Navbar.Brand className="text-white header-hl">
+          <span style={{color: colorContext[currColor]}}>nerd</span>sherd
+          </Navbar.Brand>
+        </Link>
+
         </Container>
       </Navbar>
 
