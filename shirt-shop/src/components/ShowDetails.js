@@ -52,11 +52,15 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     const size = event.target.innerText
     setCurrSherd({...currSherd, size:size})
   }
+  const quantityHandler = (event)=>{
+    
+  }
   const favoriteHandler= ()=>{
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
   }
   const shoppingHandler= ()=>{
+
     const newGood = currSherd
     setGood([...good, newGood])
   }
@@ -116,6 +120,10 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
             <div className="color-container">
             {sizes.map(size => <button className="circle btn text-white border border-light" onClick={(event)=>sizeHandler(event)}>{size}</button>)}
             </div>
+          </div>
+          <div>
+            <h5>quantity:</h5>
+            <input onClick={event=>quantityHandler(event)} type="number" id="quantity" />
           </div>
           <div>
             <h5>value:</h5>
