@@ -30,7 +30,7 @@ const Favorite = () => {
   }
 
   return (
-    <div className="favorite-card">
+    <div className="color-white">
       <h1 className="favcart-hl">your favorites</h1>
       {favoriteContext.map((sherd, i) =>{ 
         return(
