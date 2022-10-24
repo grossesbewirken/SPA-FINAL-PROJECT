@@ -42,7 +42,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
     const newList = []
     setFilterList(newList)
     navigate("/")
-    setFilterHeader('nothing');
+    setFilterHeader('main');
   }
 
   const changeFilterHeaderFav = () => {
