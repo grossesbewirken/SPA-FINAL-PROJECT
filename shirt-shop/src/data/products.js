@@ -1,5 +1,5 @@
- import { useContext } from "react"
- import ColorContext from "../context/colorContext"
+//  import { useContext } from "react"
+//  import ColorContext from "../context/colorContext"
 
  import beigeSherd from "../images/beige-sherd.png"
  import blackSherd from "../images/black-sherd.png"
@@ -214,7 +214,7 @@
   {
     "id": 10,
     "author": "anonym",
-    "text": "Warum nicht gleich? || ?!=",
+    "text": "?!=so",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {

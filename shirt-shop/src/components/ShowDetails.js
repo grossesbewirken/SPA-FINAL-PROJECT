@@ -14,10 +14,11 @@ import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
 
+// const [randomColor, setRandomColor] = useState("black")
 // const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
 

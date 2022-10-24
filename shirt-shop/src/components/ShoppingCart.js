@@ -10,7 +10,7 @@ import "../styles/shoppingCart.scss"
 import ShoppingContext from "../context/ShoppingContext";
 import ColorContext from "../context/colorContext";
 
-const ShoppingCart = () => {
+const ShoppingCart = ({showCarousel}) => {
   const navigate = useNavigate()
   const [colorContext] = useContext(ColorContext)
   const [goods, setGoods] = useContext(ShoppingContext);
@@ -54,7 +54,10 @@ return (
     {goods.length === 0 ? 
       ("") :
       (<Link className="link" to="/carousel">
-      <button type="button" className="buy-button" onClick={shoppingHandler}>BUY</button>
+        <button type="button" className="buy-button"
+          onClick={shoppingHandler && showCarousel}
+        >BUY
+        </button>
       </Link>)
     }  
     <button onClick={()=>navigate("/")}>return Shop;</button>         

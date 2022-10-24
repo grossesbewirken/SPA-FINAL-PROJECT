@@ -39,9 +39,13 @@ function App() {
   // Toggles for show Sidebar, Sidebar Buttons and for showing Carousel at the mount of the website
   const [toggle, setToggle] = useState(true);
   const [carouselToggle, setCarouselToggle] = useState(true);
+  const [counter, setCounter] = useState(0);
 
   const showCarousel = () => {
     setCarouselToggle(curr => !curr);
+    const newCount = 1
+    setCounter(counter + newCount);
+    console.log(counter);
   }
 
   const showSidebar = () => {
@@ -73,7 +77,10 @@ function App() {
       carouselToggle
       ?
       (<Carousell
-            showCarousel={showCarousel}
+          showCarousel={showCarousel}
+          currColor={currColor} 
+          setCurrColor={setCurrColor}
+          counter={counter}
       />)
       :
       (
@@ -116,8 +123,7 @@ function App() {
           <Route path="/favoriten" element=
           {<Favorite sherds={sherds} />}/>
           <Route path="/shoppingCart" element=
-          {<ShoppingCart sherds={sherds} />} />
-          {/* <Route path="/carousel" element={<Carousell showCarousel={showCarousel}/>}/> */}
+          {<ShoppingCart sherds={sherds} showCarousel={showCarousel} />} />
         </Routes>
       </div>
     </div>

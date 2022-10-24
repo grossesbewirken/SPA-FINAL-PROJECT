@@ -13,12 +13,12 @@ import ShoppingContext from "../context/ShoppingContext";
 
 // Files Import
 
-const ShowSherds = ({sherd, colorPalette, setRandomColor}) => {
+const ShowSherds = ({sherd, colorPalette}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
 
-// const [randomColor, setRandomColor] = useState("black")
-// const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
+const [randomColor, setRandomColor] = useState("black")
+const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"]
 
 useEffect(()=>{
   setRandomColor(colorPalette[Math.floor(Math.random() * colorPalette.length)])

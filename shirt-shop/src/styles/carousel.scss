@@ -15,9 +15,9 @@
   flex-direction: row;
 }
 
-// .carousel-item-container {
-
-// }
+.carousel-item-container {
+  border: 2px solid red;
+}
 
 .carousel-btn {
   width: 50%;
@@ -44,6 +44,7 @@
 .carousel-control-prev-icon, .carousel-control-next-icon {
   display: none;
 }
+
 
 
 // * {
