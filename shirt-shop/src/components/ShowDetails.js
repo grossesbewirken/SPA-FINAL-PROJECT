@@ -14,17 +14,18 @@ import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
 
+// const [randomColor, setRandomColor] = useState("black")
 // const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
-
   const [colorContext] = useContext(ColorContext)
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
+  console.log(currSherd);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
@@ -32,7 +33,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
   }, [currSherd])
 
   const textStyleDetail = {
-    color: `${currSherd.fontColor}`,
+    color: currSherd.fontColor,
   }  
   
   const colorHandler = (event)=>{
