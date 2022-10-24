@@ -21,6 +21,16 @@
 }
 
 .sherd-text-all{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin-top: 10%;
+  margin-left: 32%;
+  margin-right: 32%;
+  margin-bottom: 25%;
+  text-align: center;
   font-weight: 600;
   font-size: 1.2em;
   line-height: 1.4rem;
