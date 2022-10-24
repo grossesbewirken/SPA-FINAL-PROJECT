@@ -11,6 +11,7 @@ import "../styles/showdetails.css"
 import "../styles/App.scss"
 
 // Files Import
+import colorPick from "../images/color-pick.png"
 import ColorContext from "../context/colorContext";
 import FavoriteContext from "../context/FavoriteContext";
 import ShoppingContext from "../context/ShoppingContext";
@@ -118,7 +119,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
             <h5>color:</h5>
             <div className="color-container">
               {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
-              <label className="customColor circle" htmlFor="customColor">?</label>
+              <label className="customColor circle" htmlFor="customColor"><img src={colorPick} alt="color-pick" className="color-pick"/></label>
               <input onChange={(event)=> customHandler(event)} className="hidden" type="color" id="customColor" />
             </div>            
           </div>
