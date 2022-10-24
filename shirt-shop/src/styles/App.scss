@@ -1,5 +1,6 @@
 .App {
   background-color: #212529;
+  width: 100vw;
 }
 
 .link  {
@@ -11,8 +12,8 @@
   text-decoration:none;
 }
 
-// SIDEBAR SETTINGS
 
+// SIDEBAR SETTINGS
 .sidebar-content-flex {
   display: flex;
 }
@@ -53,6 +54,14 @@ button{
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+  &:hover {
+    outline: 1px solid white !important;
+  }
+  &:active {
+    background-color: white;
+    color: #121517;
+    outline: 1px solid white !important; 
+  }
 }
 
 .hide-sidebar {
@@ -105,5 +114,4 @@ button{
   {
     display: flex;
   }
-
 }

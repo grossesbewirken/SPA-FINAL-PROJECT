@@ -55,6 +55,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
 
   return (
     <div className="sidebar">
+      <div className="sidebar-content">
       <div className="fixed-sb">
         {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
         <button className=
@@ -67,21 +68,26 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
       </div>
       <div className="fixed-sb">
 
-        {/* F I L T E R */}
+        {/* R U B R I K E N */}
         <h4 className="hl fh">
-          {`sherds.filter((sherd) => {`}
+          {`sherds.find (() => {`}
         </h4>
         <ul className="ul-sidebar">
-          <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar fb" onClick={filterMovie}>movies && series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar fb" onClick={filterMusic}>music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar fb" onClick={filterPhilosophy}>nerdic philosophy <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></li>
+        <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar fb">
+            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
+            </Link>
+          </li>
+          <li className="li-sidebar fb">
+            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
+          </li>
         </ul>
         <h4 className="hl fh">{`});`}</h4>
 
-        {/* R U B R I K E N */}
+
+        {/* F I L T E R */}
         <h4 className="hl fh">
-          {`sherds.find((your) => {`}
+          {`sherds.filter (() => {`}
         </h4>
         <ul className="ul-sidebar">
           <li className="li-sidebar fb">
@@ -94,6 +100,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
         </ul>
         <h4 className="hl fh">{`})`}</h4>
 
+
         <div>
           <img
             src={fjm}
@@ -105,6 +112,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
         </div>  
       </div>
     </div>
+  </div>
   );
 };
 

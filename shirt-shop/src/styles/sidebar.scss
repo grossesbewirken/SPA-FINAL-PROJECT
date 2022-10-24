@@ -1,15 +1,23 @@
 .sidebar { 
   display: flex; 
+  position: relative;
   justify-content: space-between; 
   flex-direction: row-reverse; 
   color: white; 
   background-color: #1b1e21;
-  width: 100%; padding: 2rem; 
+  width: 100%; padding: 2rem;
+  top: 0; 
 } 
 .fixed-sb{
   position:fixed;
   top:106px;
   left:32px;
+}
+
+.sidebar-content{
+  position: fixed;
+  margin: 2rem;
+  top: 50px; 
 }
 
 .ul-sidebar { 
@@ -35,3 +43,6 @@
   }
 } 
 
+.dark{
+  color:#1b1e21;
+}

@@ -36,4 +36,12 @@
   padding-right: 1.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  &:hover {
+    outline: 1px solid white !important;
+  }
+  &:active {
+    background-color: white;
+    color: #121517;
+    outline: 1px solid white !important; 
+  }
 }
