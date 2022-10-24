@@ -61,10 +61,11 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   }
 
   return (
-    <div className="detail-card">
+    <div>
+    <div className="detail-card black-grad-135">
         
         {/* S H E R D - S H E R D */}
-        <div className="detail-sherd">
+        <div className="detail-sherd ">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
             <p className="detail-text">{currSherd.text}</p> 
@@ -119,10 +120,13 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
             <h5>value:</h5>
             <div>{currSherd.price.toFixed(2)} €uro</div>
           </div>
-          <div className="button-container-single">        
-          <button onClick={()=>navigate("/")}>return Shop;</button>        
         </div>
-        </div>
+      </div>
+
+      {/* R E T U R N */}
+      <div className="button-container-single">        
+        <button onClick={()=>navigate("/")}>return Shop;</button>        
+      </div>
     </div>
   );
 };

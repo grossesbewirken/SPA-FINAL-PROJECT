@@ -2,52 +2,41 @@
 .detail-card{
     display: flex;
     flex-direction: row;
-    border: 5px solid lime;
-
-    margin: 3rem;
+    outline: 5px solid lime;
     border-radius: 15px;
-    max-height: 500px;
 }
 
-
-.detail-top-container{
-    display: flex;
-    flex-direction: column;
-
-}
 
 
 /* LEFT */
 /* S H E R D - S H E R D */
 .detail-sherd{
     display: flex;
-    border: 5px solid orange;
-
+    outline: 5px solid orange;
 
     flex-direction: column;
-    max-width: 500px;
+    width: 500px;
+    height: 490px;
     position: relative;
 
 }
 .detail-sherd img{
     justify-content: center;
     object-fit: contain;
-    min-height: 290px;
-    min-width: 290px;
 }
 .detail-text{
-    font-size: 2.25vw;
-    line-height: 2.5vw;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
     font-weight: 600;
     text-align: center;
-    margin-right: 13vw;
-    margin-left: 12.5vw;
+    margin-right: 13rem;
+    margin-left: 12rem;
     display: flex;
     position: absolute;
-    top: 4.8vw;
+    top: 4.8rem;
 }
 .detail-text-hl{
-    font-size: 1.4vw
+    font-size: 1.5rem
 }
 
 /* S H E R D - I N F O */
@@ -55,11 +44,11 @@
     font-weight: 600;
     display: flex;
     position: absolute;
-    width: 100%;
+    width: 500px;
     bottom: 0;
     padding-bottom: 1.5rem;
-    padding-left: 2.8vw;
-    padding-right: 2.8vw
+    padding-left: 2.8rem;
+    padding-right: 2.8rem
 }
 
 .details-single-description{
@@ -76,9 +65,9 @@
 /* C U S T O M I Z E R */
 .customize{
     display: flex;
-    border: 5px solid orangered;
+    outline: 5px solid orangered;
+    height: 490px;
 
-    
     flex-direction: column;
     color: white;
     padding: 2rem;
@@ -90,7 +79,7 @@
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
     .detail-card{
         flex-direction: column;
     }
