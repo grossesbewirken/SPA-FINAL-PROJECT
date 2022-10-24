@@ -86,7 +86,7 @@ const Carousell = ({ showCarousel, currColor, setCurrColor, counter }) => {
               return Shop;
             </button>
           </Link>
-        {/* <div className="flex">
+        <div className="flex">
           <button
             className="circle"
             onClick={favoriteHandler}>
@@ -100,7 +100,7 @@ const Carousell = ({ showCarousel, currColor, setCurrColor, counter }) => {
             <FontAwesomeIcon
               icon={faCartShopping} />
           </button>
-        </div> */}
+        </div>
       </div>
     </div>  
   );
@@ -160,93 +160,5 @@ export default Carousell;
 //     carousel_red3
 //   ]
 
-const Carousell = ({showCarousel}) => {
-  const [favorite, setFavorite] = useContext(FavoriteContext);
-  const [good, setGood] = useContext(ShoppingContext);
 
-
-  const favoriteHandler = (sherd) => {
-    const newFav = [...favorite, { ...sherd}];
-    setFavorite(newFav);
-  }
-    
-  const shoppingHandler = (sherd) => {
-    const newGood = [...good, { ...sherd}];
-    setGood(newGood);
-  }
-
-  return (
-    <div className='carousel-outer-container'>
-      
-      <h1 className="carousell-headline display-1" >
-        nerdsherd
-      </h1>
-      <Carousel className='carousel-inner-container'>
-          {sherds.map((sherd, i) => {
-            return (
-              <Carousel.Item
-                key={i}
-                interval={3000} 
-                className="carousel-item-container">
-                  <Link 
-                    className="link" 
-                    onClick={showCarousel} 
-                    to={`/products/${sherd.id}`}>
-                    <div className="carousel-image-container">
-                      <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
-                      width="60%" /> 
-                    <div className="carousel-text-field">
-                      <p className="sherd-text-all carousel-text">{sherd.text}</p>
-                    </div>            
-                  </div>
-                </Link>
-              </Carousel.Item>
-            )
-          })}
-        </Carousel>
-      {/* <Carousel className='carousel-inner-container'>
-          {carouselPicArr.map((img, i) => {
-            return (
-              <Carousel.Item
-                key={i}
-                interval={1500} className="carousel-item-container">
-                  <img
-                    className="d-block w-100"
-                    src={img}
-                    alt="First slide"
-                  />
-              </Carousel.Item>
-            )
-          })}
-        </Carousel> */}
-        <div className='carousel-btn'>
-          <img
-            src={fjm}
-            width="45"
-            height="45"
-            className="d-inline-block align-top"
-            alt="FJM logo"
-          />
-          <Link className="link" to="/">
-            <button 
-              className="button-container-single button" 
-              onClick={showCarousel}>ENTER
-            </button>
-          </Link>
-          <div className="flex">
-          <button 
-            className="circle" 
-            onClick={favoriteHandler}>
-              <FontAwesomeIcon className="heart" icon={faHeart} />
-          </button>
-          <button 
-            onClick={shoppingHandler} 
-            className="circle">
-            <FontAwesomeIcon icon={faCartShopping}/>
-          </button>
-        </div>
-      </div>
-    </div>  
-  );
-};
 
