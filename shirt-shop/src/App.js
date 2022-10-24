@@ -8,6 +8,7 @@ import { useContext, useEffect } from "react";
 import ShoppingCart from "./components/ShoppingCart"
 
 // I M P O R T   S T Y L I N G
+import "./index.css"
 import './styles/App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,7 +18,7 @@ import FavoriteContext from "./context/FavoriteContext";
 import ShoppingContext from "./context/ShoppingContext";
 
 // Files Import
-import sherds from "./data/products"
+import sherds from "./data/products";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ShowSherds from './components/ShowSherds';
@@ -29,6 +30,8 @@ import Carousell from "./components/Carousell";
 library.add(faMagnifyingGlass);
 
 function App() {
+  const [randomColor, setRandomColor] = useState("black")
+  const colorPalette = ["beige", "blue", "grey", "lime", "oliv", "orange","black", "red"] 
   const [currColor, setCurrColor] = useState("")
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [goods, setGoods] = useContext(ShoppingContext);
@@ -50,35 +53,21 @@ function App() {
   // useEffects to set the choosen favorite "sherds" in the localStorage and get them back after reload the side
   useEffect(()=>{
     const getFav = JSON.parse(localStorage.getItem("favorite"))
-    // const getGoods = JSON.parse(localStorage.getItem("goods"))
+    const getGoods = JSON.parse(localStorage.getItem("goods"))
     if(getFav !== null && getFav.length !== 0){
       setFavorite(getFav)
     }
-    // if(getGoods !== null && getGoods.length !== 0){
-    //   setGoods(getGoods)
-    // }
+    if(getGoods !== null && getGoods.length !== 0){
+      setGoods(getGoods)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   useEffect(()=>{
     localStorage.setItem("favorite", JSON.stringify(favorite))
-    // localStorage.setItem("goods", JSON.stringify(goods))
-  }, [favorite, /*goods*/])
+    localStorage.setItem("goods", JSON.stringify(goods))
+  }, [favorite, goods])
   
-  // useEffects to set the Shopping Cart and their "sherds" in the localStorage and get them back after reload the side
-  // useEffect(()=>{
-  //   const getGoods = JSON.parse(localStorage.getItem("goods"))
-  //   if(getGoods !== null && getGoods.length !== 0){
-  //     setGoods(getGoods)
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // },[])
-  
-  // useEffect(()=>{
-  //   localStorage.setItem("goods", JSON.stringify(goods))
-  // },[goods])
-  
-
   return (
   <div className="App">
     {/* Toggle shows the Carousel until the carouselToggle is turned to false (with onClick on "enter"). Then the regular shop is shown */}
@@ -86,7 +75,7 @@ function App() {
       carouselToggle
       ?
       (<Carousell
-        showCarousel={showCarousel}
+            showCarousel={showCarousel}
       />)
       :
       (
@@ -123,9 +112,9 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={filterList.length === 0 ? 
-          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>): 
-          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd}/>)} />
-          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor}/>}/>
+          sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>): 
+          filterList.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} setRandomColor={setRandomColor} colorPalette={colorPalette}/>)} />
+          <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
           <Route path="/favoriten" element=
           {<Favorite sherds={sherds} />}/>
           <Route path="/shoppingCart" element=

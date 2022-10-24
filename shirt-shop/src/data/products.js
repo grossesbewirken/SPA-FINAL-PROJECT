@@ -60,7 +60,7 @@
   {
     "id": 3,
     "author": "anonym",
-    "text": "Commit, ik will dir was zeigen :smirk:",
+    "text": "Commit, ik will dir was zeigen!",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
@@ -104,7 +104,7 @@
   {
     "id": 5,
     "author": "anonym",
-    "text": "Na, heute schon gep(f)usht? Coder-Sprache kann Leben retten!",
+    "text": "Heute schon gep(f)usht?",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
@@ -214,7 +214,7 @@
   {
     "id": 10,
     "author": "anonym",
-    "text": "Warum nicht gleich? || ?!=",
+    "text": "?!=so?",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {

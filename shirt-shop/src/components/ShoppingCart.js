@@ -1,14 +1,16 @@
 // Packages Import
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Styles Import
 import "../styles/text.css"
-import "../styles/shoppingCart.scss"
+import "../styles/favoritencart.css"
 
 // Files Import
 import ShoppingContext from "../context/ShoppingContext";
 import ColorContext from "../context/colorContext";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ShoppingCart = () => {
   const navigate = useNavigate()
@@ -26,38 +28,57 @@ const shoppingHandler = ()=>{
 
 return (
   <div>
-    <h1>Favoriten</h1>
+    <h1 className="favcart-hl">your shopping cart</h1>
     {goods.map((sherd, i) =>{ 
       return(
-        <div className="shopping-container flex" key={i}>
-          <div className="sherds-all black-135-deg">            
+        <div className="favcart-cardd black-grad-135 flex" key={i}>
+          <div>            
             <div className="img-container-all">
-              <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="200" /> 
+              <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
               <div className="text-container-all" >
-                <p className="sherd-text-all" style={{color:sherd.fontColor}}>{sherd.text} </p> 
+                <p className="sherd-text-all favcart-text" style={{color:sherd.fontColor}}>{sherd.text} </p> 
               </div>            
             </div>   
           </div>
           <div className="shopping-details">
             <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
-            <p>text: {sherd.text},</p>
-            <p>author: {sherd.author},</p>
-            <p>backgroundColor: {sherd.backgroundColor},</p>
+            <p >backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
-            <p>value: {sherd.price.toFixed(2)}€uro </p>
+            <p>author: {sherd.author},</p>
+            <p>value: {sherd.price.toFixed(2)} €uro </p>
             <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
-            <button type="button" className="delete-button" onClick={()=>deleteGood(sherd)}>delete</button>
+
+            <div className="favcart-button-container">
+              <button 
+                type="button" 
+                className="delete-button favcart-button" 
+                onClick={()=>deleteGood(sherd)}><FontAwesomeIcon icon={faTrash} />delete
+              </button>
+            </div>
+
           </div>   
       </div>
       )
     })}
-    {goods.length === 0 ? 
-      ("") :
-      (<Link className="link" to="/carousel">
-      <button type="button" className="buy-button" onClick={shoppingHandler}>BUY</button>
-      </Link>)
-    }  
-    <button onClick={()=>navigate("/")}>return Shop;</button>         
+
+
+    <div className="favcart-button-container">
+      {goods.length === 0 ? 
+        ("") :
+        (<Link className="link" to="/carousel">
+          
+        <button 
+          type="button" 
+          className="buy-button favcart-button" 
+          onClick={shoppingHandler}>BUY
+        </button>
+        </Link>)
+      }  
+      <button
+        className="favcart-button" 
+        onClick={()=>navigate("/")}>return Shop;
+      </button>         
+    </div>
 
   </div>
 );
