@@ -16,7 +16,7 @@ import ShoppingContext from "../context/ShoppingContext";
 
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
   const {id} = useParams()
   const navigate = useNavigate()
   const [colorContext] = useContext(ColorContext)

@@ -1,5 +1,5 @@
- import { useContext } from "react"
- import ColorContext from "../context/colorContext"
+//  import { useContext } from "react"
+//  import ColorContext from "../context/colorContext"
 
  import beigeSherd from "../images/beige-sherd.png"
  import blackSherd from "../images/black-sherd.png"

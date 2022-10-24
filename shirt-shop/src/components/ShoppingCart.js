@@ -12,7 +12,7 @@ import ShoppingContext from "../context/ShoppingContext";
 import ColorContext from "../context/colorContext";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const ShoppingCart = () => {
+const ShoppingCart = ({showCarousel}) => {
   const navigate = useNavigate()
   const [colorContext] = useContext(ColorContext)
   const [goods, setGoods] = useContext(ShoppingContext);
@@ -60,8 +60,6 @@ return (
       </div>
       )
     })}
-
-
     <div className="favcart-button-container">
       {goods.length === 0 ? 
         ("") :
@@ -70,7 +68,7 @@ return (
         <button 
           type="button" 
           className="buy-button favcart-button" 
-          onClick={shoppingHandler}>BUY
+          onClick={shoppingHandler && showCarousel}>BUY
         </button>
         </Link>)
       }  

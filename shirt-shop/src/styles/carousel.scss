@@ -76,6 +76,21 @@
 }
 
 
+
+// B U T T O N - L E I S T E
+.carousel-btn {
+  width: 87%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+
 .carousel-indicators {
   display: none;
 }
