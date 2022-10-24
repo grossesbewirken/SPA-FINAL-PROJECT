@@ -22,7 +22,6 @@ import "../styles/App.scss"
 // Files Import
 import sherds from "../data/products";
 
-
 const Header = ({setFilterList, currColor}) => {
   const inputHandler = (event)=>{
     event.preventDefault()
