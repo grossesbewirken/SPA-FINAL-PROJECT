@@ -73,7 +73,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
 
   return (
     <div>
-      <h1 className="favcart-hl">customize your sherd</h1>
+      
     <div className="detail-card black-grad-135">
         
         {/* S H E R D - S H E R D */}

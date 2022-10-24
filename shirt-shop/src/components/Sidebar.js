@@ -90,17 +90,11 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
           {`sherds.filter (() => {`}
         </h4>
         <ul className="ul-sidebar">
-          <li className="li-sidebar fb">
-            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
-            </Link>
-          </li>
-          <li className="li-sidebar fb">
-            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
-          </li>
+            <li className="li-sidebar fb" onClick={filterMovie}>Movie <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></li>
+            <li className="li-sidebar fb" onClick={filterMusic}>Music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
+            <li className="li-sidebar fb" onClick={filterPhilosophy}>Philo <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
         </ul>
         <h4 className="hl fh">{`})`}</h4>
-
-
         <div>
           <img
             src={fjm}
