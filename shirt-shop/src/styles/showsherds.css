@@ -64,8 +64,10 @@
   gap: 2rem
 }
 
-.circle *{
+.circle {
+  display:flex;
   justify-content: center;
+  align-items: center;
 }
 
 .test{
