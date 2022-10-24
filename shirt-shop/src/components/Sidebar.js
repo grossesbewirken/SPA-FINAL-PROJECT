@@ -16,7 +16,7 @@ import "../styles/showsherds.css"
 import fjm from '../images/fjm-logo.png';
 import sherds from "../data/products"
 
-const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
+const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader}) => {
   const [colorContext] = useContext(ColorContext)
   const navigate = useNavigate()
 
@@ -24,27 +24,39 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
     const newList = sherds.filter(sherd => sherd.category === "Movie")
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('movie');
   }
   const filterMusic = () => {
     const newList = sherds.filter(sherd => sherd.category === "Music")
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('music');
   }
   const filterPhilosophy = () => {
     const newList = sherds.filter(sherd => sherd.category === "Developer Philosophie")
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('philosophy');
   }
   const filterNothing = () => {
     const newList = []
     setFilterList(newList)
     navigate("/")
+    setFilterHeader('nothing');
+  }
+
+  const changeFilterHeaderFav = () => {
+    setFilterHeader('favorites');
+  }
+
+  const changeFilterHeaderSC = () => {
+    setFilterHeader('shoppingCart');
   }
 
   return (
     <div className="sidebar">
       <div className="sidebar-content">
-      <div>
+      <div className="fixed-sb">
         {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
         <button className=
         {`sidebar-inner-toggle-button 
@@ -54,7 +66,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
         onClick={showSidebar}
         >hideSidebar</button>
       </div>
-      <div>
+      <div className="fixed-sb">
 
         {/* R U B R I K E N */}
         <h4 className="hl fh">
@@ -63,11 +75,11 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
         <ul className="ul-sidebar">
         <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
           <li className="li-sidebar fb">
-            <Link className='link' to="/favoriten">your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
+            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
             </Link>
           </li>
           <li className="li-sidebar fb">
-          <Link className='link' to="/shoppingCart">your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
+            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
           </li>
         </ul>
         <h4 className="hl fh">{`});`}</h4>
@@ -78,9 +90,13 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList}) => {
           {`sherds.filter (() => {`}
         </h4>
         <ul className="ul-sidebar">
-          <li className="li-sidebar fb" onClick={filterMovie}>movies && series <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar fb" onClick={filterMusic}>music <span style={{color: colorContext[currColor] }}>{"=>{}"}</span></li>
-          <li className="li-sidebar fb" onClick={filterPhilosophy}>nerdic philosophy <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></li>
+          <li className="li-sidebar fb">
+            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{"=>{}"}</span>
+            </Link>
+          </li>
+          <li className="li-sidebar fb">
+            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{"=>{}"}</span></Link>
+          </li>
         </ul>
         <h4 className="hl fh">{`})`}</h4>
 

@@ -315,7 +315,7 @@
   {
     "id": 14,
     "author": "anonym",
-    "text": "!verst&&en",
+    "text": "!verst&&en           ",
     "date": "",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {

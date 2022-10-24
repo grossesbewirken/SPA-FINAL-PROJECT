@@ -25,13 +25,20 @@ const Favorite = () => {
     setFavoriteContext(newFav)
   }
   const shoppingHandler = (sherd) => {
-    const newGood = sherd;
-    setGoods([...goods, {...newGood}])
+    let alreadyThere = goods.filter(good => good.id === sherd.id && good.fontColor === sherd.fontColor && good.backgroundColor === sherd.backgroundColor)
+
+    const newGood = goods.map(good=> 
+      good.id === sherd.id && good.fontColor === sherd.fontColor && good.backgroundColor === sherd.backgroundColor ? {...good, quantity: +good.quantity + +sherd.quantity} : good
+    )
+    setGoods(alreadyThere.length !== 0 ? newGood : [...goods, {...sherd, quantity:sherd.quantity}])
+    alreadyThere = []
+    // alert("import Sherd to ShoppinCart")
   }
+
 
   return (
     <div className="color-white">
-      <h1 className="favcart-hl">your favorites</h1>
+      {/* <h1 className="favcart-hl">your favorites</h1> */}
       {favoriteContext.map((sherd, i) =>{ 
         return(
           <div className="favcart-cardd black-grad-135 flex" key={i}>

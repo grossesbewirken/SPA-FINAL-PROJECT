@@ -1,6 +1,6 @@
 // Packages Import
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Styles Import
@@ -16,8 +16,6 @@ const ShoppingCart = ({showCarousel}) => {
   const navigate = useNavigate()
   const [colorContext] = useContext(ColorContext)
   const [goods, setGoods] = useContext(ShoppingContext);
-
-  console.log(goods);
 
 const sum = goods.map((good)=>{
   return good.quantity ? good.price * good.quantity : good.price
@@ -35,8 +33,8 @@ const shoppingHandler = ()=>{
 }
 
 return (
-  <div className="color-white hundert">
-    <h1 className="favcart-hl">your shopping cart</h1>
+  <div className="color-white">
+    {/* <h1 className="favcart-hl">your shopping cart</h1> */}
     {goods.map((sherd, i) =>{ 
       return(
         <div className="favcart-cardd black-grad-135 flex" key={i}>
@@ -44,11 +42,12 @@ return (
             <div className="img-container-all">
               <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
               <div className="text-container-all" >
-                <p className="sherd-text-all favcart-text" style={{color:sherd.backgroundColor === "white" ? "black" :sherd.fontColor}}>{sherd.text} </p> 
+                <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : "white",
+                fontSize: sherd.text.length > 21 && "12px"}}>{sherd.text} </p> 
               </div>            
             </div>   
           </div>
-          <div className="shopping-details">
+          <div className="favoriten-details favcart-p">
             <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
             <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
