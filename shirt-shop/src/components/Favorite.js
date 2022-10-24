@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Styles Import
 import "../styles/text.css"
-import "../styles/favoritencart.css"
+import "../styles/favoritencart.scss"
 import "../styles/showsherds.css"
 
 // Files Import

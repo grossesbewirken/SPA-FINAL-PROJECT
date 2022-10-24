@@ -176,9 +176,9 @@
   },
   {
     "id": 8,
-    "author": "anonym",
+    "author": "Jeff",
     "text": "Loop Skywalker",
-    "date": "",
+    "date": "15. 07. 2022 - 10:34",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -362,7 +362,7 @@
     "id": 16,
     "author": "anonym",
     "text": "||wurm",
-    "date": "",
+    "date": "22. 06. 2022 - 15:00",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -384,8 +384,8 @@
   {
     "id": 17,
     "author": "anonym",
-    "text": "Pulmentum Clava, taste the chaos...",
-    "date": "",
+    "text": "Pulmentum Clava: Taste the Chaos",
+    "date": "22. 06. 2022 - 09:45",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -477,7 +477,7 @@
     "id": 21,
     "author": "Florian",
     "text": "Stranger Strings",
-    "date": "2022-07-14",
+    "date": "14. 07. 2022 - 09:11",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -500,7 +500,7 @@
     "id": 22,
     "author": "Martin",
     "text": "coffee.filter() returned immer einen 'Brewlean'",
-    "date": "2022-07-13",
+    "date": "13. 07. 2022 - 11:47",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -592,7 +592,7 @@
     "id": 26,
     "author": "Martin",
     "text": "Captain Jack Sp=>",
-    "date": "2022-07-16",
+    "date": "16. 07. 2022 - 21:36",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -613,9 +613,9 @@
   },
   {
     "id": 27,
-    "author": "Martin",
+    "author": "unknown",
     "text": "Roses are red, violets are blue, unexpected error in line 42",
-    "date": "2022-07-20",
+    "date": "unknown",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -636,9 +636,9 @@
   },
   {
     "id": 28,
-    "author": "Martin",
+    "author": "Robert",
     "text": "null > 0",
-    "date": "2022-07-21",
+    "date": "13. 07. 2022 - 13:58",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -684,7 +684,7 @@
     "id": 30,
     "author": "Martin",
     "text": "Pull Metal Jacket",
-    "date": "2022-07-21",
+    "date": "21. 07. 2022 - 09:01",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -705,9 +705,9 @@
   },
   {
     "id": 31,
-    "author": "Martin",
+    "author": "unknown",
     "text": ":): => Schrödingers Smiley",
-    "date": "2022-07-21",
+    "date": "unknown",
     "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
     "sherdColor": {
       "beige": beigeSherd,
@@ -932,7 +932,192 @@
     "category": "Movie",
     "price": 19.90,
     "quantity":1
-  }
+  },
+  {
+    "id": 41,
+    "author": "Robert",
+    "text": "Loop mich doch am Array",
+    "date": "28. 04. 2022 - 10:04",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
+  {
+    "id": 42,
+    "author": "Martin",
+    "text": "Beware of the git pull",
+    "date": "15. 07. 2022 - 10:23",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
+  {
+    "id": 42,
+    "author": "Martin",
+    "text": "sort art online",
+    "date": "13. 07. 2022 - 14:00",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Movie",
+    "price": 19.90,
+    "quantity":1
+  },
+  {
+    "id": 43,
+    "author": "Martin",
+    "text": "Like a merge in",
+    "date": "2022",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Music",
+    "price": 19.90,
+    "quantity":1
+  },  
+  {
+    "id": 44,
+    "author": "Martin",
+    "text": "Das var früher so",
+    "date": "2022",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
+  {
+    "id": 45,
+    "author": "Martin",
+    "text": "Das darf nicht var sein!",
+    "date": "2022",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
+  {
+    "id": 46,
+    "author": "Martin",
+    "text": "Des const net ändern!",
+    "date": "2022",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
+  {
+    "id": 47,
+    "author": "Martin",
+    "text": "JS is die for-hölle",
+    "date": "2022",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
+  
 ]
 
 export default products

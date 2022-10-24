@@ -58,13 +58,19 @@ const getSherd=()=>{
             className="d-inline-block align-top"
             alt="FJM logo"
           />
-          <button onClick={()=>getSherd()}>getSherd</button>
+
+          <button
+              className="button-container-single button" 
+              onClick={()=>getSherd()}>GET THIS SHIRT
+          </button>
+
           <Link className="link" to="/">
             <button 
               className="button-container-single button" 
-              onClick={showCarousel}>ENTER
+              onClick={showCarousel}>ENTER THE SHOP
             </button>
           </Link>
+
       </div>
     </div>  
   );

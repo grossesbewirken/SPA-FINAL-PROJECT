@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Styles Import
-import "../styles/showdetails.css"
+import "../styles/showdetails.scss"
 import "../styles/App.scss"
 
 // Files Import
@@ -73,7 +73,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
 
   return (
     <div>
-      <h1 className="favcart-hl">customize your shirt</h1>
+      <h1 className="favcart-hl">customize your sherd</h1>
     <div className="detail-card black-grad-135">
         
         {/* S H E R D - S H E R D */}
@@ -87,11 +87,12 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           {/* S H E R D - I N F O */}
             <div className="details-single">
               <div className="details-single-description">
-                <span style={{color: colorContext[currColor]}}>{"{ "}author: </span>
-                <span style={{color:"white"}}>{currSherd.author}</span><br/>
+                <span style={{color: colorContext[currColor]}}>{"{ "}</span>
                 <span style={{color: colorContext[currColor]}}>text: </span>
                 <span className="detail-text-hl" style={{color:"white"}}>{currSherd.text}</span><br/>
-                <span style={{color: colorContext[currColor]}}>date: </span>
+                <span style={{color: colorContext[currColor]}}>author: </span>
+                <span style={{color:"white"}}>{currSherd.author}</span>
+                <span style={{color: colorContext[currColor]}}>{" , "}date: </span>
                 <span style={{color:"white"}}>{currSherd.date}</span>
                 <span style={{color: colorContext[currColor]}}>{" }"}</span>
               </div>
@@ -120,13 +121,14 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
             {sizes.map(size => <button className="circle btn text-white border border-light" onClick={(event)=>sizeHandler(event)}>{size}</button>)}
             </div>
           </div>
-          <div>
+
+
+        <div className="flex between">
+                    <div>
             <h5 className="fh hl">quantity:</h5>
             <input onChange={event=>quantityHandler(event)} type="number" id="quantity" />
           </div>
-
-<div className="flex between">
-<div>
+          <div>
             <h5 className="fh hl">value:</h5>
             <div>{currSherd.price.toFixed(2)} €uro</div>
           </div>
@@ -137,7 +139,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
             </button>
             <button onClick={shoppingHandler} className="circle btn text-white border border-light">
               <FontAwesomeIcon
-              icon={faCartShopping}/></button>
+              icon={faCartShopping}/>
+            </button>
 
           </div>
         </div>
@@ -147,8 +150,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
       </div>
 
       {/* R E T U R N */}
-      <div className="button-container-single">        
-        <button onClick={()=>navigate("/")}>return Shop;</button>        
+      <div className="button-container-single carousel-btn">        
+        <button className="detail-btn" onClick={()=>navigate("/")}>return Shop;</button>        
       </div>
     </div>
   );

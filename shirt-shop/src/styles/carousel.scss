@@ -25,7 +25,23 @@
 .carousel-image-container{
   display: flex;
   justify-content: center;
+  max-height: 1500px;
+  min-height: 100vh;
 }
+.carousel-image-container > img{
+  object-fit: cover;
+  width: 100%;
+  max-height: 1500px
+}
+
+@media (min-width: 900px) {
+  .carousel-image-container > img{
+    object-fit: contain;
+    max-height: 100vh;
+  }
+}
+
+
 
 //  C A R O U S E L - T E X T - F I E L D
 .carousel-text-field{
@@ -62,6 +78,7 @@
 }
 
 
+
 // B U T T O N - L E I S T E
 .carousel-btn {
   width: 87%;
@@ -72,24 +89,16 @@
   .button{
     padding-left: 2rem;
     padding-right: 2rem;
+    &:hover {
+      outline: 1.5px solid white !important;
+    }
+    &:active {
+      background-color: white;
+      color: #121517;
+      outline: 1.5px solid white !important; 
+    }
   }
 }
-
-
-
-// B U T T O N - L E I S T E
-.carousel-btn {
-  width: 87%;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .button{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 
 .carousel-indicators {
   display: none;
@@ -98,14 +107,12 @@
 .carousel-control-prev-icon, 
 .carousel-control-next-icon {
   margin-top: 5vw;
-  // display: none;
 }
 .carousel-control-prev,
 .carousel-control-next{
   height:fit-content;
   margin:auto
 }
-
 
 
 
