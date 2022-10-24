@@ -16,7 +16,7 @@
 
     flex-direction: column;
     width: 500px;
-    height: 490px;
+    /* height: 490px; */
     position: relative;
 
 }
@@ -24,16 +24,19 @@
     justify-content: center;
     object-fit: contain;
 }
+
 .detail-text{
+    border: 2px solid red;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 600;
     text-align: center;
-    margin-right: 13rem;
-    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-left: 11rem;
     display: flex;
     position: absolute;
-    top: 4.8rem;
+    top: 4.8rem;    
+    font-weight: bold;
 }
 .detail-text-hl{
     font-size: 1.5rem
@@ -66,7 +69,7 @@
 .customize{
     display: flex;
     outline: 5px solid orangered;
-    height: 490px;
+    /* height: 490px; */
 
     flex-direction: column;
     color: white;
@@ -75,6 +78,9 @@
 }
 .customize h5{
     margin-top: 2rem;
+}
+.select-single{
+    height:fit-content;
 }
 
 

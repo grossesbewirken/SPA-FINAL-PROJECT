@@ -12,7 +12,7 @@ import "../styles/showsherds.css"
 import FavoriteContext from "../context/FavoriteContext"
 import ColorContext from "../context/colorContext";
 import ShoppingContext from "../context/ShoppingContext";
-import { faCartShopping, faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Favorite = () => {
   const navigate = useNavigate()
@@ -39,7 +39,7 @@ const Favorite = () => {
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
                 <div className="text-container-all" >
-                  <p className="sherd-text-all favcart-text" style={{color:sherd.fontColor}}>{sherd.text} </p> 
+                  <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor}}>{sherd.text} </p> 
                 </div>            
               </div>   
             </div>
@@ -55,13 +55,13 @@ const Favorite = () => {
               <div className="favcart-button-container">
                 <button 
                   type="button"
-                  className="add-button favcart-button" 
-                  onClick={() => shoppingHandler(sherd)}><FontAwesomeIcon icon={faCartShopping} />add to cart
+                  className="add-button favcart-button btn circle text-white border border-light" 
+                  onClick={() => shoppingHandler(sherd)}><FontAwesomeIcon icon={faCartShopping} />
                 </button>
                 <button 
                   type="button" 
-                  className="delete-button favcart-button" 
-                  onClick={()=>deleteFav(sherd)}><FontAwesomeIcon icon={faTrash} />delete
+                  className="delete-button favcart-button circle btn text-white border border-light" 
+                  onClick={()=>deleteFav(sherd)}><FontAwesomeIcon icon={faTrash} />
                 </button>
               </div>
 

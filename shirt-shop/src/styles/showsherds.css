@@ -22,10 +22,10 @@
 
 .sherd-text-all{
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   line-height: 1.4rem;
-
 }
+
 .red-text{
   color:red;
 }
@@ -64,8 +64,10 @@
   gap: 2rem
 }
 
-.circle *{
+.circle {
+  display:flex;
   justify-content: center;
+  align-items: center;
 }
 
 .test{

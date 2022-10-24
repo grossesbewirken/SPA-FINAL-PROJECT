@@ -3,7 +3,9 @@
   border-radius: 15px;
   width: 650px
 }
-
+.shopping-details{
+  color:white;
+}
 .favcart-hl{
   font-family: 'Readex Pro', sans-serif;
   font-weight: 700;

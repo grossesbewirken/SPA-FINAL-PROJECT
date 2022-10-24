@@ -25,7 +25,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   const [favorite, setFavorite] = useContext(FavoriteContext)
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
-  console.log(currSherd);
 
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
@@ -42,7 +41,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   }
   const fontHandler = (event)=>{    
     const color = event.target.className.split(" ")[0]
-    setCurrSherd({...currSherd, fontColor:colorContext[color]})
+    setCurrSherd({...currSherd, fontColor: colorContext[color]})
   }
   const customHandler = (event)=>{
     const color = event.target.value
@@ -52,13 +51,22 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     const size = event.target.innerText
     setCurrSherd({...currSherd, size:size})
   }
+  const quantityHandler = (event)=>{
+    const quantity = event.target.value
+    setCurrSherd({...currSherd, quantity:quantity})
+  }
   const favoriteHandler= ()=>{
     const newSherd = currSherd
     setFavorite([...favorite, newSherd])
   }
   const shoppingHandler= ()=>{
-    const newGood = currSherd
-    setGood([...good, newGood])
+    let alreadyThere = good.filter( good => good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor)
+
+    const newGood = good.map(good=> 
+      good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor ? {...good, quantity: +good.quantity + +currSherd.quantity} : good
+    )
+    setGood(alreadyThere.length !== 0 ? newGood : [...good, {...currSherd, quantity:currSherd.quantity}])
+    alreadyThere = []
   }
 
   return (
@@ -69,7 +77,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
         <div className="detail-sherd ">
           <img  src={currSherd.sherdColor[currSherd.backgroundColor]} alt=""/>
           <div className="detail-text-container" style={textStyleDetail}>
-            <p className="detail-text">{currSherd.text}</p> 
+            <p style={{color: currSherd.backgroundColor === "white" ? "black" : "white",
+                       fontSize: currSherd.text.length > 20 && "14px"}} className="detail-text">{currSherd.text}</p> 
           </div>
 
           {/* S H E R D - I N F O */}
@@ -84,10 +93,10 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
                 <span style={{color: colorContext[currColor]}}>{" }"}</span>
               </div>
               <div className="details-single-buttons flex">
-                <button onClick={shoppingHandler} className="circle">
+                <button onClick={shoppingHandler} className="circle btn text-white border border-light">
                   <FontAwesomeIcon
                   icon={faCartShopping}/></button>
-                <button onClick={favoriteHandler} className="circle">
+                <button onClick={favoriteHandler} className="circle btn text-white border border-light">
                   <FontAwesomeIcon className="heart"
                   icon={faHeart} />
                 </button>
@@ -114,8 +123,12 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           <div>
             <h5>width: </h5>
             <div className="color-container">
-            {sizes.map(size => <div className="circle" onClick={(event)=>sizeHandler(event)}>{size}</div>)}
+            {sizes.map(size => <button className="circle btn text-white border border-light" onClick={(event)=>sizeHandler(event)}>{size}</button>)}
             </div>
+          </div>
+          <div>
+            <h5>quantity:</h5>
+            <input onChange={event=>quantityHandler(event)} type="number" id="quantity" />
           </div>
           <div>
             <h5>value:</h5>
