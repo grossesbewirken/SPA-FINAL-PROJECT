@@ -36,7 +36,7 @@ const FJM = () => {
         
         <img src={itzFlorian } alt="" />
         <h3>Florian Mewes</h3>
-        <p>I am on going Web Developer</p>
+        <p>Chabos wissen wer der Babo ist...</p>
         <div className="link flexi">
             <a
               href="https://github.com/itzFlorian"
