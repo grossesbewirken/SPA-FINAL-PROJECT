@@ -104,14 +104,14 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
           <div>
             <h5 className="fh hl">background-color: </h5>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>colorHandler(event)}></div>)}
+              {colorPalette.map(color => <div className={`${color} col-circle`} onClick={(event)=>colorHandler(event)}></div>)}
             </div>
           </div>
           <div>
             <h5 className="fh hl">color:</h5>
             <div className="color-container">
-              {colorPalette.map(color => <div className={`${color} circle`} onClick={(event)=>fontHandler(event)}></div>)}
-              <label className="customColor circle" htmlFor="customColor"><img src={colorPick} alt="color-pick" className="color-pick"/></label>
+              {colorPalette.map(color => <div className={`${color} col-circle`} onClick={(event)=>fontHandler(event)}></div>)}
+              <label className="customColor col-circle" htmlFor="customColor"><img src={colorPick} alt="color-pick" className="color-pick"/></label>
               <input onChange={(event)=> customHandler(event)} className="hidden" type="color" id="customColor" />
             </div>            
           </div>
@@ -119,29 +119,41 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
             <h5 className="fh hl">width: </h5>
             <div className="color-container">
             {sizes.map(size => <button className="circle btn text-white border border-light" onClick={(event)=>sizeHandler(event)}>{size}</button>)}
-            </div>
           </div>
+        </div>
 
-
-        <div className="flex between">
-                    <div>
+        <div className="flex between gap">
+          <div>
             <h5 className="fh hl">quantity:</h5>
-            <input onChange={event=>quantityHandler(event)} type="number" id="quantity" />
+            <input 
+              className="value-field" 
+              onChange={event=>quantityHandler(event)} 
+              type="number" 
+              id="quantity"
+            />
           </div>
+
           <div>
             <h5 className="fh hl">value:</h5>
             <div>{currSherd.price.toFixed(2)} €uro</div>
           </div>
-          <div className="details-single-buttons flex">
-          <button onClick={favoriteHandler} className="circle btn text-white border border-light">
-              <FontAwesomeIcon className="heart"
-              icon={faHeart} />
-            </button>
-            <button onClick={shoppingHandler} className="circle btn text-white border border-light">
-              <FontAwesomeIcon
-              icon={faCartShopping}/>
-            </button>
 
+          <div className="details-single-buttons">
+            <h5 className="fh hl">get item:</h5>
+            <div className="flex">
+              <button
+                onClick={favoriteHandler} 
+                className="circle btn text-white border border-light">
+                <FontAwesomeIcon className="heart"
+                icon={faHeart} />
+              </button>
+              <button 
+                onClick={shoppingHandler} 
+                className="circle btn text-white border border-light">
+                <FontAwesomeIcon
+                icon={faCartShopping}/>
+              </button>
+            </div>
           </div>
         </div>
 </div>
