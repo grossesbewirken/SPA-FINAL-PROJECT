@@ -36,11 +36,11 @@ const Header = ({setFilterList, currColor, setFilterHeader}) => {
   const [favoritenContext] = useContext(FavoriteContext)
 
   const changeFilterHeaderFav = () => {
-    setFilterHeader('favorites');
+    setFilterHeader('your favorites');
   }
 
   const changeFilterHeaderSC = () => {
-    setFilterHeader('shoppingCart');
+    setFilterHeader('your shopping cart');
   }
 
   return (
