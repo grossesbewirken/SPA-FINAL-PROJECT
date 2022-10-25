@@ -35,33 +35,52 @@
   max-height: 1500px
 }
 
-@media (min-width: 900px) {
-  .carousel-image-container > img{
-    object-fit: contain;
-    max-height: 100vh;
-  }
-}
-
 
 //  C A R O U S E L - T E X T - F I E L D
 .carousel-text-field{
 
   position: absolute;
-  width: 50vw;
-  margin-top: 3.9vw;
-  margin-bottom: 25%;
+  width: 50rem;
+  margin-top: 4.5rem;
 }
-
 
 //  C A R O U S E L - T E X T - F I E L D
 .carousel-text{
-  font-size: 3.9vw;
-  line-height: 4.3vw;
+  font-size: 4rem;
+  line-height: 4.5rem;
   color: white;
   font-weight: 600;
   display: flex;
   text-align: center;
 }
+
+
+@media (min-width: 900px) {
+  .carousel-image-container > img{
+    object-fit: contain;
+    max-height: 100vh;
+  };
+}
+
+
+@media(max-width: 900px){
+  .carousel-text-field{
+    display: flex;
+    position: absolute;
+    width: 80vw;
+    margin-top: 5vh;
+  };
+  .carousel-text{
+    font-size: 4.5vh;
+    line-height: 6vh;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    text-align: center;
+  }
+}
+
+
 
 
 // H E A D L I N E
