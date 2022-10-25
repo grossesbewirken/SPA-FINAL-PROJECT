@@ -17,7 +17,7 @@ import ColorContext from "../context/colorContext";
 
 // Files Import
 
-const ShowSherds = ({sherd, nothing, movie, music, philosophy}) => {
+const ShowSherds = ({sherd, setFilterHeader}) => {
 const [favorite, setFavorite] = useContext(FavoriteContext)
 const [good, setGood] = useContext(ShoppingContext)
 const [colorContext] = useContext(ColorContext)
@@ -43,10 +43,13 @@ const shoppingHandler = () => {
   setGood(newGood);
 }
   
+const changeFilterHeaderShowDetails = () => {
+  setFilterHeader('showDetails');
+}
 
   return (
     <div className="sherds-all black-grad-135">
-      <Link className="link " to={`/products/${sherd.id}`}>
+      <Link className="link " to={`/products/${sherd.id}`} onClick={changeFilterHeaderShowDetails}>
         <div className="img-container-all">
           <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
           <div className="text-container-all" style={textStyle}>

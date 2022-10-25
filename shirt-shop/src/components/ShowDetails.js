@@ -19,7 +19,7 @@ import ShoppingContext from "../context/ShoppingContext";
 // const colorPalette = ["red", "orange","beige", "white", "lime",  "blue", "grey", "oliv", "black"]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
-const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor}) => {
+const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomColor, setFilterHeader}) => {
   const {id} = useParams()
   const navigate = useNavigate()
   const [colorContext] = useContext(ColorContext)
@@ -69,8 +69,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     setGood(alreadyThere.length !== 0 ? newGood : [...good, {...currSherd, quantity:currSherd.quantity}])
     alreadyThere = []
   }
-
-
 
   return (
     <div>

@@ -21,7 +21,7 @@ import "../styles/App.scss"
 // Files Import
 import sherds from "../data/products";
 
-const Header = ({setFilterList, currColor}) => {
+const Header = ({setFilterList, currColor, setFilterHeader}) => {
   const inputHandler = (event)=>{
     event.preventDefault()
     const searchTerm = event.target.value
@@ -34,6 +34,14 @@ const Header = ({setFilterList, currColor}) => {
   const [colorContext] = useContext(ColorContext);
   const [shoppingContext] = useContext(ShoppingContext)
   const [favoritenContext] = useContext(FavoriteContext)
+
+  const changeFilterHeaderFav = () => {
+    setFilterHeader('favorites');
+  }
+
+  const changeFilterHeaderSC = () => {
+    setFilterHeader('shoppingCart');
+  }
 
   return (
 <Navbar expand="lg" className="shadow-lg sticky-top navbar">
@@ -65,7 +73,8 @@ const Header = ({setFilterList, currColor}) => {
               onChange={(event)=>inputHandler(event)}/>
             </div>
             <div id="length-parent">
-              <Link id="length-parent" className="link" to="/favoriten">
+              <Link id="length-parent" className="link" to="/favoriten"
+                onClick={changeFilterHeaderFav}>
                 <Button
                 variant="outline-dark"
                 className="me-2 text-white border border-light circle"
@@ -78,7 +87,8 @@ const Header = ({setFilterList, currColor}) => {
               </Link>
             </div>
             <div id="length-parent">
-              <Link className='link' to="/shoppingCart">
+              <Link className='link' to="/shoppingCart"
+                onClick={changeFilterHeaderSC}>
                 <Button
                 variant="outline-dark"
                 className="me-2 text-white border border-light circle">

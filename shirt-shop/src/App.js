@@ -98,6 +98,7 @@ function App() {
         setCurrColor={setCurrColor} 
         FontAwesomeIcon={FontAwesomeIcon}
         setFilterList={setFilterList}
+        setFilterHeader={setFilterHeader}
       />
     {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
     <button className=
@@ -124,26 +125,17 @@ function App() {
           />
       </div>
       <div className="show-sherds-header-and-routes">
-                  
         <div className="show-sherds-header">
-          {filterHeader === 'main' ? <h1 className="favcart-hl">Main</h1> :
-            filterHeader === 'movie' ? <h1 className="favcart-hl">Movie</h1> :
-            filterHeader === 'music' ? <h1 className="favcart-hl">Music</h1> :
-            filterHeader === 'philosophy' ? <h1 className="favcart-hl">Philosophy</h1> :
-            filterHeader === 'favorites' ? <h1 className="favcart-hl">Favorites</h1> :
-            filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">Shopping Cart</h1> :
-            // filterHeader === 'showDetails' ? <h1 className="favcart-hl">customize your sherd</h1> :                                    
-            <></>
-            }
+          <h1 className="favcart-hl">{filterHeader}</h1>         
         </div>
         <div className="sherd-container-all">
           <Routes>
             <Route path="*" element={<Navigate to="/"/>}/>
             <Route path="/" element={
             filterList.length === 0 ?
-            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette} /*onClick={changeFilterHeaderShowSherd}*/ />) :
+            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette} setFilterHeader={setFilterHeader}/>) :
             filterList.map(sherd => <ShowSherds key={sherd.id}
-            sherd={sherd} colorPalette={colorPalette} /*onClick={changeFilterHeaderShowSherd}*//>)} />
+            sherd={sherd} colorPalette={colorPalette} setFilterHeader={setFilterHeader}/>)} />
             <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette} />}/>
             <Route path="/favoriten" element=
             {<Favorite sherds={sherds} />}/>
