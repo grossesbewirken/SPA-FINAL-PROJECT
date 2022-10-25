@@ -55,7 +55,11 @@
 
 .details-single-buttons{
     align-items:flex-end;
-    flex: 1,
+    flex: 1;
+}
+
+.gap{
+    gap: 3rem;
 }
 
 
@@ -93,4 +97,31 @@
     .detail-card{
         flex-direction: column;
     }
+}
+
+.value-field{
+    background-color: hidden;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-left: 1.5rem;
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 5rem;
+}
+
+.col-circle{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    border: 1px solid white;
+    &:hover {
+        outline: 1.5px solid white !important;
+      }
+      &:active {
+        background-color: white;
+        color: #121517;
+        outline: 1.5px solid white !important; 
+      }
 }

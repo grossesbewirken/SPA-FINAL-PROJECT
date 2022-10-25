@@ -4,7 +4,7 @@
   justify-content: space-between; 
   flex-direction: row-reverse; 
   color: white; 
-  background-color: #1b1e21;
+  background-color: rgb(27, 30, 33);
   width: 100%; padding: 2rem;
   top: 0; 
 } 
@@ -25,7 +25,7 @@
   width: 100%;}
 
 .li-sidebar { 
-  background-color: #121517;
+  background-color: rgb(18,21,24);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 2rem;
@@ -38,11 +38,11 @@
   }
   &:active {
     background-color: white;
-    color: #121517;
+    color: rgb(18,21,24);
     outline: 1px solid white !important; 
   }
 } 
 
 .dark{
-  color:#1b1e21;
+  color:rgb(27, 30, 33);
 }

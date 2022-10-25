@@ -146,10 +146,7 @@
   background-color: rgb(0, 0, 0);
 }
 .black-grad-135{
-  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(10, 10, 10));
-}
-.black-grad-135{
-  background: linear-gradient(135deg, rgb(45, 45, 45)30%,rgb(10, 10, 10));
+  background: linear-gradient(135deg, rgb(45, 48, 51)30%,rgb(10, 13, 16));
 }
 
 
