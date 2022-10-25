@@ -55,26 +55,30 @@ const shoppingHandler = () => {
           </div>            
         </div>
       </Link>
-        <div className="details-all">
-          <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>{"{ "}text: </span>
-          <span style={{color: "white"}} className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
-          <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>price: </span>
-          <span style={{color:"white"}}>{sherd.price.toFixed(2)} €uro</span>
-          <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>{" }"}</span>
-        </div>
-        <div className="flex">
-          <button
-            className="circle"
-            onClick={favoriteHandler}>
-            <FontAwesomeIcon className="heart" icon={faHeart} />
-          </button>
-          <button
-            className="circle"
-            onClick={shoppingHandler}>
-            <FontAwesomeIcon icon={faCartShopping} />
-          </button>
-        </div>      
+
+      {/* T E X T - favcart */}
+      <div className="details-all">
+        <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>{"{ "}text: </span>
+        <span style={{color: "white"}} className="text-details-all">{ sherd.text.length > 15 ? `${sherd.text.slice(0, 15)}...` : sherd.text },</span><br />
+        <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>price: </span>
+        <span style={{color:"white"}}>{sherd.price.toFixed(2)} €uro</span>
+        <span style={{color: sherd.backgroundColor === "black" ? colorContext.red : colorContext[sherd.backgroundColor]}}>{" }"}</span>
       </div>
+
+      {/* B U T T O N S - favcart */}
+      <div className="flex">
+        <button
+          className="circle"
+          onClick={favoriteHandler}>
+          <FontAwesomeIcon className="heart" icon={faHeart} />
+        </button>
+        <button
+          className="circle"
+          onClick={shoppingHandler}>
+          <FontAwesomeIcon icon={faCartShopping} />
+        </button>
+      </div>
+    </div>
   );
 };
 
