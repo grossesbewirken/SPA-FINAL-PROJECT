@@ -62,10 +62,10 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     setFavorite([...favorite, newSherd])
   }
   const shoppingHandler= ()=>{
-    let alreadyThere = good.filter( good => good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor)
+    let alreadyThere = good.filter( good => good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor && good.size === currSherd.size)
 
     const newGood = good.map(good=> 
-      good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor ? {...good, quantity: +good.quantity + +currSherd.quantity} : good
+      good.id === currSherd.id && good.fontColor === currSherd.fontColor && good.backgroundColor === currSherd.backgroundColor && good.size === currSherd.size ? {...good, quantity: +good.quantity + +currSherd.quantity} : good
     )
     setGood(alreadyThere.length !== 0 ? newGood : [...good, {...currSherd, quantity:currSherd.quantity}])
     alreadyThere = []

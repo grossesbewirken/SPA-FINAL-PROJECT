@@ -25,10 +25,10 @@ const Favorite = () => {
     setFavoriteContext(newFav)
   }
   const shoppingHandler = (sherd) => {
-    let alreadyThere = goods.filter(good => good.id === sherd.id && good.fontColor === sherd.fontColor && good.backgroundColor === sherd.backgroundColor)
+    let alreadyThere = goods.filter(good => good.id === sherd.id && good.fontColor === sherd.fontColor && good.backgroundColor === sherd.backgroundColor && good.size === sherd.size)
 
     const newGood = goods.map(good=> 
-      good.id === sherd.id && good.fontColor === sherd.fontColor && good.backgroundColor === sherd.backgroundColor ? {...good, quantity: +good.quantity + +sherd.quantity} : good
+      good.id === sherd.id && good.fontColor === sherd.fontColor && good.backgroundColor === sherd.backgroundColor && good.size === sherd.size ? {...good, quantity: +good.quantity + +sherd.quantity} : good
     )
     setGoods(alreadyThere.length !== 0 ? newGood : [...goods, {...sherd, quantity:sherd.quantity}])
     alreadyThere = []
