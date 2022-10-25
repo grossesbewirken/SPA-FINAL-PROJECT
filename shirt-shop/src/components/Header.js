@@ -44,7 +44,7 @@ const Header = ({setFilterList, currColor, setFilterHeader}) => {
   }
 
   const quantityCart = shoppingContext.map(good=> +good.quantity)
-  const sumCart = quantityCart.reduce((a,b)=>a+b)
+
 
   return (
 <Navbar expand="lg" className="shadow-lg sticky-top navbar">
@@ -99,7 +99,7 @@ const Header = ({setFilterList, currColor, setFilterHeader}) => {
                   icon={faCartShopping} />
                 </Button>
                 {shoppingContext.length !== 0 &&
-                <div id='quantity-cart'>{sumCart}</div>}
+                <div id='quantity-cart'>{quantityCart.reduce((a,b)=>a+b)}</div>}
               </Link>
             </div>
 
