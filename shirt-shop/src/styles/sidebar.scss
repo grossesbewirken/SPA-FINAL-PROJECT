@@ -8,18 +8,28 @@
   width: 100%; padding: 2rem;
   top: 0; 
 } 
-.fixed-sb{
-  position:fixed;
-  top:106px;
-  left:32px;
-}
+// .fixed-sb{
+//   position:fixed;
+//   top:106px;
+//   left:32px;
+// }
 
 .sidebar-content{
+  display:flex;
+  flex-direction: column;
   position: fixed;
   margin: 2rem;
   top: 50px; 
 }
+.button-sidebar{
+  align-self: end;
+  justify-self: end;
 
+}
+.sidebar-inner-toggle-button{
+  margin:0;
+  margin-right:-55px
+}
 .ul-sidebar { 
   margin: 2rem; 
   width: 100%;}

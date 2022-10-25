@@ -43,13 +43,14 @@ return (
             <div className="img-container-all">
               <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
               <div className="text-container-all" >
-                <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : "white",
+                <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor,
                 fontSize: sherd.text.length > 21 && "12px"}}>{sherd.text} </p> 
               </div>            
             </div>   
           </div>
+
           <div className="favoriten-details favcart-p">
-            <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
+            <h4 className="hl fh" style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</h4>
             <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
             <p>author: {sherd.author},</p>

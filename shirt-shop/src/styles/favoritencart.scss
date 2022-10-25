@@ -1,11 +1,24 @@
 .favcart-cardd{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 10px;
   border-radius: 15px;
-  width: 650px
 }
+
+@media (max-width: 300px) {
+.favcart-card{
+flex-direction: row;
+}
+}
+
+
 .shopping-details{
   color:white;
 }
+
+
 .favcart-hl{
   font-family: 'Readex Pro', sans-serif;
   font-weight: 700;
@@ -20,6 +33,10 @@
   padding-right: 0.5rem
 }
 
+.favcart-p{
+  margin: 1rem;
+}
+
 .favcart-p > p{
   margin:2px;
   color: white;
@@ -27,6 +44,7 @@
 
 .favcart-button-container{
   display: flex;
+  justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
 }
