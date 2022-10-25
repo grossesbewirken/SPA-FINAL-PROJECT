@@ -127,7 +127,7 @@ function App() {
       </div>
       <div className="show-sherds-header-and-routes">
         <div className="show-sherds-header">
-          <h1 className="favcart-hl">{filterHeader}</h1>         
+          <h1 className="favcart-hl sticky-header">{filterHeader}</h1>         
         </div>
         <div className="sherd-container-all">
           <Routes>
