@@ -69,6 +69,13 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     alreadyThere = []
   }
 
+  const changeFilterHeaderSC = () => {
+    setFilterHeader('main');
+    navigate("/")
+  }
+
+  // navigate("/")
+
   return (
     <div>
       
@@ -161,7 +168,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
 
       {/* R E T U R N */}
       <div className="button-container-single carousel-btn">        
-        <button className="detail-btn" onClick={()=>navigate("/")}>return Shop;</button>        
+        <button className="detail-btn" onClick={changeFilterHeaderSC}>return Shop;</button>        
       </div>
     </div>
   );

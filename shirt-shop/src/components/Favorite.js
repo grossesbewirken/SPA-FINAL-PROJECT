@@ -14,7 +14,7 @@ import ColorContext from "../context/colorContext";
 import ShoppingContext from "../context/ShoppingContext";
 import { faCartShopping, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const Favorite = () => {
+const Favorite = ({setFilterHeader}) => {
   const navigate = useNavigate()
   const [favoriteContext, setFavoriteContext] = useContext(FavoriteContext);
   const [colorContext] = useContext(ColorContext);
@@ -34,7 +34,11 @@ const Favorite = () => {
     alreadyThere = []
     // alert("import Sherd to ShoppinCart")
   }
-  console.log(favoriteContext);
+  
+  const changeFilterHeaderSC = () => {
+    setFilterHeader('main');
+    navigate("/")
+  }
 
   return (
     <div className="color-white">
@@ -84,7 +88,7 @@ const Favorite = () => {
       })}
       <button
         className="favcart-button"
-        onClick={()=>navigate("/")}>return Shop;</button>         
+        onClick={changeFilterHeaderSC}>return Shop;</button>         
     </div>
   );
 };

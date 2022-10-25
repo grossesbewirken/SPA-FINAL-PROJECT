@@ -12,7 +12,7 @@ import ShoppingContext from "../context/ShoppingContext";
 import ColorContext from "../context/colorContext";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const ShoppingCart = ({showCarousel}) => {
+const ShoppingCart = ({showCarousel, setFilterHeader}) => {
   const navigate = useNavigate()
   const [colorContext] = useContext(ColorContext)
   const [goods, setGoods] = useContext(ShoppingContext);
@@ -32,6 +32,11 @@ const deleteGood = (sherd)=>{
 const shoppingHandler = ()=>{
   setGoods([]);
   showCarousel();
+}
+
+const changeFilterHeaderSC = () => {
+    setFilterHeader('main');
+    navigate("/")
 }
 
 return (
@@ -87,7 +92,7 @@ return (
       }  
       <button
         className="favcart-button" 
-        onClick={()=>navigate("/")}>return Shop;
+        onClick={changeFilterHeaderSC}>return Shop;
       </button>         
     </div>
 
