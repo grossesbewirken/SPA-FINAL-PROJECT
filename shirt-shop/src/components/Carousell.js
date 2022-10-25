@@ -39,14 +39,14 @@ const getSherd=()=>{
                 key={i}
                 interval={3000} 
                 className="carousel-item-container">             
-                    <div className="carousel-image-container">
-                      <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
-                      width="60%" /> 
-                    <div className="carousel-text-field">
-                      <p style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor,
-                      fontSize: sherd.text.length > 20 && "50px"}}className="sherd-text-all carousel-text">{sherd.text}</p>
-                    </div>            
-                  </div>             
+                  <div className="carousel-image-container">
+                    <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" 
+                    width="60%" /> 
+                  <div className="carousel-text-field">
+                    <p style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor,
+                    fontSize: sherd.text.length > 20 && "50px"}}className="sherd-text-all carousel-text">{sherd.text}</p>
+                    </div>
+                  </div>
               </Carousel.Item>
             )
           })}

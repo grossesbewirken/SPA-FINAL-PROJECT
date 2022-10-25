@@ -24,6 +24,7 @@
 // I M A G E - C O N T A I N E R
 .carousel-image-container{
   display: flex;
+  position: relative;
   justify-content: center;
   max-height: 1500px;
   min-height: 100vh;
@@ -40,7 +41,6 @@
     max-height: 100vh;
   }
 }
-
 
 
 //  C A R O U S E L - T E X T - F I E L D
