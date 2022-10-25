@@ -34,7 +34,7 @@ const Favorite = () => {
     alreadyThere = []
     // alert("import Sherd to ShoppinCart")
   }
-
+  console.log(favoriteContext);
 
   return (
     <div className="color-white">
@@ -47,7 +47,7 @@ const Favorite = () => {
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
                 <div className="text-container-all" >
-                  <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : "white",
+                  <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor,
                   fontSize: sherd.text.length > 21 && "12px"}}>{sherd.text} </p> 
                 </div>            
               </div>   
@@ -60,6 +60,7 @@ const Favorite = () => {
               <p>backgroundColor: {sherd.backgroundColor},</p>
               <p>fontColor: {sherd.fontColor},</p>
               <p>author: {sherd.author},</p>
+              <p>size: {sherd.size}</p>
               <p>value: {sherd.price.toFixed(2)} €uro </p>
               <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
 

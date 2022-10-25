@@ -20,6 +20,8 @@ const ShoppingCart = ({showCarousel}) => {
 const sum = goods.map((good)=>{
   return good.quantity ? good.price * good.quantity : good.price
 })
+  
+  
 const total = goods.length !== 0 && sum.reduce((a,b)=> a+b)
 
 const deleteGood = (sherd)=>{
@@ -41,7 +43,7 @@ return (
             <div className="img-container-all">
               <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
               <div className="text-container-all" >
-                <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : "white",
+                <p className="sherd-text-all favcart-text" style={{color: sherd.backgroundColor === "white" ? "black" : sherd.fontColor,
                 fontSize: sherd.text.length > 21 && "12px"}}>{sherd.text} </p> 
               </div>            
             </div>   
@@ -52,6 +54,7 @@ return (
             <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
             <p>author: {sherd.author},</p>
+            <p>size: {sherd.size}</p>
             {sherd.quantity ? <p>quantity: {sherd.quantity}</p> : <p>quantity: 1</p> }
             <p>value: {sherd.quantity ? (sherd.price * sherd.quantity).toFixed(2): sherd.price.toFixed(2)} €uro </p>
             <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
