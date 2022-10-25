@@ -140,7 +140,7 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
 
           <div>
             <h5 className="fh hl">value:</h5>
-            <div>{currSherd.price.toFixed(2)} €uro</div>
+            <div>{(currSherd.price * currSherd.quantity).toFixed(2)} €uro</div>
           </div>
 
           <div className="details-single-buttons">
