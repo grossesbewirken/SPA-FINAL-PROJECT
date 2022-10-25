@@ -52,7 +52,7 @@ const getSherd=()=>{
           })}
         </Carousel>
       <div className='carousel-btn'>
-        <Link className="link" to="/fjm">
+        <Link className="link" to="/fjm" onClick={showCarousel}>
           <img
             src={fjm}
             width="45"
