@@ -26,6 +26,7 @@ import ShowDetails from './components/ShowDetails';
 import Favorite from "./components/Favorite";
 import Carousell from "./components/Carousell";
 import ShoppingCart from './components/ShoppingCart';
+import FJM from './components/FJM';
 
 library.add(faMagnifyingGlass);
 
@@ -71,6 +72,11 @@ function App() {
     localStorage.setItem("favorite", JSON.stringify(favorite))
     localStorage.setItem("goods", JSON.stringify(goods))
   }, [favorite, goods])
+
+  // const changeFilterHeaderShowSherd = () => {
+  //   setFilterHeader('showDetails');
+  // }
+  console.log(filterHeader);
 
   return (
   <div className="App">
@@ -126,24 +132,25 @@ function App() {
             filterHeader === 'philosophy' ? <h1 className="favcart-hl">Philosophy</h1> :
             filterHeader === 'favorites' ? <h1 className="favcart-hl">Favorites</h1> :
             filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">Shopping Cart</h1> :
-            filterHeader === 'showDetails' ? <h1 className="favcart-hl">customize your sherd</h1> :                                    
+            // filterHeader === 'showDetails' ? <h1 className="favcart-hl">customize your sherd</h1> :                                    
             <></>
-          }
+            }
         </div>
         <div className="sherd-container-all">
           <Routes>
             <Route path="*" element={<Navigate to="/"/>}/>
             <Route path="/" element={
             filterList.length === 0 ?
-            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette}  />) :
+            sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette} /*onClick={changeFilterHeaderShowSherd}*/ />) :
             filterList.map(sherd => <ShowSherds key={sherd.id}
-            sherd={sherd} colorPalette={colorPalette}/>)} />
-            <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette}/>}/>
+            sherd={sherd} colorPalette={colorPalette} /*onClick={changeFilterHeaderShowSherd}*//>)} />
+            <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette} />}/>
             <Route path="/favoriten" element=
             {<Favorite sherds={sherds} />}/>
             <Route path="/shoppingCart" element=
             {<ShoppingCart sherds={sherds} showCarousel={showCarousel} />
             } />
+            <Route path="fjm" element={<FJM />} />          
         </Routes>
       </div>          
       </div>

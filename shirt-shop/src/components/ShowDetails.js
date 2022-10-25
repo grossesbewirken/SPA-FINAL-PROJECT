@@ -26,7 +26,6 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
   const [currSherd, setCurrSherd] = useState(sherds.find(sherd => sherd.id === +id))
   const [good, setGood] = useContext(ShoppingContext);
 
-  console.log(currSherd);
   useEffect(()=>{
     setCurrColor(currSherd.backgroundColor)
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -69,6 +68,8 @@ const ShowDetails = ({sherds, currColor, setCurrColor, colorPalette, setRandomCo
     setGood(alreadyThere.length !== 0 ? newGood : [...good, {...currSherd, quantity:currSherd.quantity}])
     alreadyThere = []
   }
+
+
 
   return (
     <div>
