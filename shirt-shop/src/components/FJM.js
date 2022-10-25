@@ -26,16 +26,18 @@ const FJM = () => {
           className="d-inline-block align-top"
           alt="FJM logo"
         />
-        <h5>The "nerdsherd" Shop was created and designed by "FJM" which consists of Florian, Jeff and Martin as a final project for the "Single Page Application Module". This three gusys are DCI Web Developer Students.
+        <h5>The "nerdsherd" Shop was created as a final project for the "Single Page Application Module". 
         </h5>
+        <h5>"nerdsherd" was created and designed by "FJM" which consists of Florian, Jeff and Martin. This three guys are amazing DCI Web Developer Students.</h5>
         <h5>Have a look at our Profiles and at our other Projects on Github</h5>
       </div>
       <div className="profile-card-container">
       <div className='single-profile-card'>
+        
         <img src={itzFlorian } alt="" />
-        <h1>Florian Mewes</h1>
-        <p>I am on going Web Developer</p>
-        <div className="link">
+        <h3>Florian Mewes</h3>
+        <p>Chabos wissen wer der Babo ist...</p>
+        <div className="link flexi">
             <a
               href="https://github.com/itzFlorian"
               target="_blank"
@@ -51,9 +53,9 @@ const FJM = () => {
       </div>
       <div className='single-profile-card'>
         <img src={grossesbewirken} alt="" />
-        <h1>Martin Gross</h1>
+        <h3>Martin Gross</h3>
         <p>I am on going Web Developer</p>
-        <div className="link">
+        <div className="link flexi">
             <a
               href="https://github.com/grossesbewirken"
               target="_blank"
@@ -69,9 +71,9 @@ const FJM = () => {
       </div>
       <div className='single-profile-card'>
         <img src={BreffJaun} alt="" />
-        <h1>Jeff Braun</h1>
+        <h3>Jeff Braun</h3>
         <p>Hello, my name is Jeff and i'm web developer student, class representative and tutor at the DCI in germany.</p>
-        <div className="link">
+        <div className="link flexi">
             <a
               href="https://github.com/BreffJaun"
               target="_blank"
