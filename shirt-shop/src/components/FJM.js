@@ -35,7 +35,7 @@ const FJM = () => {
       <div className='single-profile-card black-grad-135'>
         <img src={itzFlorian } alt="" />
         <h3>Florian Mewes</h3>
-        <p>Chabos wissen wer der Babo ist...</p>
+        <p>If you like what you see, check out my Github for more great projects!</p>
         <div className="link flexi">
             <a
               href="https://github.com/itzFlorian"

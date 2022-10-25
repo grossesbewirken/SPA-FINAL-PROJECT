@@ -43,6 +43,9 @@ const Header = ({setFilterList, currColor, setFilterHeader}) => {
     setFilterHeader('your shopping cart');
   }
 
+  const quantityCart = shoppingContext.map(good=> +good.quantity)
+  const sumCart = quantityCart.reduce((a,b)=>a+b)
+
   return (
 <Navbar expand="lg" className="shadow-lg sticky-top navbar">
     <Container fluid className="d-flex justify-content-between">
@@ -96,7 +99,7 @@ const Header = ({setFilterList, currColor, setFilterHeader}) => {
                   icon={faCartShopping} />
                 </Button>
                 {shoppingContext.length !== 0 &&
-                <div id='quantity-cart'>{shoppingContext.length}</div>}
+                <div id='quantity-cart'>{sumCart}</div>}
               </Link>
             </div>
 
