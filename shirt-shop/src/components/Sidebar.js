@@ -56,7 +56,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
   return (
     <div className="sidebar">
       <div className="sidebar-content">
-        <div className="fixed-sb">
+        <div className="button-sidebar">
           {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
           <button className=
           {`sidebar-inner-toggle-button 
