@@ -66,14 +66,14 @@ const Favorite = () => {
 
               <div className="favcart-button-container">
                 <button 
-                  type="button"
-                  className="add-button favcart-button circle text-white border border-light" 
-                  onClick={() => shoppingHandler(sherd)}><FontAwesomeIcon icon={faCartShopping} />
-                </button>
-                <button 
                   type="button" 
                   className="delete-button favcart-button circle btn text-white border border-light" 
                   onClick={()=>deleteFav(sherd)}><FontAwesomeIcon icon={faTrash} />
+                </button>
+                <button 
+                  type="button"
+                  className="add-button favcart-button circle text-white border border-light" 
+                  onClick={() => shoppingHandler(sherd)}><FontAwesomeIcon icon={faCartShopping} />
                 </button>
               </div>
 
