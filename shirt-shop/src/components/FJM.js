@@ -34,7 +34,7 @@ const FJM = () => {
       <div className='single-profile-card'>
         <img src={itzFlorian } alt="" />
         <h1>Florian Mewes</h1>
-        <p>I am on going Web Developer</p>
+        <p>Chabos wissen wer der Babo ist...</p>
         <div className="link">
             <a
               href="https://github.com/itzFlorian"
