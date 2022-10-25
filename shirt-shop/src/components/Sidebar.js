@@ -24,19 +24,19 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
     const newList = sherds.filter(sherd => sherd.category === "Movie")
     setFilterList(newList)
     navigate("/")
-    setFilterHeader('movie');
+    setFilterHeader('movie && series');
   }
   const filterMusic = () => {
     const newList = sherds.filter(sherd => sherd.category === "Music")
     setFilterList(newList)
     navigate("/")
-    setFilterHeader('music');
+    setFilterHeader('songs');
   }
   const filterPhilosophy = () => {
     const newList = sherds.filter(sherd => sherd.category === "Developer Philosophie")
     setFilterList(newList)
     navigate("/")
-    setFilterHeader('philosophy');
+    setFilterHeader('nerdic philosophy');
   }
   const filterNothing = () => {
     const newList = []
@@ -46,11 +46,11 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
   }
 
   const changeFilterHeaderFav = () => {
-    setFilterHeader('favorites');
+    setFilterHeader('your favorites');
   }
 
   const changeFilterHeaderSC = () => {
-    setFilterHeader('shoppingCart');
+    setFilterHeader('your shopping cart');
   }
 
   return (
