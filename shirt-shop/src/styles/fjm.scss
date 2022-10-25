@@ -1,0 +1,39 @@
+.fjm-parent-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.general-info-container {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  img {
+    height: 250px;
+    width: 250px;
+    padding: 1.5rem;
+  }
+}
+
+.profile-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-profile-card {
+  border: 2px solid white;
+  border-radius: 10px;
+  img {
+    height: 250px;
+    width: 250px;
+    padding: 1.5rem;
+    border: 2px solid white;
+  }
+}

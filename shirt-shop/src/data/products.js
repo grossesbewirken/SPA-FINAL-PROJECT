@@ -1117,6 +1117,29 @@
     "price": 19.90,
     "quantity":1
   },
+  {
+    "id": 48,
+    "author": "anonym",
+    "text": "Na danke, Du Vogel! Jetzt hab ich das die letzten Wochen alles umsonst gemacht, du Pfeife!",
+    "date": "2022",
+    "backgroundColor":colorPalette[Math.floor(Math.random() * colorPalette.length)],
+    "sherdColor": {
+      "beige": beigeSherd,
+      "black": blackSherd,
+      "blue": blueSherd,
+      "grey": greySherd,
+      "lime": limeSherd,
+      "oliv": olivSherd,
+      "orange": orangeSherd,
+      "red":redSherd,
+      "white": whiteSherd
+    },
+    "fontColor": "white",
+    "size": "M",
+    "category": "Developer Philosophie",
+    "price": 19.90,
+    "quantity":1
+  },
   
 ]
 

@@ -51,7 +51,8 @@ const getSherd=()=>{
             )
           })}
         </Carousel>
-        <div className='carousel-btn'>
+      <div className='carousel-btn'>
+        <Link className="link" to="/fjm">
           <img
             src={fjm}
             width="45"
@@ -59,7 +60,7 @@ const getSherd=()=>{
             className="d-inline-block align-top"
             alt="FJM logo"
           />
-
+        </Link>
           <button
               className="button-container-single button" 
               onClick={()=>getSherd()}>GET THIS SHIRT

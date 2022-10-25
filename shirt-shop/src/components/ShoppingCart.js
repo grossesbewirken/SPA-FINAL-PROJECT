@@ -20,6 +20,8 @@ const ShoppingCart = ({showCarousel}) => {
 const sum = goods.map((good)=>{
   return good.quantity ? good.price * good.quantity : good.price
 })
+  
+  
 const total = goods.length !== 0 && sum.reduce((a,b)=> a+b)
 
 const deleteGood = (sherd)=>{
@@ -51,6 +53,7 @@ return (
             <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
             <p>author: {sherd.author},</p>
+            <p>size: {sherd.size}</p>
             {sherd.quantity ? <p>quantity: {sherd.quantity}</p> : <p>quantity: 1</p> }
             <p>value: {sherd.quantity ? (sherd.price * sherd.quantity).toFixed(2): sherd.price.toFixed(2)} €uro </p>
             <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>

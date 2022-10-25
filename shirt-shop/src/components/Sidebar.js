@@ -56,17 +56,17 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
   return (
     <div className="sidebar">
       <div className="sidebar-content">
-      <div className="fixed-sb">
-        {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
-        <button className=
-        {`sidebar-inner-toggle-button 
-        ${!toggle ?
-          "hide-inner-sidebar-button" :
-          "hide-inner-sidebar-button-onClick"}`}
-        onClick={showSidebar}
-        >hideSidebar</button>
-      </div>
-      <div className="fixed-sb">
+        <div className="fixed-sb">
+          {/* Toggle regulates if the "Outer Sidebar Button" is shown or not. It is also chained to the window size */}
+          <button className=
+          {`sidebar-inner-toggle-button 
+          ${!toggle ?
+            "hide-inner-sidebar-button" :
+            "hide-inner-sidebar-button-onClick"}`}
+          onClick={showSidebar}
+          >hideSidebar</button>
+        </div>
+        <div className="fixed-sb">
 
         {/* R U B R I K E N */}
         <h4 className="hl fh">
@@ -74,13 +74,16 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
         </h4>
         <ul className="ul-sidebar">
         <li className="li-sidebar fb" onClick={filterNothing}>main <span style={{color: colorContext[currColor] }}>{" =>{}"}</span></li>
-          <li className="li-sidebar fb">
-            <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}>your favorites <span style={{ color: colorContext[currColor] }}>{" =>{}"}</span>
-            </Link>
-          </li>
-          <li className="li-sidebar fb">
-            <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>your shopping cart<span style={{ color: colorContext[currColor] }}>{" =>{}"}</span></Link>
-          </li>
+          <Link className='link' to="/favoriten" onClick={changeFilterHeaderFav}> 
+            <li className="li-sidebar fb">your favorites
+                <span style={{ color: colorContext[currColor] }}>{" =>{}"}</span>
+            </li>
+          </Link>
+          <Link className='link' to="/shoppingCart" onClick={changeFilterHeaderSC}>
+            <li className="li-sidebar fb">
+              your shopping cart<span style={{ color: colorContext[currColor] }}>{" =>{}"}</span>
+            </li>
+          </Link>
         </ul>
         <h4 className="hl fh">{`});`}</h4>
 
@@ -96,13 +99,15 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
         </ul>
         <h4 className="hl fh">{`})`}</h4>
         <div>
-          <img
-            src={fjm}
-            width="45"
-            height="45"
-            className="d-inline-block align-top"
-            alt="FJM logo"
-          />
+          <Link className="link" to="/fjm">
+            <img
+              src={fjm}
+              width="45"
+              height="45"
+              className="d-inline-block align-top"
+              alt="FJM logo"
+            />
+          </Link>
         </div>  
       </div>
     </div>

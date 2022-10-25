@@ -55,6 +55,7 @@ const Favorite = () => {
               <p>backgroundColor: {sherd.backgroundColor},</p>
               <p>fontColor: {sherd.fontColor},</p>
               <p>author: {sherd.author},</p>
+              <p>size: {sherd.size}</p>
               <p>value: {sherd.price.toFixed(2)} €uro </p>
               <p style={{color:colorContext[sherd.backgroundColor]}}> {" } "}</p>
 
