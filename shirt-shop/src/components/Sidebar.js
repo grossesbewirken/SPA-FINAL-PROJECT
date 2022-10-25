@@ -53,6 +53,10 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
     setFilterHeader('your shopping cart');
   }
 
+  const changeFilterHeaderFJM = () => {
+    setFilterHeader('FJM');
+  }
+
   return (
     <div className="sidebar">
       <div className="sidebar-content">
@@ -99,7 +103,7 @@ const Sidebar = ({toggle, showSidebar, currColor, setFilterList, setFilterHeader
         </ul>
         <h4 className="hl fh">{`})`}</h4>
         <div>
-          <Link className="link" to="/fjm">
+          <Link className="link" to="/fjm" onClick={changeFilterHeaderFJM}>
             <img
               src={fjm}
               width="45"

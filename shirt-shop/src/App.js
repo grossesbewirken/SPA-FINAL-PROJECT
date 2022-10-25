@@ -89,6 +89,7 @@ function App() {
           currColor={currColor} 
           setCurrColor={setCurrColor}
           counter={counter}
+          setFilterHeader={setFilterHeader}
       />)
       :
       (
@@ -142,7 +143,7 @@ function App() {
             <Route path="/shoppingCart" element=
             {<ShoppingCart sherds={sherds} showCarousel={showCarousel} setFilterHeader={setFilterHeader}/>
             } />
-            <Route path="fjm" element={<FJM />} />          
+            <Route path="fjm" element={<FJM  />} />          
         </Routes>
       </div>          
       </div>
