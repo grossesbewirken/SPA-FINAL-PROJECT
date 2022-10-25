@@ -10,16 +10,21 @@ import "../styles/App.scss";
 // Files Import
 import sherds from "../data/products";
 import fjm from '../images/fjm-logo.png';
-const Carousell = ({showCarousel, counter}) => {
+const Carousell = ({showCarousel, counter, setFilterHeader}) => {
 
-const navigate = useNavigate()
+  const navigate = useNavigate()
 
-const getSherd=()=>{
-  const active = document.querySelector(".active")
-  const slide = active.ariaLabel.slice(6)
-  showCarousel()
-  navigate(`/products/${slide}`) 
-}
+  const getSherd=()=>{
+    const active = document.querySelector(".active")
+    const slide = active.ariaLabel.slice(6)
+    showCarousel()
+    navigate(`/products/${slide}`) 
+  }
+
+  const changeFilterHeaderFJM = () => {
+    setFilterHeader('FJM');
+    showCarousel();
+  }
 
   return (
     <div className='carousel-outer-container'>
@@ -52,7 +57,7 @@ const getSherd=()=>{
           })}
         </Carousel>
       <div className='carousel-btn'>
-        <Link className="link" to="/fjm" onClick={showCarousel}>
+        <Link className="link" to="/fjm" onClick={changeFilterHeaderFJM}>
           <img
             src={fjm}
             width="45"
