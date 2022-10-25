@@ -492,7 +492,7 @@
     },
     "fontColor": "white",
     "size": "M",
-    "category": "Developer Philosophie",
+    "category": "Movie",
     "price": 19.90,
     "quantity":1
   },
