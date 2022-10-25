@@ -41,6 +41,8 @@ const Favorite = () => {
       {favoriteContext.map((sherd, i) =>{ 
         return(
           <div className="favcart-cardd black-grad-135 flex" key={i}>
+
+            {/* I M A G E - C O N T A I N E R*/}
             <div>            
               <div className="img-container-all">
                 <img src={sherd.sherdColor[sherd.backgroundColor]} alt="shirt" width="290" /> 
@@ -50,8 +52,11 @@ const Favorite = () => {
                 </div>            
               </div>   
             </div>
+
+            {/* I N F O - C O N T A I N E R*/}
             <div className="favoriten-details favcart-p">
-              <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
+              <h4 className="hl fh" style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</h4>
+
               <p>backgroundColor: {sherd.backgroundColor},</p>
               <p>fontColor: {sherd.fontColor},</p>
               <p>author: {sherd.author},</p>
@@ -61,7 +66,7 @@ const Favorite = () => {
               <div className="favcart-button-container">
                 <button 
                   type="button"
-                  className="add-button favcart-button btn circle text-white border border-light" 
+                  className="add-button favcart-button circle text-white border border-light" 
                   onClick={() => shoppingHandler(sherd)}><FontAwesomeIcon icon={faCartShopping} />
                 </button>
                 <button 

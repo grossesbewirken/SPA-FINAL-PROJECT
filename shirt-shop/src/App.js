@@ -120,12 +120,12 @@ function App() {
       <div className="show-sherds-header-and-routes">
                   
         <div className="show-sherds-header">
-          {filterHeader === 'main' ? <h1 className="favcart-hl">Main</h1> :
-            filterHeader === 'movie' ? <h1 className="favcart-hl">Movie</h1> :
-            filterHeader === 'music' ? <h1 className="favcart-hl">Music</h1> :
-            filterHeader === 'philosophy' ? <h1 className="favcart-hl">Philosophy</h1> :
-            filterHeader === 'favorites' ? <h1 className="favcart-hl">Favorites</h1> :
-            filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">Shopping Cart</h1> :
+          {filterHeader === 'main' ? <h1 className="favcart-hl">main</h1> :
+            filterHeader === 'movie' ? <h1 className="favcart-hl">movies && series</h1> :
+            filterHeader === 'music' ? <h1 className="favcart-hl">songs</h1> :
+            filterHeader === 'philosophy' ? <h1 className="favcart-hl">nerdic philosophy</h1> :
+            filterHeader === 'favorites' ? <h1 className="favcart-hl">your favorites</h1> :
+            filterHeader === 'shoppingCart' ? <h1 className="favcart-hl">your shopping cart</h1> :
             filterHeader === 'showDetails' ? <h1 className="favcart-hl">customize your sherd</h1> :                                    
             <></>
           }

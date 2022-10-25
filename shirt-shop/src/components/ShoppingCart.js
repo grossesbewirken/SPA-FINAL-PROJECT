@@ -46,8 +46,9 @@ return (
               </div>            
             </div>   
           </div>
+
           <div className="favoriten-details favcart-p">
-            <p style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</p>
+            <h4 className="hl fh" style={{color:colorContext[sherd.backgroundColor]}}>sherdObject{"{"}</h4>
             <p>backgroundColor: {sherd.backgroundColor},</p>
             <p>fontColor: {sherd.fontColor},</p>
             <p>author: {sherd.author},</p>
