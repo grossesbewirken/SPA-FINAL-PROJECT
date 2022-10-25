@@ -136,11 +136,11 @@ function App() {
             sherds.map(sherd => <ShowSherds key={sherd.id} sherd={sherd} colorPalette={colorPalette} setFilterHeader={setFilterHeader}/>) :
             filterList.map(sherd => <ShowSherds key={sherd.id}
             sherd={sherd} colorPalette={colorPalette} setFilterHeader={setFilterHeader}/>)} />
-            <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette} />}/>
+            <Route path="/products/:id" element={<ShowDetails sherds={sherds} currColor={currColor} setCurrColor={setCurrColor} colorPalette={colorPalette} setFilterHeader={setFilterHeader}/>}/>
             <Route path="/favoriten" element=
-            {<Favorite sherds={sherds} />}/>
+            {<Favorite sherds={sherds} setFilterHeader={setFilterHeader} />}/>
             <Route path="/shoppingCart" element=
-            {<ShoppingCart sherds={sherds} showCarousel={showCarousel} />
+            {<ShoppingCart sherds={sherds} showCarousel={showCarousel} setFilterHeader={setFilterHeader}/>
             } />
             <Route path="fjm" element={<FJM />} />          
         </Routes>
