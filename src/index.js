@@ -1,7 +1,7 @@
 // Packages Import
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; // Hashrouter?
+import { HashRouter } from 'react-router-dom'; // Hashrouter?
 import { ColorContextProvider } from './context/colorContext';
 import { FavoriteContextProvider } from './context/FavoriteContext';
 import { ShoppingContextProvider } from './context/ShoppingContext';
@@ -17,11 +17,11 @@ root.render(
   <ShoppingContextProvider>
   <FavoriteContextProvider>
   <ColorContextProvider>
-    <BrowserRouter>
+    <HashRouter>
       {/* <React.StrictMode> */}
         <App />
       {/* </React.StrictMode> */}
-    </BrowserRouter>  
+    </HashRouter>  
   </ColorContextProvider>
   </FavoriteContextProvider>
   </ShoppingContextProvider>
