@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/spa-final-project/static/css/main.b3456580.css",
-    "main.js": "/spa-final-project/static/js/main.472236d8.js",
-    "static/media/beige-sherd.png": "/spa-final-project/static/media/beige-sherd.4e0a527acf692b8ee12e.png",
-    "static/media/white-sherd.png": "/spa-final-project/static/media/white-sherd.d53edc83dcf5a2448696.png",
-    "static/media/lime-sherd.png": "/spa-final-project/static/media/lime-sherd.348af8a6b54b7047ec22.png",
-    "static/media/orange-sherd.png": "/spa-final-project/static/media/orange-sherd.816702347721f4bafe03.png",
-    "static/media/blue-sherd.png": "/spa-final-project/static/media/blue-sherd.ef794327e05c8ee3749b.png",
-    "static/media/red-sherd.png": "/spa-final-project/static/media/red-sherd.11a097b4535e392174f7.png",
-    "static/media/grey-sherd.png": "/spa-final-project/static/media/grey-sherd.6d559f105cf0aa02f5fd.png",
-    "static/media/oliv-sherd.png": "/spa-final-project/static/media/oliv-sherd.6e07fa17dd44e7dd59bb.png",
-    "static/media/black-sherd.png": "/spa-final-project/static/media/black-sherd.0fe89348183789f5a272.png",
-    "static/media/color-pick.png": "/spa-final-project/static/media/color-pick.c4acc35168369a90a95f.png",
-    "static/media/itzFlorian.jpeg": "/spa-final-project/static/media/itzFlorian.420615942cf5f4d2a39b.jpeg",
-    "static/media/grossesbewirken.png": "/spa-final-project/static/media/grossesbewirken.3a1cac2f2b9580bd3b14.png",
-    "static/media/BreffJaun.jpeg": "/spa-final-project/static/media/BreffJaun.123d18b90c8d1bfcae63.jpeg",
-    "static/media/fjm-logo.png": "/spa-final-project/static/media/fjm-logo.606135fb7c24dd3ad602.png",
-    "index.html": "/spa-final-project/index.html",
-    "main.b3456580.css.map": "/spa-final-project/static/css/main.b3456580.css.map",
-    "main.472236d8.js.map": "/spa-final-project/static/js/main.472236d8.js.map"
+    "main.css": "/SPA-FINAL-PROJECT/static/css/main.b3456580.css",
+    "main.js": "/SPA-FINAL-PROJECT/static/js/main.993bca0d.js",
+    "static/media/beige-sherd.png": "/SPA-FINAL-PROJECT/static/media/beige-sherd.4e0a527acf692b8ee12e.png",
+    "static/media/white-sherd.png": "/SPA-FINAL-PROJECT/static/media/white-sherd.d53edc83dcf5a2448696.png",
+    "static/media/lime-sherd.png": "/SPA-FINAL-PROJECT/static/media/lime-sherd.348af8a6b54b7047ec22.png",
+    "static/media/orange-sherd.png": "/SPA-FINAL-PROJECT/static/media/orange-sherd.816702347721f4bafe03.png",
+    "static/media/blue-sherd.png": "/SPA-FINAL-PROJECT/static/media/blue-sherd.ef794327e05c8ee3749b.png",
+    "static/media/red-sherd.png": "/SPA-FINAL-PROJECT/static/media/red-sherd.11a097b4535e392174f7.png",
+    "static/media/grey-sherd.png": "/SPA-FINAL-PROJECT/static/media/grey-sherd.6d559f105cf0aa02f5fd.png",
+    "static/media/oliv-sherd.png": "/SPA-FINAL-PROJECT/static/media/oliv-sherd.6e07fa17dd44e7dd59bb.png",
+    "static/media/black-sherd.png": "/SPA-FINAL-PROJECT/static/media/black-sherd.0fe89348183789f5a272.png",
+    "static/media/color-pick.png": "/SPA-FINAL-PROJECT/static/media/color-pick.c4acc35168369a90a95f.png",
+    "static/media/itzFlorian.jpeg": "/SPA-FINAL-PROJECT/static/media/itzFlorian.420615942cf5f4d2a39b.jpeg",
+    "static/media/grossesbewirken.png": "/SPA-FINAL-PROJECT/static/media/grossesbewirken.3a1cac2f2b9580bd3b14.png",
+    "static/media/BreffJaun.jpeg": "/SPA-FINAL-PROJECT/static/media/BreffJaun.123d18b90c8d1bfcae63.jpeg",
+    "static/media/fjm-logo.png": "/SPA-FINAL-PROJECT/static/media/fjm-logo.606135fb7c24dd3ad602.png",
+    "index.html": "/SPA-FINAL-PROJECT/index.html",
+    "main.b3456580.css.map": "/SPA-FINAL-PROJECT/static/css/main.b3456580.css.map",
+    "main.993bca0d.js.map": "/SPA-FINAL-PROJECT/static/js/main.993bca0d.js.map"
   },
   "entrypoints": [
     "static/css/main.b3456580.css",
-    "static/js/main.472236d8.js"
+    "static/js/main.993bca0d.js"
   ]
 }
